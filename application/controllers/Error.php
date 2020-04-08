@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          public function index()
        	{
 
-       		$this->load->view('umum_404');
+       		$this->load->view('errors/html/error_php');
        	}
 
    }

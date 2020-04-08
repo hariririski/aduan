@@ -5,7 +5,7 @@
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
         <title>Error Halaman Tidak Di Temukan</title>
-                <?php echo $this->load->view('share/author', '', TRUE);?>
+                <?php echo $this->load->view('../../share/author', '', TRUE);?>
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/plugins.css">
@@ -44,7 +44,7 @@
                                 <div class="clearfix"></div>
 
                                 <div class="clearfix"></div>
-                              
+
                                 <a href="<?php echo site_url(); ?>" class="btn   color2-bg">Back to Home Page<i class="far fa-home-alt"></i></a>
                             </div>
                         </div>
