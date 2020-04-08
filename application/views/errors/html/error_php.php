@@ -1,4 +1,4 @@
 <?php
-header("Location:".base_url());
+ini_set('display_errors', 1);
 
 ?>
