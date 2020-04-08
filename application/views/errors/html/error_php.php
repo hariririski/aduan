@@ -5,7 +5,7 @@
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
         <title>Error Halaman Tidak Di Temukan</title>
-                <?php include(__DIR__ . 'share/author');?>
+                <?php include(__DIR__ . '/../../share/author');?>
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/plugins.css">
