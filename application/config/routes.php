@@ -59,5 +59,5 @@ $route['admin'] = 'Admin_Beranda';
 
 $route['data'] = 'Admin_Pengaduan';
 
-$route['404_override'] = 'my404';
+$route['404_override'] = 'Custom404';
 $route['translate_uri_dashes'] = FALSE;
