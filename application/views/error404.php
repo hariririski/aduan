@@ -5,6 +5,7 @@
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
         <title>Error Halaman Tidak Di Temukan</title>
+
                 <?php echo $this->load->view('share/author', '', TRUE);?>
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
