@@ -15,14 +15,14 @@
                     <!--tab -->
                     <div id="tab-1" class="tab-content first-tab">
                         <div class="custom-form">
-                            <form method="post"  name="registerform">
+                             <form class="login-form" method="post" action="<?php echo site_url(); ?>login/proses_login">
                                 <label>Username or Email Address <span>*</span> </label>
-                                <input name="email" type="text"   onClick="this.select()" value="">
+                                <input name="username" type="text"   onClick="this.select()" value="">
                                 <label >Password <span>*</span> </label>
                                 <input name="password" type="password"   onClick="this.select()" value="" >
                                 <button type="submit"  class="btn float-btn color2-bg"> Log In <i class="fas fa-caret-right"></i></button>
                                 <div class="clearfix"></div>
-                                
+
                             </form>
 
                         </div>

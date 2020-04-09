@@ -1,4 +1,4 @@
 <?php
-echo"a";
+echo" Gagal Koneksi Dengan Database";
 
 ?>

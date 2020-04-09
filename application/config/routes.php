@@ -54,10 +54,17 @@ $route['default_controller'] = 'Umum_Home';
 $route['beranda'] = 'Umum_Home';
 $route['tentang'] = 'Umum_Tentang';
 $route['info'] = 'Umum_Info';
+$route['admin_info'] = 'Admin_Informasi';
 $route['admin'] = 'Admin_Beranda';
-
-
+$route['data_admin'] = 'Admin';
+$route['jenis_pengaduan'] = 'Admin_Jenis_Pengaduan';
+$route['jenis_informasi'] = 'Admin_Jenis_Informasi';
 $route['data'] = 'Admin_Pengaduan';
+$route['login'] = 'Login/proses_login';
+$route['logout'] = 'Login/logout';
+
+
+
 
 $route['404_override'] = 'Custom404';
 $route['translate_uri_dashes'] = FALSE;

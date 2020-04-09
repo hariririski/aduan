@@ -14,8 +14,23 @@
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/color.css">
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="<?php echo site_url(); ?>assets/umum/images/favicon.ico">
+
+
+        <script>
+        <?php
+          $id=$_GET['id'];
+          if($id==1){
+        ?>
+    		    alert("Maaf Gagal Login!");
+        <?php
+          }
+        ?>
+        </script>
+
     </head>
     <body>
+
+
         <!--loader-->
         <div class="loader-wrap">
             <div class="loader-inner">
@@ -25,6 +40,9 @@
         <!--loader end-->
         <!-- main start  -->
         <div id="main">
+
+
+
             <!-- header -->
               <?php echo $this->load->view('share/menu', '', TRUE);?>
             <!-- header end-->

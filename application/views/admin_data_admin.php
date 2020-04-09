@@ -3,7 +3,7 @@
 <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
-        <title>Data Pengaduan</title>
+        <title>Data administrator</title>
         <?php echo $this->load->view('share/author', '', TRUE);?>
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
@@ -84,7 +84,7 @@
                             <!-- dashboard content-->
                             <div class="col-md-9">
                                 <div class="dashboard-title fl-wrap">
-                                    <h3>Data Pengaduan</h3>
+                                    <h3>Data Informasi Pertanahan</h3>
                                 </div>
                                 <!-- list-single-facts -->
 

@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-   class Admin_Beranda extends CI_Controller {
+   class Admin extends CI_Controller {
 
      function __construct() {
          parent::__construct();
@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          public function index()
        	{
 
-       		$this->load->view('admin_beranda');
+       		$this->load->view('admin_data_admin');
        	}
 
    }
