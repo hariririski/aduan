@@ -38,11 +38,11 @@
           font-size: 14px;
         }
         </style>
-<script type="text/javascript" src="<?php echo site_url(); ?>assets/assets/DataTables/media/js/jquery.js"></script>
-	<script type="text/javascript" src="<?php echo site_url(); ?>assets/assets/DataTables/media/js/jquery.dataTables.js"></script>
+          <script type="text/javascript" src="<?php echo site_url(); ?>assets/assets/DataTables/media/js/jquery.js"></script>
+        	<script type="text/javascript" src="<?php echo site_url(); ?>assets/assets/DataTables/media/js/jquery.dataTables.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/assets/DataTables/media/css/jquery.dataTables.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/assets/DataTables/media/css/dataTables.bootstrap.css">
+        	<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/assets/DataTables/media/css/jquery.dataTables.css">
+        	<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/assets/DataTables/media/css/dataTables.bootstrap.css">
 
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="<?php echo site_url(); ?>assets/umum/images/favicon.ico">
@@ -146,10 +146,10 @@
         <!-- Main end -->
         <!--=============== scripts  ===============-->
         <script type="text/javascript">
-  	$(document).ready(function(){
-  		$('.data').DataTable();
-  	});
-  </script>
+          	$(document).ready(function(){
+          		$('.data').DataTable();
+          	});
+          </script>
         <!-- <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script> -->
         <script src="<?php echo site_url(); ?>assets/umum/js/plugins.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/scripts.js"></script>

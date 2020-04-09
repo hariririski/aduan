@@ -752,7 +752,13 @@
                                     <div class="inline-facts">
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
-                                                <div class="num" data-content="0" data-num="1254">1254</div>
+                                                <div class="num" data-content="0" data-num="<?php
+                                                   foreach($jumlah_pengaduan as $pengaduan){
+                                                 ?>
+                                                 <?php echo $pengaduan->jumlah; ?>
+                                                 <?php } ?>">
+
+                                                </div>
                                             </div>
                                         </div>
                                         <h6>Jumlah Pengaduan</h6>
@@ -764,7 +770,11 @@
                                     <div class="inline-facts">
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
-                                                <div class="num" data-content="0" data-num="12168">12168</div>
+                                                <div class="num" data-content="0" data-num="<?php
+                                                   foreach($pengaduan_proses as $proses){
+                                                 ?>
+                                                 <?php echo $proses->jumlah; ?>
+                                                 <?php } ?>"></div>
                                             </div>
                                         </div>
                                         <h6>Pengaduan Sedang Di Proses</h6>
@@ -776,7 +786,11 @@
                                     <div class="inline-facts">
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
-                                                <div class="num" data-content="0" data-num="2172">2172</div>
+                                                <div class="num" data-content="0" data-num="<?php
+                                                   foreach($pengaduan_selesai as $selesai){
+                                                 ?>
+                                                 <?php echo $selesai->jumlah; ?>
+                                                 <?php } ?>"></div>
                                             </div>
                                         </div>
                                         <h6>Pengaduan Selesai</h6>
@@ -788,7 +802,11 @@
                                     <div class="inline-facts">
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
-                                                <div class="num" data-content="0" data-num="732">732</div>
+                                                <div class="num" data-content="0" data-num="<?php
+                                                   foreach($jumlah_informasi as $informasi){
+                                                 ?>
+                                                 <?php echo $informasi->jumlah; ?>
+                                                 <?php } ?>"></div>
                                             </div>
                                         </div>
                                         <h6>Jumlah Informasi</h6>

@@ -10,6 +10,10 @@
         $query=$this->db->query("SELECT COUNT(*) as jumlah FROM data_pengaduan");
         return $query->result();
       }
+      function jumlah_informasi(){
+        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM Informasi");
+        return $query->result();
+      }
       function pengaduan_selesai(){
         $query=$this->db->query("SELECT COUNT(*) as jumlah FROM data_pengaduan WHERE status='1'");
         return $query->result();

@@ -12,6 +12,38 @@
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/dashboard-style.css">
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/color.css">
         <!--=============== favicons ===============-->
+        <style>
+        #customers {
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+
+        }
+
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 15px 10px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: center;
+          background-color: #2e3f6e;
+          color: white;
+          font-size: 14px;
+        }
+        </style>
+          <script type="text/javascript" src="<?php echo site_url(); ?>assets/assets/DataTables/media/js/jquery.js"></script>
+          <script type="text/javascript" src="<?php echo site_url(); ?>assets/assets/DataTables/media/js/jquery.dataTables.js"></script>
+
+          <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/assets/DataTables/media/css/jquery.dataTables.css">
+          <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/assets/DataTables/media/css/dataTables.bootstrap.css">
+
         <link rel="shortcut icon" href="<?php echo site_url(); ?>assets/umum/images/favicon.ico">
     </head>
     <body>
@@ -49,23 +81,25 @@
                             <!-- dashboard-menu  end-->
                             <!-- dashboard content-->
                             <div class="col-md-9">
-                                <div class="dashboard-title fl-wrap">
-                                    <h3>Your Statistics</h3>
-                                </div>
+                                
                                 <!-- list-single-facts -->
                                 <div class="list-single-facts fl-wrap">
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <!-- inline-facts -->
                                             <div class="inline-facts-wrap gradient-bg ">
                                                 <div class="inline-facts">
                                                     <i class="fal fa-chart-bar"></i>
                                                     <div class="milestone-counter">
                                                         <div class="stats animaper">
-                                                            <div class="num" data-content="0" data-num="1054">0</div>
+                                                            <div class="num" data-content="0" data-num="<?php
+                                                               foreach($jumlah_pengaduan as $pengaduan){
+                                                             ?>
+                                                             <?php echo $pengaduan->jumlah; ?>
+                                                             <?php } ?>"></div>
                                                         </div>
                                                     </div>
-                                                    <h6>Listing Views</h6>
+                                                    <h6>Jumlah Pengaduan</h6>
                                                 </div>
                                                 <div class="stat-wave">
                                                     <svg viewbox="0 0 100 25">
@@ -75,17 +109,21 @@
                                             </div>
                                             <!-- inline-facts end -->
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <!-- inline-facts  -->
                                             <div class="inline-facts-wrap gradient-bg ">
                                                 <div class="inline-facts">
                                                     <i class="fal fa-comments-alt"></i>
                                                     <div class="milestone-counter">
                                                         <div class="stats animaper">
-                                                            <div class="num" data-content="0" data-num="2557">0</div>
+                                                            <div class="num" data-content="0" data-num="<?php
+                                                               foreach($pengaduan_proses as $proses){
+                                                             ?>
+                                                             <?php echo $proses->jumlah; ?>
+                                                             <?php } ?>"></div>
                                                         </div>
                                                     </div>
-                                                    <h6>Total Reviews</h6>
+                                                    <h6>Pengaduan Proses</h6>
                                                 </div>
                                                 <div class="stat-wave">
                                                     <svg viewbox="0 0 100 25">
@@ -95,17 +133,45 @@
                                             </div>
                                             <!-- inline-facts end -->
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <!-- inline-facts  -->
                                             <div class="inline-facts-wrap gradient-bg ">
                                                 <div class="inline-facts">
                                                     <i class="fal fa-envelope-open-dollar"></i>
                                                     <div class="milestone-counter">
                                                         <div class="stats animaper">
-                                                            <div class="num" data-content="0" data-num="125">0</div>
+                                                            <div class="num" data-content="0" data-num="<?php
+                                                               foreach($pengaduan_selesai as $selesai){
+                                                             ?>
+                                                             <?php echo $selesai->jumlah; ?>
+                                                             <?php } ?>"></div>
                                                         </div>
                                                     </div>
-                                                    <h6>Bookings </h6>
+                                                    <h6>Pengaduan Selesai </h6>
+                                                </div>
+                                                <div class="stat-wave">
+                                                    <svg viewbox="0 0 100 25">
+                                                        <path fill="#fff" d="M0 30 V12 Q30 12 55 5 T100 11 V30z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- inline-facts end -->
+                                        </div>
+                                        <div class="col-md-3">
+                                            <!-- inline-facts  -->
+                                            <div class="inline-facts-wrap gradient-bg ">
+                                                <div class="inline-facts">
+                                                    <i class="fal fa-envelope-open-dollar"></i>
+                                                    <div class="milestone-counter">
+                                                        <div class="stats animaper">
+                                                            <div class="num" data-content="0" data-num="<?php
+                                                               foreach($jumlah_informasi as $informasi){
+                                                             ?>
+                                                             <?php echo $informasi->jumlah; ?>
+                                                             <?php } ?>"></div>
+                                                        </div>
+                                                    </div>
+                                                    <h6>informasi </h6>
                                                 </div>
                                                 <div class="stat-wave">
                                                     <svg viewbox="0 0 100 25">
@@ -118,90 +184,45 @@
                                     </div>
                                 </div>
                                 <!-- list-single-facts end -->
-                                <div class="list-single-main-item fl-wrap block_box">
-                                    <!-- chart-wra-->
-                                    <div class="chart-wrap   fl-wrap">
-                                        <div class="chart-header fl-wrap">
-                                            <div class="listsearch-input-item">
-                                                <select data-placeholder="Week" class="chosen-select no-search-select" >
-                                                    <option>Week</option>
-                                                    <option>Month</option>
-                                                    <option>Year</option>
-                                                </select>
-                                            </div>
-                                            <div id="myChartLegend"></div>
-                                        </div>
-                                        <canvas id="canvas-chart"></canvas>
-                                    </div>
-                                    <!--chart-wrap end-->
-                                </div>
                                 <div class="dashboard-title dt-inbox fl-wrap">
-                                    <h3>Recent Activities</h3>
+                                    <h3>Pengaduan Menunggu Tindak Lanjut</h3>
                                 </div>
-                                <!-- dashboard-list-box-->
-                                <div class="dashboard-list-box  fl-wrap">
-                                    <!-- dashboard-list end-->
-                                    <div class="dashboard-list fl-wrap">
-                                        <div class="dashboard-message">
-                                            <span class="new-dashboard-item"><i class="fal fa-times"></i></span>
-                                            <div class="dashboard-message-text">
-                                                <i class="far fa-check green-bg"></i>
-                                                <p>Your listing <a href="#">Park Central</a> has been approved! </p>
-                                            </div>
-                                            <div class="dashboard-message-time"><i class="fal fa-calendar-week"></i> 28 may 2020</div>
-                                        </div>
-                                    </div>
-                                    <!-- dashboard-list end-->
-                                    <!-- dashboard-list end-->
-                                    <div class="dashboard-list fl-wrap">
-                                        <div class="dashboard-message">
-                                            <span class="new-dashboard-item"><i class="fal fa-times"></i></span>
-                                            <div class="dashboard-message-text">
-                                                <i class="far fa-heart purp-bg"></i>
-                                                <p>Someone bookmarked your <a href="#">Holiday Home</a> listing!</p>
-                                            </div>
-                                            <div class="dashboard-message-time"><i class="fal fa-calendar-week"></i> 28 may 2020</div>
-                                        </div>
-                                    </div>
-                                    <!-- dashboard-list end-->
-                                    <!-- dashboard-list end-->
-                                    <div class="dashboard-list fl-wrap">
-                                        <div class="dashboard-message">
-                                            <span class="new-dashboard-item"><i class="fal fa-times"></i></span>
-                                            <div class="dashboard-message-text">
-                                                <i class="fal fa-comments-alt red-bg"></i>
-                                                <p> Someone left a review on <a href="#">Park Central</a> listing!</p>
-                                            </div>
-                                            <div class="dashboard-message-time"><i class="fal fa-calendar-week"></i> 28 may 2020</div>
-                                        </div>
-                                    </div>
-                                    <!-- dashboard-list end-->
-                                    <!-- dashboard-list end-->
-                                    <div class="dashboard-list fl-wrap">
-                                        <div class="dashboard-message">
-                                            <span class="new-dashboard-item"><i class="fal fa-times"></i></span>
-                                            <div class="dashboard-message-text">
-                                                <i class="far fa-check green-bg"></i>
-                                                <p> Your listing <a href="#">Holiday Home</a> has been approved! </p>
-                                            </div>
-                                            <div class="dashboard-message-time"><i class="fal fa-calendar-week"></i> 28 may 2020</div>
-                                        </div>
-                                    </div>
-                                    <!-- dashboard-list end-->
-                                    <!-- dashboard-list end-->
-                                    <div class="dashboard-list fl-wrap">
-                                        <div class="dashboard-message">
-                                            <span class="new-dashboard-item"><i class="fal fa-times"></i></span>
-                                            <div class="dashboard-message-text">
-                                                <i class="far fa-heart purp-bg"></i>
-                                                <p>Someone bookmarked your <a href="#">Moonlight Hotel</a> listing!</p>
-                                            </div>
-                                            <div class="dashboard-message-time"><i class="fal fa-calendar-week"></i> 28 may 2020</div>
-                                        </div>
-                                    </div>
-                                    <!-- dashboard-list end-->
+                                <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
+                                  <div >
+                                		<table class=" data" id="customers">
+                                			<thead>
+                                				<tr>
+                                					<th>No</th>
+                                					<th>Tanggal</th>
+                                					<th>Nama</th>
+                                					<th>Jenis Pengaduan</th>
+                                					<th>Status</th>
+                                          <th>Media Lapor</th>
+                                          <th>Detail</th>
+                                				</tr>
+                                			</thead>
+                                			<tbody>
+                                        <?php
+                                          $i=0;
+                                             foreach($proses_data as $pengaduan){
+                                               $i++;
+                                        ?>
+                                        <tr>
+                                             <td><?php echo $i; ?></td>
+                                             <td><?php echo date('d F Y', strtotime($pengaduan->tanggal_pengaduan));  ?></td>
+                                             <td><?php echo $pengaduan->nama; ?></td>
+                                             <td><?php echo $pengaduan->nama_jenis_pengaduan; ?></td>
+                                             <td><?php if($pengaduan->status==0){echo"Proses";}else{echo"Selesai";} ?></td>
+                                             <td><?php echo $pengaduan->media_lapor; ?></td>
+                                             <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="logout_btn color2-bg">Detail</button></a></td>
+                                         </tr>
+                                        <?php } ?>
+
+                                			</tbody>
+                                		</table>
+                                	</div>
                                 </div>
-                                <!-- dashboard-list-box end-->
+
                             </div>
                             <!-- dashboard content end-->
                         </div>
@@ -222,7 +243,12 @@
         </div>
         <!-- Main end -->
         <!--=============== scripts  ===============-->
-        <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        	$(document).ready(function(){
+        		$('.data').DataTable();
+        	});
+        </script>
+        <!-- <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script> -->
         <script src="<?php echo site_url(); ?>assets/umum/js/plugins.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/scripts.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/charts.js"></script>
