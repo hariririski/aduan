@@ -841,7 +841,17 @@
                                 <div class="process-end"><i class="fal fa-check"></i></div>
                             </div>
                         </div>
+                        <div class="waveWrapper waveAnimation">
+
+                          <div class="waveWrapperInner bgMiddle">
+                            <div class="wave-bg-anim waveMiddle" style="background-image: url('<?php echo site_url(); ?>assets/umum/images/wave-top.png')"></div>
+                          </div>
+                          <div class="waveWrapperInner bgBottom">
+                            <div class="wave-bg-anim waveBottom" style="background-image: url('<?php echo site_url(); ?>assets/umum/images/wave-top.png')"></div>
+                          </div>
+                        </div>
                     </section>
+
                     <!--section end-->
                     <!--section  -->
                     <!-- <section class="gradient-bg hidden-section" data-scrollax-parent="true">
@@ -898,7 +908,7 @@
                             <div class="section-title">
                                 <h2> Pengaduan Sudah Ditanggapi</h2>
                                 <span class="section-separator"></span>
-                                <p>Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla.</p>
+
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -908,70 +918,52 @@
                             <div class="testimonilas-carousel">
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
+
+                                      <?php
+                                        $i=0;
+                                           foreach($max5 as $pengaduan){
+
+                                      ?>
                                         <!--testi-item-->
                                         <div class="swiper-slide">
                                             <div class="testi-item fl-wrap">
-                                                <div class="testi-avatar"><img src="<?php echo site_url(); ?>assets/umum/images/avatar/2.jpg" alt=""></div>
-                                                <div class="testimonilas-text fl-wrap">
-                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                                    <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "</p>
-                                                    <a href="#" class="testi-link" target="_blank">Via Facebook</a>
+                                                <div class="testi-avatar"><img src="<?php echo site_url(); ?>assets/umum/images/avatar/umum.webp" alt=""></div>
+                                                <div class="testimonilas-text fl-wrap" style="height: 300px;">
+
+                                                    <p>"<?php echo $pengaduan->uraian;
+                                                        echo ", ";
+                                                      $tanggal=$pengaduan->tanggal_pengaduan;
+                                                      $bulan = array (
+                                                    		1 =>   'Januari',
+                                                    		'Februari',
+                                                    		'Maret',
+                                                    		'April',
+                                                    		'Mei',
+                                                    		'Juni',
+                                                    		'Juli',
+                                                    		'Agustus',
+                                                    		'September',
+                                                    		'Oktober',
+                                                    		'November',
+                                                    		'Desember'
+                                                    	);
+                                                    	$pecahkan = explode('-', $tanggal);
+                                                    	echo $newtanggal=$pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+                                                      ?>
+                                                    "</p>
+                                                    <a href="#" class="testi-link" target="_blank"><?php echo $pengaduan->media_lapor; ?></a>
                                                     <div class="testimonilas-avatar fl-wrap">
-                                                        <h3>Andy Dimasky</h3>
-                                                        <h4>Restaurant Owner</h4>
+                                                        <h3><?php echo $pengaduan->nama; ?></h3>
+                                                        <h4><?php echo $pengaduan->Pekerjaan; ?></h4>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <!--testi-item end-->
-                                        <!--testi-item-->
-                                        <div class="swiper-slide">
-                                            <div class="testi-item fl-wrap">
-                                                <div class="testi-avatar"><img src="<?php echo site_url(); ?>assets/umum/images/avatar/3.jpg" alt=""></div>
-                                                <div class="testimonilas-text fl-wrap">
-                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                                    <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "</p>
-                                                    <a href="#" class="testi-link" target="_blank">Via Twitter</a>
-                                                    <div class="testimonilas-avatar fl-wrap">
-                                                        <h3>Frank Dellov</h3>
-                                                        <h4>Hotel Owner</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--testi-item end-->
-                                        <!--testi-item-->
-                                        <div class="swiper-slide">
-                                            <div class="testi-item fl-wrap">
-                                                <div class="testi-avatar"><img src="<?php echo site_url(); ?>assets/umum/images/avatar/4.jpg" alt=""></div>
-                                                <div class="testimonilas-text fl-wrap">
-                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                                    <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "</p>
-                                                    <a href="#" class="testi-link" target="_blank">Via Facebook</a>
-                                                    <div class="testimonilas-avatar fl-wrap">
-                                                        <h3>Centa Simpson</h3>
-                                                        <h4>Restaurant Owner</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--testi-item end-->
-                                        <!--testi-item-->
-                                        <div class="swiper-slide">
-                                            <div class="testi-item fl-wrap">
-                                                <div class="testi-avatar"><img src="<?php echo site_url(); ?>assets/umum/images/avatar/5.jpg" alt=""></div>
-                                                <div class="testimonilas-text fl-wrap">
-                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                                    <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "</p>
-                                                    <a href="#" class="testi-link" target="_blank">Via Instagram</a>
-                                                    <div class="testimonilas-avatar fl-wrap">
-                                                        <h3>Linda Svensky</h3>
-                                                        <h4>Shop Owner</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--testi-item end-->
+                                        <?php
+                                            }
+                                        ?>
+
                                     </div>
                                 </div>
                             </div>

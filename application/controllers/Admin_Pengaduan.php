@@ -7,14 +7,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			 $this->load->helper('url');
   			 $this->load->library('session');
   			 $this->load->database();
+         $this->load->model('M_lapor');
+
 
   		}
 
 
          public function index()
        	{
-
-       		$this->load->view('admin_data_pengaduan');
+          $data['semua_pengaduan'] = $this->M_lapor->semua_pengaduan();
+       		$this->load->view('admin_data_pengaduan',$data);
        	}
 
    }

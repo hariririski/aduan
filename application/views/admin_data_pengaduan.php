@@ -94,154 +94,32 @@
                                 		<table class=" data" id="customers">
                                 			<thead>
                                 				<tr>
+                                					<th>No</th>
+                                					<th>Tanggal</th>
                                 					<th>Nama</th>
-                                					<th>Alamat</th>
-                                					<th>Pekerjaan</th>
-                                					<th>Usia</th>
+                                					<th>Jenis Pengaduan</th>
                                 					<th>Status</th>
+                                          <th>Media Lapor</th>
+                                          <th>Detail</th>
                                 				</tr>
                                 			</thead>
                                 			<tbody>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Malas Ngoding</td>
-                                					<td>Bandung</td>
-                                					<td>Web Developer</td>
-                                					<td>26</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Malas Ngoding</td>
-                                					<td>Bandung</td>
-                                					<td>Web Developer</td>
-                                					<td>26</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
-                                				<tr>
-                                					<td>Andi</td>
-                                					<td>Jakarta</td>
-                                					<td>Web Designer</td>
-                                					<td>21</td>
-                                					<td>Aktif</td>
-                                				</tr>
+                                        <?php
+                                          $i=0;
+                                             foreach($semua_pengaduan as $pengaduan){
+                                               $i++;
+                                        ?>
+                                        <tr>
+                                             <td><?php echo $i; ?></td>
+                                             <td><?php echo date('d F Y', strtotime($pengaduan->tanggal_pengaduan));  ?></td>
+                                             <td><?php echo $pengaduan->nama; ?></td>
+                                             <td><?php echo $pengaduan->nama_jenis_pengaduan; ?></td>
+                                             <td><?php if($pengaduan->status==0){echo"Proses";}else{echo"Selesai";} ?></td>
+                                             <td><?php echo $pengaduan->media_lapor; ?></td>
+                                             <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="logout_btn color2-bg">Detail</button></a></td>
+                                         </tr>
+                                        <?php } ?>
+
                                 			</tbody>
                                 		</table>
                                 	</div>
