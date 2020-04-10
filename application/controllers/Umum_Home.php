@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           //
           //   $data['informasi'.$isi->id_informasi] = $this->M_info->artikel($isi->id_informasi);
           // }
-       		$this->load->view('umum_home',$data);
+       		//$this->load->view('umum_home',$data);
        	}
 
    }
