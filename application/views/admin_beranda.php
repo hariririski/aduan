@@ -159,7 +159,7 @@
                                 </div>
                                 <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                   <div >
-                                		<table class=" data" id="customers">
+                                		<table class=" data " id="customers" >
                                 			<thead>
                                 				<tr>
                                 					<th>No</th>
@@ -171,7 +171,7 @@
                                           <th>Detail</th>
                                 				</tr>
                                 			</thead>
-                                			<tbody>
+                                			<tbody >
                                         <?php
                                           $i=0;
                                              foreach($proses_data as $pengaduan){

@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $data['pengaduan_selesai'] = $this->M_lapor_hp->pengaduan_selesai();
           $data['pengaduan_proses'] = $this->M_lapor_hp->pengaduan_proses();
           $data['jenis_pengaduan'] = $this->M_lapor_hp->lihat();
-       		$this->load->view('hp/Index',$data);
+       		$this->load->view('hp/home',$data);
        	}
 
          public function detail(){
