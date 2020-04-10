@@ -2,19 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
    class Umum_Home extends CI_Controller {
 
-     function __construct() {
-         parent::__construct();
-  			 $this->load->helper('url');
-  			 $this->load->library('session');
-  			 $this->load->database();
-         // $this->load->model('M_lapor');
-         // $this->load->model('M_lapor_hp');
-         // $this->load->model('M_info');
-  		}
+     // function __construct() {
+     //     parent::__construct();
+     //
+     //     // $this->load->model('M_lapor');
+     //     // $this->load->model('M_lapor_hp');
+     //     // $this->load->model('M_info');
+  		// }
 
 
          public function index()
        	{
+          $this->load->helper('url');
+          $this->load->library('session');
+          $this->load->database();
           echo a;
           // $data['jumlah_pengaduan'] = $this->M_lapor_hp->jumlah_pengaduan();
           // $data['pengaduan_selesai'] = $this->M_lapor_hp->pengaduan_selesai();
