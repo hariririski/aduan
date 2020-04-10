@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
      function __construct() {
          parent::__construct();
-  			 // $this->load->helper('url');
-  			 // $this->load->library('session');
-  			 // $this->load->database();
-         // $this->load->model('M_lapor');
-         // $this->load->model('M_lapor_hp');
-         // $this->load->model('M_info');
+  			 $this->load->helper('url');
+  			 $this->load->library('session');
+  			 $this->load->database();
+         $this->load->model('M_lapor');
+         $this->load->model('M_lapor_hp');
+         $this->load->model('M_info');
   		}
 
 
