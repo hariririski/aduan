@@ -20,9 +20,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           // $data['pengaduan_selesai'] = $this->M_lapor_hp->pengaduan_selesai();
           // $data['pengaduan_proses'] = $this->M_lapor_hp->pengaduan_proses();
           // $data['jumlah_informasi'] = $this->M_lapor_hp->jumlah_informasi();
-          // $data['max5'] = $this->M_lapor->max5();
-          //
-          //
+          $data['max5'] = $this->M_lapor->max5();
+
+          
           $query1=$this->db->query("SELECT * FROM `jenis_informasi`");
           $hasil=$query1->result();
           $data['jenis_informasi'] =$hasil;
