@@ -198,7 +198,7 @@
 
 
                             </div>
-                            <a href="listing.html" class="btn  dec_btn  color2-bg">Check Out All Listings<i class="fal fa-arrow-alt-right"></i></a>
+                            <a href="<?php echo site_url(); ?>info" class="btn  dec_btn  color2-bg">Lihat Semua<i class="fal fa-arrow-alt-right"></i></a>
                         </div>
                     </section>
                     <!--section end-->

@@ -1,7 +1,5 @@
 <!--Header Area Start-->
-<?php
-  ini_set('display_errors','off');
-?>
+<?php echo $this->load->view('share/e', '', TRUE);?>
 <script type="text/javascript">
   $(document).ready(function(){
     $('.data').DataTable();

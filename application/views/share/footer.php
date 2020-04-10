@@ -1,5 +1,5 @@
 <!--Header Area Start-->
-<?php ini_set('display_errors','off');?>
+<?php echo $this->load->view('share/e', '', TRUE);?>
 <footer class="main-footer fl-wrap">
 
     <!-- footer-header end-->

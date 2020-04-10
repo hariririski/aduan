@@ -1,7 +1,5 @@
 <!--Header Area Start-->
-<?php
-  ini_set('display_errors','off');
-?>
+<?php echo $this->load->view('share/e', '', TRUE);?>
 <section class="parallax-section dashboard-header-sec gradient-bg" data-scrollax-parent="true">
     <div class="container">
         <div class="dashboard-header_conatiner fl-wrap dashboard-header_title">

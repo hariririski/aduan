@@ -1,5 +1,5 @@
 
-<?php ini_set('display_errors','off');?>
+<?php echo $this->load->view('share/e', '', TRUE);?>
 <div class="header">
     <div class="row no-gutters">
         <!-- <div class="col-auto">

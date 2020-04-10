@@ -1,5 +1,5 @@
 
-<?php ini_set('display_errors','off');?>
+<?php echo $this->load->view('share/e', '', TRUE);?>
 <div class="row no-gutters vh-100 loader-screen">
     <div class="bg-template background-overlay"></div>
     <div class="col align-self-center text-white text-center">

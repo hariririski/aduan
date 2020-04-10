@@ -1,7 +1,5 @@
 <!--Header Area Start-->
-<?php
-  ini_set('display_errors','off');
-?>
+<?php echo $this->load->view('share/e', '', TRUE);?>
 <header class="main-header">
     <!-- logo-->
     <a href="index.html" class="logo-holder"><img src="<?php echo site_url(); ?>assets/umum/images/logo.png" alt=""></a>
