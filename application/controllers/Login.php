@@ -31,7 +31,7 @@ class Login extends CI_Controller {
       $query = $this->db->query($sql);
       $data=$query->result();
       foreach ($data as $isi) {
-            echo  $isi->username;
+          
             $arraydata = array(
                  'nama'  => $isi->nama,
                  'level'     => $isi->level,
@@ -39,12 +39,7 @@ class Login extends CI_Controller {
          );
          $this->session->set_userdata($arraydata);
       }
-      if(($cek[0]->pengaduan)!=1){
-        echo"<script>alert('Maaf Anda Gagal Login')</script>";
-        redirect('beranda?id=1');
-      }else {
-        redirect('admin');
-      }
+      redirect('admin');
 
 		}else{
       echo"<script>alert('Anda Gagal Login')</script>";

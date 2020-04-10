@@ -12,37 +12,7 @@
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/dashboard-style.css">
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/color.css">
 
-        <style>
-        #customers {
-          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-
-        }
-
-        #customers td, #customers th {
-          border: 1px solid #ddd;
-          padding: 15px 10px;
-        }
-
-        #customers tr:nth-child(even){background-color: #f2f2f2;}
-
-        #customers tr:hover {background-color: #ddd;}
-
-        #customers th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-          text-align: center;
-          background-color: #2e3f6e;
-          color: white;
-          font-size: 14px;
-        }
-        </style>
-          <script type="text/javascript" src="<?php echo site_url(); ?>assets/assets/DataTables/media/js/jquery.js"></script>
-        	<script type="text/javascript" src="<?php echo site_url(); ?>assets/assets/DataTables/media/js/jquery.dataTables.js"></script>
-
-        	<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/assets/DataTables/media/css/jquery.dataTables.css">
-        	<link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/assets/DataTables/media/css/dataTables.bootstrap.css">
+        <?php echo $this->load->view('share/table_header', '', TRUE);?>
 
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="<?php echo site_url(); ?>assets/umum/images/favicon.ico">
@@ -145,11 +115,7 @@
         </div>
         <!-- Main end -->
         <!--=============== scripts  ===============-->
-        <script type="text/javascript">
-          	$(document).ready(function(){
-          		$('.data').DataTable();
-          	});
-          </script>
+        <?php echo $this->load->view('share/table_footer', '', TRUE);?>
         <!-- <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script> -->
         <script src="<?php echo site_url(); ?>assets/umum/js/plugins.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/scripts.js"></script>

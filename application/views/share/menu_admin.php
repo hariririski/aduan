@@ -13,6 +13,10 @@
         </ul>
     </div>
     <!-- user-profile-menu end-->
+    <?php
+        $level=$this->session->userdata('level');
+        if(($level)==2){
+    ?>
     <!-- user-profile-menu-->
     <div class="user-profile-menu">
         <h3>Setting</h3>
@@ -23,6 +27,10 @@
             <li><a href="dashboard-add-listing.html"><i class="fal fa-file-plus"></i> Konfigurasi</a></li>
         </ul>
     </div>
+
+    <?php
+        }
+    ?>
     <!-- user-profile-menu end-->
     <a href="<?php echo site_url(); ?>logout" class="logout_btn color2-bg">Keluar <i class="fas fa-sign-out"></i></a>
 </div>
