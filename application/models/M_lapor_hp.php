@@ -11,7 +11,7 @@
         return $query->result();
       }
       function jumlah_informasi(){
-        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM Informasi");
+        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM informasi");
         return $query->result();
       }
       function pengaduan_selesai(){
