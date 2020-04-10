@@ -1,3 +1,3 @@
 <?php
-echo" Gagal Koneksi Dengan Database";
+echo" Ini Halaman error  ";
 ?>
