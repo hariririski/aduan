@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			 $this->load->database();
          $this->load->model('M_lapor');
          $this->load->model('M_lapor_hp');
-         $this->load->model('M_info');
+         //$this->load->model('M_info');
   		}
 
 
@@ -26,15 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $hasil=$query1->result();
           $data['jenis_informasi'] =$hasil;
           $data['jenis_informasi1'] =$hasil;
-          //print_r($data['jenis_informasi1']);
           foreach ($hasil as $isi) {
 
             $data['informasi'.$isi->id_informasi] = $this->M_info->artikel($isi->id_informasi);
           }
-          foreach ($hasil as $isi2) {
-            //print_r($data['informasi'.$isi2->id_informasi]);
-          }
-
        		$this->load->view('umum_home',$data);
        	}
 
