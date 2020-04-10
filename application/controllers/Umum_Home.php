@@ -15,12 +15,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
          public function index()
        	{
-          //
-          // $data['jumlah_pengaduan'] = $this->M_lapor_hp->jumlah_pengaduan();
-          // $data['pengaduan_selesai'] = $this->M_lapor_hp->pengaduan_selesai();
-          // $data['pengaduan_proses'] = $this->M_lapor_hp->pengaduan_proses();
-          // $data['jumlah_informasi'] = $this->M_lapor_hp->jumlah_informasi();
-          // $data['max5'] = $this->M_lapor->max5();
+
+          $data['jumlah_pengaduan'] = $this->M_lapor_hp->jumlah_pengaduan();
+          $data['pengaduan_selesai'] = $this->M_lapor_hp->pengaduan_selesai();
+          $data['pengaduan_proses'] = $this->M_lapor_hp->pengaduan_proses();
+          $data['jumlah_informasi'] = $this->M_lapor_hp->jumlah_informasi();
+          $data['max5'] = $this->M_lapor->max5();
           //
           //
           // $query1=$this->db->query("SELECT * FROM `jenis_informasi`");
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           //
           //   $data['informasi'.$isi->id_informasi] = $this->M_info->artikel($isi->id_informasi);
           // }
-       		$this->load->view('umum_home');
+       		$this->load->view('umum_home',$data);
        	}
 
    }
