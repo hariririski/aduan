@@ -67,5 +67,5 @@ $route['hp'] = 'HP/home';
 
 
 
-$route['404_override'] = 'Custom404';
+$route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
