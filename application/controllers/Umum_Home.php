@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
    class Umum_Home extends CI_Controller {
 
      function __construct() {
-         //parent::__construct();
+         parent::__construct();
   			 // $this->load->helper('url');
   			 // $this->load->library('session');
   			 // $this->load->database();
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           //
           //   $data['informasi'.$isi->id_informasi] = $this->M_info->artikel($isi->id_informasi);
           // }
-       		// $this->load->view('umum_home',$data);
+       		$this->load->view('umum_tentang');
        	}
 
    }
