@@ -7,7 +7,7 @@
     <i data-feather="file-text" data-feather-line="1" data-feather-size="21" data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i>
     <span>Lapor</span>
   </a>
-  <a href="<?php echo site_url(); ?>hp/cek">
+  <a href="<?php echo site_url(); ?>cek">
     <i data-feather="search" data-feather-line="1" data-feather-size="21" data-feather-color="green1-dark" data-feather-bg="green1-fade-light"></i>
     <span>Cek Pengaduan</span>
   </a>

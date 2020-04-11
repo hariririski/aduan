@@ -24,7 +24,7 @@
         <span>Lapor</span>
         <i class="fa fa-angle-right"></i>
       </a>
-      <a id="nav-features" href="<?php echo site_url(); ?>hp/cek">
+      <a id="nav-features" href="<?php echo site_url(); ?>cek">
         <i class="fa fa-search color-red2-dark"></i>
         <span>Cek Pengaduan</span>
         <i class="fa fa-angle-right"></i>
