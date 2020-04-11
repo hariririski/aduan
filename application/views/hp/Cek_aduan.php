@@ -63,7 +63,7 @@
           <div class="caption-center right-20">
             <?php //if($detail->status==0){
               ?>
-              <p class="text-right color-yellow1-dark bottom-0"><img align="right" src="<?php //echo site_url(); ?>assets/hp/images/proses.png" width="15%"></p>
+              <p class="text-right color-yellow1-dark bottom-0"><img align="right" src="<?php echo site_url(); ?>assets/hp/images/proses.png" width="15%"></p>
               <?php
           //  }else{
               ?>
@@ -92,7 +92,7 @@
               //$pecahkan = explode('-', $detail->tanggal_pengaduan);
               //$tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
             ?>
-            <h1 class="color-white bolder"><?php echo $tanggal;?>,</h1>
+            <h1 class="color-white bolder"><?php //echo $tanggal;?>,</h1>
             <p class="under-heading color-white opacity-90 bottom-0">
               <?php //if($detail->status==0){
               //  echo'Status Proses';
