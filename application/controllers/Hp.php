@@ -40,7 +40,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        public function cek()
       {
         $no_telepon;
-        echo  $this->uri->segment(3);
+        $this->uri->segment(3);
+        if(empty($this->uri->segment(3))){
+          echo"kosong";
+        }
         //if(empty($this->uri->segment(3))){
         //  $no_telepon = $this->input->get('no_telepon');
         //  $this->load->view('hp/cek_aduan');
