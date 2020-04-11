@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			 $this->load->library('session');
   			 $this->load->database();
          $this->load->model('M_lapor_hp');
-         $this->load->model('M_lapor');
+         //$this->load->model('M_lapor');
   		}
 
          public function home()
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
        public function cek()
       {
-  
+
         $this->load->view('hp/cek_aduan');
       }
 
@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        //   $this->load->view('hp/cek_aduan',$data);
        // }
 
-       $this->load->view('hp/cek_aduan');
+       $this->load->view('hp/cek_aduan_up');
      }
 
 
