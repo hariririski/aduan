@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 /*-----------------------------------------------------------------------*/
-$route['default_controller'] = 'Umum_Home';
+$route['default_controller'] = 'Umum_Home/cek';
 $route['beranda'] = 'Umum_Home';
 $route['tentang'] = 'Umum_Tentang';
 $route['info'] = 'Umum_Info';
