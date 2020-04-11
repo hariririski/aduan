@@ -61,6 +61,7 @@ $route['jenis_pengaduan'] = 'Admin_Jenis_Pengaduan';
 $route['jenis_informasi'] = 'Admin_Jenis_Informasi';
 $route['data'] = 'Admin_Pengaduan';
 $route['login'] = 'Login/proses_login';
+$route['login_hp'] = 'HP/login';
 $route['logout'] = 'Login/logout';
 $route['hp'] = 'Hp/home';
 $route['cek'] = 'Hp/cek_pengaduan';

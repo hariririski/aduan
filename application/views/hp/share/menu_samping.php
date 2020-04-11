@@ -39,7 +39,7 @@
         <span>Tentang</span>
         <i class="fa fa-angle-right"></i>
       </a>
-      <a id="nav-contact" href="<?php echo site_url(); ?>hp/login">
+      <a id="nav-contact" href="<?php echo site_url(); ?>login_hp">
         <i class="fa fa-power-off color-blue2-dark"></i>
         <span>login</span>
         <i class="fa fa-angle-right"></i>
