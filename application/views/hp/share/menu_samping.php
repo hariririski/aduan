@@ -3,7 +3,6 @@
     <a href="#" data-toggle-theme><i class="fa fa-lightbulb color-yellow1-dark"></i></a>
     <a href="#" data-menu="menu-highlights"><i class="fa fa-brush color-green1-dark"></i></a>
     <a href="#" data-menu="menu-share"><i class="fa fa-share-alt color-orange-dark"></i></a>
-    <a href="settings.html"><i class="fa fa-cog color-blue2-dark"></i></a>
     <a href="#" class="close-menu"><i class="fa fa-times color-red2-dark"></i></a>
     <div class="clear"></div>
   </div>
@@ -51,14 +50,7 @@
       </a>
     </div>
   </div>
-  <div class="content bottom-20 center-text">
-    <a href="#" class="icon icon-xxs round-tiny shadow-large bottom-0 bg-facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="icon icon-xxs round-tiny shadow-large bottom-0 bg-twitter"><i class="fab fa-twitter"></i></a>
-    <a href="#" class="icon icon-xxs round-tiny shadow-large bottom-0 bg-instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" class="icon icon-xxs round-tiny shadow-large bottom-0 bg-linkedin"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" class="icon icon-xxs round-tiny shadow-large bottom-0 bg-whatsapp"><i class="fab fa-whatsapp"></i></a>
-    <p class="top-10 font-10 opacity-50">Copyright <span class="copyright-year"></span>, Enabled. All rights reserved</p>
-  </div>
+
 
 
 

@@ -1,5 +1,5 @@
 <div id="footer-menu" class="footer-menu-4-icons footer-menu-style-1">
-  <a href="<?php echo site_url(); ?>hp/home" class="active-nav4">
+  <a href="<?php echo site_url(); ?>hp/home" >
     <i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-dark"></i>
     <span>Home</span>
   </a>

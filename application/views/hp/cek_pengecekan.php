@@ -17,10 +17,10 @@
       <div class="loader-main"><div class="preload-spinner border-highlight"></div></div>
     </div>
     <div class="header header-fixed header-logo-app header-auto-show">
-      <a href="index.html" class="header-subtitle">Back to Components</a>
+      <a href="<?php echo site_url(); ?>hp" class="header-subtitle">Back</a>
       <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
       <a href="#" data-toggle-theme class="header-icon header-icon-2"><i class="fas fa-lightbulb"></i></a>
-      <a href="settings.html" class="header-icon header-icon-3"><i class="fas fa-cog"></i></a>
+      <a href="<?php echo site_url(); ?>hp" class="header-icon header-icon-3"><i class="fas fa-cog"></i></a>
     </div>
     <div class="page-content">
       <div data-height="150" class="page-title-bg bg-20"></div>
@@ -32,7 +32,7 @@
       </div>
       <div data-height="150" class="caption caption-margins round-medium shadow-large">
         <div class="caption-center">
-        <form class="row" action="<?php echo site_url(); ?>pengecekan" method="get">
+        <form class="row" action="<?php echo site_url(); ?>pengecekan" method="post">
           <table class="caption-center  shadow-large" width="100%">
             <tr>
               <td width="90%">
