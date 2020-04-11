@@ -32,7 +32,7 @@
       </div>
       <div data-height="150" class="caption caption-margins round-medium shadow-large">
         <div class="caption-center">
-          <form class="row" action="<?php echo site_url(); ?>hp/cek" method="get">
+        <form class="row" action="<?php echo site_url(); ?>pengecekan" method="get">
           <table class="caption-center  shadow-large" width="100%">
             <tr>
               <td width="90%">
