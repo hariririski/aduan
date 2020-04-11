@@ -46,9 +46,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $no_telepon = $this->uri->segment(3);
         }
 
-
         $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
-        $this->load->view('hp/cek_aduan',$data);
+        $this->load->view('hp/cek_aduan');
       }
 
 
