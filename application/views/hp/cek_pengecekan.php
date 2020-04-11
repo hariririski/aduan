@@ -56,59 +56,59 @@
 
       <div class="container mb-5">
         <?php
-        //foreach($data_pengaduan as $detail){
+        foreach($data_pengaduan as $detail){
         ?>
-        <a href="<?php echo site_url(); ?>hp/detail/<?php //echo $detail->id_pengaduan;?>">
+        <a href="<?php echo site_url(); ?>hp/detail/<?php echo $detail->id_pengaduan;?>">
         <div data-height="175" class="caption caption-margins round-medium shadow-large">
           <div class="caption-center right-20">
-            <?php //if($detail->status==0){
+            <?php if($detail->status==0){
               ?>
               <p class="text-right color-yellow1-dark bottom-0"><img align="right" src="<?php echo site_url(); ?>assets/hp/images/proses.png" width="15%"></p>
               <?php
-          //  }else{
+            }else{
               ?>
               <p class="text-right color-green1-dark bottom-0"><i class="fa fa-check fa-3x"></i></p>
               <?php
-            //}
+            }
             ?>
 
           </div>
           <div class="caption-center left-20">
             <?php
-            // $bulan = array (
-            //     1 => 'Januari',
-            //     'Februari',
-            //     'Maret',
-            //     'April',
-            //     'Mei',
-            //     'Juni',
-            //     'Juli',
-            //     'Agustus',
-            //     'September',
-            //     'Oktober',
-            //     'November',
-            //     'Desember'
-              // );
-              //$pecahkan = explode('-', $detail->tanggal_pengaduan);
-              //$tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+            $bulan = array (
+                1 => 'Januari',
+                'Februari',
+                'Maret',
+                'April',
+                'Mei',
+                'Juni',
+                'Juli',
+                'Agustus',
+                'September',
+                'Oktober',
+                'November',
+                'Desember'
+              );
+              $pecahkan = explode('-', $detail->tanggal_pengaduan);
+              $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
             ?>
-            <h1 class="color-white bolder"><?php //echo $tanggal;?>,</h1>
+            <h1 class="color-white bolder"><?php echo $tanggal;?>,</h1>
             <p class="under-heading color-white opacity-90 bottom-0">
-              <?php //if($detail->status==0){
-              //  echo'Status Proses';
-            //  }else{
-                //echo'Status Selesai';
-            //  }
+              <?php if($detail->status==0){
+               echo'Status Proses';
+             }else{
+                echo'Status Selesai';
+             }
               ?>
               <br>
-                <?php //echo $detail->nama_jenis_pengaduan;?>
+                <?php echo $detail->nama_jenis_pengaduan;?>
               <br>
                 <?php
-                  //$str = $detail->uraian;
-                  //$arr = explode(" ", str_replace(",", ", ", $str));
-                  //for ($index = 0; $index < 15; $index++) {
-                  //    echo $arr[$index]. " ";
-                  //}
+                  $str = $detail->uraian;
+                  $arr = explode(" ", str_replace(",", ", ", $str));
+                  for ($index = 0; $index < 15; $index++) {
+                     echo $arr[$index]. " ";
+                  }
 
                 ?>
 
@@ -119,7 +119,7 @@
         </div>
       </a>
         <?php
-        //}
+        }
         ?>
       </div>
 
