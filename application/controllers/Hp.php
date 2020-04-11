@@ -19,6 +19,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $data['jenis_pengaduan'] = $this->M_lapor_hp->lihat();
        		$this->load->view('hp/home',$data);
        	}
+         public function info()
+       	{
+
+       		$this->load->view('hp/info');
+       	}
+         public function lapor()
+       	{
+
+       		$this->load->view('hp/lapor');
+       	}
 
          public function detail(){
 
@@ -38,11 +48,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
         $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
-        $this->load->view('hp/Cek_aduan',$data);
+        $this->load->view('hp/cek_aduan',$data);
       }
+
+
        public function login()
       {
-        $this->load->view('hp/Login');
+        $this->load->view('hp/login');
       }
 
    }

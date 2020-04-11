@@ -14,42 +14,37 @@
   </div>
   <div class="content top-20 bottom-50">
     <div class="link-list link-list-1">
-      <a id="nav-welcome" href="index.html">
+      <a id="nav-welcome" href="<?php echo site_url(); ?>hp">
         <i class="fa fa-home color-blue2-dark"></i>
-        <span>Welcome</span>
+        <span>Home</span>
         <i class="fa fa-angle-right"></i>
       </a>
-      <a id="nav-starters" href="pages-starters-list.html">
-        <i class="fa fa-star color-yellow1-dark"></i>
-        <span>Starters</span>
+      <a id="nav-starters" href="<?php echo site_url(); ?>hp/lapor">
+        <i class="fa fa-clone color-yellow1-dark"></i>
+        <span>Lapor</span>
         <i class="fa fa-angle-right"></i>
       </a>
-      <a id="nav-features" href="components.html">
-        <i class="fa fa-heart color-red2-dark"></i>
-        <span>Features</span>
+      <a id="nav-features" href="<?php echo site_url(); ?>hp/cek">
+        <i class="fa fa-search color-red2-dark"></i>
+        <span>Cek Pengaduan</span>
         <i class="fa fa-angle-right"></i>
       </a>
-      <a id="nav-pages" href="pages.html">
-        <i class="fa fa-file color-brown1-dark"></i>
-        <span>Pages</span>
+      <a id="nav-pages" href="<?php echo site_url(); ?>hp/info">
+        <i class="fa fa-book color-brown1-dark"></i>
+        <span>Informasi Pertanahan</span>
         <i class="fa fa-angle-right"></i>
       </a>
       <a id="nav-media" href="media.html">
-        <i class="fa fa-image color-green1-dark"></i>
-        <span>Media</span>
+        <i class="fa fa-info color-green1-dark"></i>
+        <span>Tentang</span>
         <i class="fa fa-angle-right"></i>
       </a>
-      <a id="nav-settings" href="settings.html">
-        <i class="fa fa-cog color-gray2-dark"></i>
-        <span>Settings</span>
+      <a id="nav-contact" href="<?php echo site_url(); ?>hp/login">
+        <i class="fa fa-power-off color-blue2-dark"></i>
+        <span>login</span>
         <i class="fa fa-angle-right"></i>
       </a>
-      <a id="nav-contact" href="contact.html">
-        <i class="fa fa-envelope color-blue2-dark"></i>
-        <span>Contact</span>
-        <i class="fa fa-angle-right"></i>
-      </a>
-      <a href="#" class="no-border">
+      <a href="#" class="close-menu">
         <i class="fa fa-times color-red2-dark"></i>
         <span>Close</span>
         <i class="fa fa-angle-right"></i>

@@ -3,13 +3,12 @@
   <div data-height="140" class="page-title-bg dark-mode-tint"></div>
   <div data-height="140" class="page-title-bg opacity-90 bg-highlight"></div>
   <div class="content bottom-20 top-30">
-    <h1 class="center-text color-white font-35 bolder uppercase">Azures</h1>
-    <span class="under-heading center-text font-11 color-white">Put a little color in your life!</span>
+    <h1 class="center-text color-white font-35 bolder uppercase">Aplikasi Pengaduan</h1>
+
   </div>
   <div class="content-boxed content-boxed-full shadow-small">
     <p class="boxed-text-huge top-15 bottom-10">
-      Azures is packed with a beautiful color scheme.
-      <br>Tap on your favorite! The page will adapt.
+      
     </p>
     <div class="highlight-changer bottom-10">
       <a href="#" data-change-highlight="blue2"><i class="fa fa-circle color-blue2-dark"></i><span class="color-blue2-light">Default</span></a>

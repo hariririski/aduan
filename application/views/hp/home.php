@@ -20,7 +20,7 @@
     <?php echo $this->load->view('hp/share/header', '', TRUE);?>
     <div class="page-content">
       <div class="page-title-large color-white bottom-30">
-        <h1 data-username="Enabled!" class="greeting-text"></h1>
+        <h1 data-username="Selamat Datang di Aplikasi Pengaduan" >Aplikasi <br> Pengaduan</h1>
         <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
       </div>
       <div data-height="210" class="page-title-bg preload-image" data-src="<?php echo site_url(); ?>assets/hp/images/pictures/20s.jpg"></div>
@@ -63,31 +63,45 @@
 
       <div class="content-boxed shadow-small bottom-30">
         <div class="content">
-          <h5 class="float-left font-500">Happy Customers</h5>
-          <a href="#" class="float-right opacity-70">View All</a>
+
           <div class="clear"></div>
-          <p>
-            Over 30.000 people use our products, and we're always happy to see the positiv impact our products
-            have had! Thank you!
-          </p>
+
         </div>
-        <div class="user-slider owl-carousel bottom-0">
-          <div class="user-follow">
-            <img data-src="<?php echo site_url(); ?>assets/hp/images/avatars/1s.png" width="55" height="55" class="owl-lazy shadow-small bg-gradient-blue2">
-            <p>Jane</p>
+        <div class="content top-0 center-text bottom-20">
+          <div class="one-third">
+            <h1 class="bolder">
+              <?php
+                 foreach($jumlah_pengaduan as $pengaduan){
+               ?>
+               <?php echo $pengaduan->jumlah; ?>
+               <?php } ?>
+            </h1>
+            <p class="under-heading font-10 bottom-15">Total Pengaduan</p>
           </div>
-          <div class="user-follow">
-            <img data-src="<?php echo site_url(); ?>assets/hp/images/avatars/2s.png" width="55" height="55" class="owl-lazy shadow-small bg-gradient-red2">
-            <p>Craig</p>
+          <div class="one-third">
+            <h1 class="bolder">
+              <?php
+                 foreach($pengaduan_selesai as $selesai){
+               ?>
+               <?php echo $selesai->jumlah; ?>
+               <?php } ?>
+            </h1>
+            <p class="under-heading font-10 bottom-15">Selesai</p>
           </div>
-          <div class="user-follow">
-            <img data-src="<?php echo site_url(); ?>assets/hp/images/avatars/1s.png" width="55" height="55" class="owl-lazy shadow-small bg-gradient-green1">
-            <p>Jane</p>
+          <div class="one-third last-column">
+            <h1 class="bolder">
+              <?php
+                 foreach($pengaduan_proses as $proses){
+               ?>
+               <?php echo $proses->jumlah; ?>
+               <?php } ?>
+            </h1>
+            <p class="under-heading font-10 bottom-15">Proses</p>
           </div>
-          <div class="user-follow">
-            <img data-src="<?php echo site_url(); ?>assets/hp/images/avatars/2s.png" width="55" height="55" class="owl-lazy shadow-small bg-gradient-brown1">
-            <p>Craig</p>
-          </div>
+          <div class="clear"></div>
+          <div class="divider bottom-20"></div>
+
+          <div class="clear"></div>
         </div>
       </div>
 
@@ -170,30 +184,7 @@
       </div>
     </div>
 
-    <div class="content-boxed shadow-small">
-      <h1 class="center-text font-700 bottom-10 top-20">Media Sosial</h1>
-
-      <div class="divider divider-margins"></div>
-      <div class="social-grid-4">
-        <a href="#" class="shareToFacebook">
-          <i class="font-20 round-small shadow-small bg-facebook fab fa-facebook-f"></i>
-          <span class="color-theme">Facebook</span>
-        </a>
-        <a href="#" class="shareToTwitter">
-          <i class="font-22 round-small shadow-small bg-twitter fab fa-twitter"></i>
-          <span class="color-theme">Twitter</span>
-        </a>
-        <a href="#" class="shareToMail">
-          <i class="font-22 round-small shadow-small bg-mail fa fa-envelope"></i>
-          <span class="color-theme">Email</span>
-        </a>
-        <a href="#" class="shareToWhatsApp">
-          <i class="font-22 round-small shadow-small bg-whatsapp fab fa-whatsapp"></i>
-          <span class="color-theme">WhatsApp</span>
-        </a>
-
-      </div>
-    </div>
+    <?php echo $this->load->view('hp/share/sosial_media', '', TRUE);?>
 
     <?php echo $this->load->view('hp/share/menu_bawah', '', TRUE);?>
 
