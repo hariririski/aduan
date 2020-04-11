@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
        public function login_hp()
       {
-        $this->load->view('hp/login');
+        $this->load->view('hp/login_hp');
       }
 
    }
