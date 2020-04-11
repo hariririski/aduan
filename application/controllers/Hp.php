@@ -37,10 +37,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
        	}
 
-       public function cek()
+       public function cek_pengaduan()
       {
 
-        $this->load->view('hp/cek_aduan');
+        $this->load->view('hp/cek_pengaduan');
       }
 
       public function cek_up()
