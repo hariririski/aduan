@@ -39,25 +39,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
        public function cek()
       {
-        // $no_telepon=0;
-        // $no_telepon=$this->uri->segment(3);
-        // if(isset($no_telepon)){
-        //     $this->load->view('hp/info');
-        // }else{
-        //   $this->load->view('hp/cek_aduan');
-        // }
-        //if(empty($this->uri->segment(3))){
-        //  $no_telepon = $this->input->get('no_telepon');
-        //  $this->load->view('hp/cek_aduan');
-      //  }
-        //else{
-        //   $no_telepon = $this->uri->segment(3);
-        //   $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
-        //   $this->load->view('hp/cek_aduan',$data);
-        // }
-
+  
         $this->load->view('hp/cek_aduan');
       }
+
+      public function cek_up()
+     {
+       // $no_telepon=0;
+       // $no_telepon=$this->uri->segment(3);
+       // if(isset($no_telepon)){
+       //     $this->load->view('hp/info');
+       // }else{
+       //   $this->load->view('hp/cek_aduan');
+       // }
+       //if(empty($this->uri->segment(3))){
+       //  $no_telepon = $this->input->get('no_telepon');
+       //  $this->load->view('hp/cek_aduan');
+     //  }
+       //else{
+       //   $no_telepon = $this->uri->segment(3);
+       //   $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
+       //   $this->load->view('hp/cek_aduan',$data);
+       // }
+
+       $this->load->view('hp/cek_aduan');
+     }
 
 
        public function login()
