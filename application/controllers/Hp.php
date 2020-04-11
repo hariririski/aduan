@@ -42,8 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $no_telepon=0;
         $no_telepon=$this->uri->segment(3);
         if(isset($no_telepon)){
-            $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
-            $this->load->view('hp/cek_aduan',$data);
+            $this->load->view('hp/info');
         }else{
           $this->load->view('hp/cek_aduan');
         }
