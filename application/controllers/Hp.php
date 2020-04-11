@@ -43,8 +43,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->load->view('hp/cek_pengaduan');
       }
 
-      public function cek_up()
+      public function cek_pengecekan()
      {
+       echo $no_telepon = $this->input->get('no_telepon');
        // $no_telepon=0;
        // $no_telepon=$this->uri->segment(3);
        // if(isset($no_telepon)){
