@@ -58,7 +58,7 @@
         <?php
         //foreach($data_pengaduan as $detail){
         ?>
-        <a href="<?php echo site_url(); ?>hp/detail/<?php echo $detail->id_pengaduan;?>">
+        <a href="<?php echo site_url(); ?>hp/detail/<?php //echo $detail->id_pengaduan;?>">
         <div data-height="175" class="caption caption-margins round-medium shadow-large">
           <div class="caption-center right-20">
             <?php //if($detail->status==0){
