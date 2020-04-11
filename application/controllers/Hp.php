@@ -39,11 +39,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
        public function cek()
       {
-         $no_telepon;
-        if(empty($this->uri->segment(3))){
-          $no_telepon = $this->input->get('no_telepon');
-          $this->load->view('hp/cek_aduan');
-        }
+        $no_telepon;
+        echo  $this->uri->segment(3);
+        //if(empty($this->uri->segment(3))){
+        //  $no_telepon = $this->input->get('no_telepon');
+        //  $this->load->view('hp/cek_aduan');
+      //  }
         //else{
         //   $no_telepon = $this->uri->segment(3);
         //   $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
