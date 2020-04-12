@@ -83,23 +83,23 @@
                                               <div class="row">
                                                   <div class="col-sm-6">
                                                       <label style="padding: 10px;">NIK <i class="fal fa-user" style="top: 50px;"></i></label>
-                                                      <input type="text" name="nik" placeholder="NIK" value="">
+                                                      <input required type="text" name="nik" placeholder="NIK" value="">
                                                   </div>
                                                   <div class="col-sm-6">
                                                       <label style="padding: 10px;">Nama Lengkap  <i class="fal fa-user" style="top: 50px;"></i></label>
-                                                      <input type="text" name="nama_lengkap" placeholder="Nama Anda" value="">
+                                                      <input required type="text" name="nama_lengkap" placeholder="Nama Anda" value="">
                                                   </div>
                                                   <div class="col-sm-6">
                                                       <label style="padding: 10px;">Nomor HP  <i class="far fa-phone" style="top: 50px;"></i></label>
-                                                      <input type="text"  name="no_telepon" placeholder="0822 3788 3433" value="">
+                                                      <input required type="text"  name="no_telepon" placeholder="0822 3788 3433" value="">
                                                   </div>
                                                   <div class="col-sm-6">
                                                       <label style="padding: 10px;">Alamat<i class="far fa-envelope" style="top: 50px;"></i>  </label>
-                                                      <input type="text"  name="alamat" placeholder="Desa Setu, Kecamatan Baiturahman" value="">
+                                                      <input required type="text"  name="alamat" placeholder="Desa Setu, Kecamatan Baiturahman" value="">
                                                   </div>
                                                   <div class="col-sm-6">
                                                       <label style="padding: 10px;">Pekerjaan<i class="far fa-user" style="top: 50px;"></i>  </label>
-                                                      <input type="text" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="">
+                                                      <input required type="text" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="">
                                                   </div>
 
                                               </div>
@@ -115,7 +115,9 @@
                                                   <span><i class="fal fa-image"></i> <strong>Upload Bukti</strong></span>
                                                   <input type="file" class="upload">
                                               </div> -->
-                                              <button class="back-tofilters color2-bg custom-scroll-link fl-wrap" href="#dash_menu" style="z-index: auto; position: relative; top: 0px;">Kirim Pengaduan</button>
+                                            <p align="center">
+                                            <button type="submit" class="btn color2-bg "> Kirim Pengaduan <i class="fas fa-caret-right"></i></button>
+                                          </p>
                                            </form>
                                           </div>
                                         </div>
