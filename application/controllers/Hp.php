@@ -33,8 +33,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $jumlah_data=$data['0']->jumlah;
       		$config['base_url'] = base_url().'hp/info/';
       		$config['total_rows'] = $jumlah_data;
-      		$config['per_page'] = 5;
+      		$config['per_page'] = 6;
       		$from = $page;
+          $config['full_tag_open']   = '<div class="pagination">';
+          $config['full_tag_close']  = '</div>';
+
+          $config['first_link']      = '<i class="fa fa-angle-left"></i>';
+          $config['first_tag_open']  = '<a href="#">';
+          $config['first_tag_close'] = '</a>';
+
+          $config['last_link']       = '<i class="fa fa-angle-right">';
+          $config['last_tag_open']   = '<a href="#">';
+          $config['last_tag_close']  = '</a>';
+
+          $config['cur_tag_open']    = '<a href="#" class="bg-highlight color-white">';
+          $config['cur_tag_close']   = '</a>';
+
+
+
       		$this->pagination->initialize($config);
       		$data['user'] = $this->M_info->data($config['per_page'],$from);
        		$this->load->view('hp/info',$data);

@@ -39,7 +39,7 @@
 		?>
 
           <div class="one-half">
-            <div class="content-boxed content-boxed-full shadow-small">
+            <div class="content-boxed content-boxed-full shadow-small" style="height: 400px;">
               <a href="#" class="caption bottom-15" data-height="200">
                 <div class="caption-bottom left-10 bottom-10">
                   <h4 class="color-white"><?php echo $u->judul ?></h4>
@@ -48,9 +48,34 @@
                 <div class="caption-bg bg-10"></div>
               </a>
               <div class="content bottom-0">
-                <p>
-                  <?php echo $u->tanggal ?>
-                  <?php echo $u->artikel ?>
+                <p style="height: 100px;">
+                  <?php
+                  $bulan = array (
+                      1 => 'Januari',
+                      'Februari',
+                      'Maret',
+                      'April',
+                      'Mei',
+                      'Juni',
+                      'Juli',
+                      'Agustus',
+                      'September',
+                      'Oktober',
+                      'November',
+                      'Desember'
+                    );
+                    $pecahkan = explode('-', date('d F Y', strtotime($u->tanggal)));
+                    $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+                    ?><?php echo $tanggal;?>,
+                  <?php
+                    $str = $u->artikel;
+                    $arr = explode(" ", str_replace(",", ", ", $str));
+                    for ($index = 0; $index < 15; $index++) {
+                       echo $arr[$index]. " ";
+                    }
+
+                  ?>
+
                 </p>
                 <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">READ MORE</a>
               </div>
@@ -59,23 +84,16 @@
 
 	<?php } ?>
 
-	<?php
-	echo $this->pagination->create_links();
-	?>
-  <div class="pagination">
-<a href="#"><i class="fa fa-angle-left"></i></a>
-<a href="#" class="no-border">1</a>
-<a href="#" class="no-border">2</a>
-<a href="#" class="bg-highlight color-white">3</a>
-<a href="#" class="no-border">4</a>
-<a href="#" class="no-border">5</a>
-<a href="#"><i class="fa fa-angle-right"></i></a>
-</div>
+
+
 <div class="clear"></div>
-
-
-
+<div >
+  <?php
+  echo $this->pagination->create_links();
+  ?>
+</div>
     </div>
+
 
     <?php echo $this->load->view('hp/share/menu_bawah', '', TRUE);?>
 
