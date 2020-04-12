@@ -61,7 +61,7 @@
                                 <!-- list-single-facts end -->
                                 <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                   <div >
-                                		<table class=" data" id="customers">
+                                		<table id="example" class="display responsive nowrap" style="width:100%">
                                 			<thead>
                                 				<tr>
                                 					<th>No</th>
@@ -82,7 +82,7 @@
                                              <td><?php echo date('d F Y', strtotime($informasi->tanggal));  ?></td>
                                              <td><?php echo $informasi->judul; ?></td>
                                              <td><?php echo $informasi->nama_jenis_informasi; ?></td>
-                                             <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $informasi->id_pengaduan; ?>"><button type="button" class="logout_btn color2-bg">Detail</button></a></td>
+                                             <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $informasi->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
                                          </tr>
                                         <?php } ?>
                                 			</tbody>

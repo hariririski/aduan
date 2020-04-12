@@ -61,7 +61,7 @@
                                 <!-- list-single-facts end -->
                                 <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                   <div >
-                                		<table class=" data" id="customers">
+                                		<table id="example" class="display responsive nowrap" style="width:100%">
                                 			<thead>
                                 				<tr>
                                 					<th>No</th>
@@ -86,7 +86,7 @@
                                              <td><?php echo $pengaduan->nama_jenis_pengaduan; ?></td>
                                              <td><?php if($pengaduan->status==0){echo"Proses";}else{echo"Selesai";} ?></td>
                                              <td><?php echo $pengaduan->media_lapor; ?></td>
-                                             <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="logout_btn color2-bg">Detail</button></a></td>
+                                             <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
                                          </tr>
                                         <?php } ?>
 
