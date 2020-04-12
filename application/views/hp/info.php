@@ -18,10 +18,10 @@
       <div class="loader-main"><div class="preload-spinner border-highlight"></div></div>
     </div>
     <div class="header header-fixed header-logo-app header-auto-show">
-      <a href="index.html" class="header-subtitle">Back to Media</a>
+      <a href="i<?php echo site_url(); ?>assets/hp" class="header-subtitle">Kembali</a>
       <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
       <a href="#" data-toggle-theme class="header-icon header-icon-2"><i class="fas fa-lightbulb"></i></a>
-      <a href="settings.html" class="header-icon header-icon-3"><i class="fas fa-cog"></i></a>
+      
     </div>
     <div class="page-content">
       <div data-height="150" class="page-title-bg bg-20"></div>
@@ -45,7 +45,7 @@
                   <h4 class="color-white"><?php echo $u->judul ?></h4>
                 </div>
                 <div class="caption-overlay bg-gradient"></div>
-                <div class="caption-bg bg-10"></div>
+                <div class="caption-bg " style="background-image: url(<?php echo site_url(); ?>upload/artikel/<?php echo $u->foto ?>)"></div>
               </a>
               <div class="content bottom-0">
                 <p style="height: 100px;">
@@ -77,7 +77,7 @@
                   ?>
 
                 </p>
-                <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">READ MORE</a>
+                <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">Selengkapnya</a>
               </div>
             </div>
           </div>

@@ -66,6 +66,8 @@ $route['logout'] = 'Login/logout';
 $route['hp'] = 'Hp/home';
 $route['cek'] = 'Hp/cek_pengaduan';
 $route['pengecekan'] = 'Hp/cek_pengecekan';
+$route['pengecekan_url'] = 'Hp/cek_pengecekan_url';
+$route['pengaduan_hp'] = 'Lapor_hp/tambah_hp';
 
 
 

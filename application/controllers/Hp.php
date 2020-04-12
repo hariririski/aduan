@@ -81,6 +81,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
        $this->load->view('hp/cek_pengecekan',$data);
      }
+      public function cek_pengecekan_url()
+     {
+       $no_telepon =$no_telepon = $this->input->get('no_telepon');
+       $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
+
+       $this->load->view('hp/cek_pengecekan',$data);
+     }
 
 
        public function login_hp()

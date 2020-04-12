@@ -193,7 +193,7 @@
                                                <td><?php echo $pengaduan->nama; ?></td>
                                                <td><?php echo $pengaduan->nama_jenis_pengaduan; ?></td>
 
-                                               <td><?php echo $pengaduan->media_lapor; ?></td>
+                                               <td><?php echo $pengaduan->nama_media_pelaporan; ?></td>
                                                <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
                                            </tr>
                                           <?php } ?>

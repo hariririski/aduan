@@ -18,10 +18,10 @@
       <div class="loader-main"><div class="preload-spinner border-highlight"></div></div>
     </div>
     <div class="header header-fixed header-logo-app header-auto-show">
-      <a href="<?php echo site_url(); ?>hp" class="header-subtitle">Back to Components</a>
+      <a href="<?php echo site_url(); ?>hp" class="header-subtitle">Kembali</a>
       <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
       <a href="#" data-toggle-theme class="header-icon header-icon-2"><i class="fas fa-lightbulb"></i></a>
-      <a href="settings.html" class="header-icon header-icon-3"><i class="fas fa-cog"></i></a>
+
     </div>
     <div class="page-content">
       <div data-height="150" class="page-title-bg bg-20"></div>
@@ -36,7 +36,7 @@
         <div class="content">
           <h3 class="bolder">Formulir Pengaduan</h3>
           <br>
-          <form  action="<?php echo site_url(); ?>Lapor_hp/tambah_hp" method="post" enctype="multipart/form-data">
+          <form  action="<?php echo site_url(); ?>pengaduan_hp" method="post" enctype="multipart/form-data">
           <div class="input-style  input-style-1 input-required">
             <span>Nomor Handphone</span>
             <em>(Wajib di isi)</em>
@@ -60,19 +60,19 @@
           <div class="input-style input-style-1 input-required">
             <span>Uraian Pengaduan</span>
             <em>(Wajib di isi)</em>
-            <textarea  required name="uraian" placeholder="Uraian Pengaduan"></textarea>
+            <textarea  required name="uraian_pengaduan" placeholder="Uraian Pengaduan"></textarea>
           </div>
           <h6 >Foto KTP</h6>
           <div class="input-style input-style-1 input-required">
             <span>KTP</span>
             <em>(Wajib di isi)</em>
-            <input required type="file" name="pekerjaan" placeholder="Pekerjaan">
+            <input required type="file" accept="image/*" name="ktp" placeholder="Pekerjaan">
           </div>
           <h6 >Foto Bukti</h6>
           <div class="input-style input-style-1 input-required">
             <span>Bukti</span>
             <em>(Jika Ada)</em>
-            <input type="file" name="pekerjaan" placeholder="Pekerjaan" required />
+            <input type="file" accept="image/*" name="bukti1" placeholder="Pekerjaan" required />
 
           </div>
           <p align="center">
@@ -84,7 +84,7 @@
       </div>
 
 
-  
+
 
 
     <?php echo $this->load->view('hp/share/menu_bawah', '', TRUE);?>

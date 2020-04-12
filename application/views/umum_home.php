@@ -97,9 +97,14 @@
                                               </div>
                                               <label style="padding: 10px;"> Uraian Pengaduan</label>
                                               <textarea cols="40" rows="3" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"></textarea>
+                                              <label style="padding: 10px;">KTP</label>
+                                              <div class="photoUpload">
+                                                  <span><i class="fal fa-image"></i> <strong>KTP</strong></span>
+                                                  <input type="file" class="upload">
+                                              </div>
                                               <label style="padding: 10px;">Upload Bukti (Bila Ada)</label>
                                               <div class="photoUpload">
-                                                  <span><i class="fal fa-image"></i> <strong>Tambah Bukti</strong></span>
+                                                  <span><i class="fal fa-image"></i> <strong>Upload Bukti</strong></span>
                                                   <input type="file" class="upload">
                                               </div>
                                               <button class="back-tofilters color2-bg custom-scroll-link fl-wrap" href="#dash_menu" style="z-index: auto; position: relative; top: 0px;">Kirim Pengaduan</button>
@@ -128,9 +133,9 @@
                         <div class="container big-container">
                             <div class="section-title">
                                 <h2><span>Informasi Pertanahan</span></h2>
-                                <div class="section-subtitle">Best Listings</div>
+                                <div class="section-subtitle">Info</div>
                                 <span class="section-separator"></span>
-                                <p>Proin dapibus nisl ornare diam varius tempus. Aenean a quam luctus, finibus tellus ut, convallis eros sollicitudin turpis.</p>
+
                             </div>
                             <div class="listing-filters gallery-filters fl-wrap">
                               <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*">All Categories</a>
@@ -155,7 +160,7 @@
                                             <div class="geodir-category-img">
 
                                                 <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                                <img src="<?php echo site_url(); ?>assets/umum/images/all/1.jpg" alt="">
+                                                <img src="<?php echo site_url(); ?>upload/artikel/<?php echo $informasi->foto; ?>" alt="">
                                                 </a>
                                             </div>
                                             <div class="geodir-category-content fl-wrap title-sin_item">

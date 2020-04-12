@@ -39,7 +39,7 @@
       function add(){
           $nama_lengkap = $this->input->post('nama_lengkap');
           $alamat = $this->input->post('alamat');
-          $email = $this->input->post('email');
+          $email = "-";
           $pekerjaan = $this->input->post('pekerjaan');
           $no_telepon = $this->input->post('no_telepon');
           $uraian_pengaduan = $this->input->post('uraian_pengaduan');
@@ -53,42 +53,35 @@
           $file_bukti1=$this->random_name(20);
           $bukti1=$this->upload_bukti1($file_bukti1);
 
+          $perintah0="INSERT INTO `pelapor`(`nama`, `alamat`, `email`, `pekerjaan`, `no_telepon`, `id_pelapor`)VALUES ('$nama_lengkap','$alamat','$email','$pekerjaan','$no_telepon','$id_pelapor')";
+          $query=$this->db->query($perintah0);
 
-          $data = array(
-              'nama'=>$nama_lengkap,
-              'id_pelapor'=>$id_pelapor,
-              'alamat'=>$alamat,
-              'email'=>$email,
-              'pekerjaan'=>$pekerjaan,
-              'no_telepon'=>$no_telepon
-            );
-            $cek=$this->db->insert('pelapor',$data);
             $nomor=0;
             $date=date("Y");
-            $query=$this->db->query("SELECT COUNT(*) as nomor FROM data_pengaduan WHERE year(tanggal_pengaduan)='$date'");
-            $query->result();
-             foreach($query->result() as $a){
+            $perintah3="SELECT COUNT(*) as nomor FROM data_pengaduan WHERE year(tanggal_pengaduan)='$date'";
+            $query3=$this->db->query($perintah3);
+            $query3->result();
+             foreach($query3->result() as $a){
               $nomor=$a->nomor;
              }
              $nomor++;
-          $data = array(
-              'uraian'=>$uraian_pengaduan,
-              'nomor'=>$nomor."/".date("Y"),
-              'id_pengaduan'=>$id_pelapor.$nomor,
-              'id_pelapor'=>$id_pelapor,
-              'tanggal_pengaduan'=>$tanggal,
-              'jenis_pengaduan'=>$jenis_pengaduan,
-              'penerima'=>"Belum Diterima",
-              'ktp'=>$ktp,
-              'bukti1'=>$bukti1,
-            );
-          print_r($data);
-          $cek=$this->db->insert('data_pengaduan',$data);
-          return $no_telepon;
+             $new_nomor=$nomor."/".date("Y");
+
+          $media=2;
+
+          $perintah1="INSERT INTO `data_pengaduan`(`id_pelapor`, `id_pengaduan`, `nomor`, `uraian`, `ktp`, `bukti1`, `id_media_pelaporan`, `penerima`,`tanggal_pengaduan`)
+                      VALUES ('$id_pelapor','$id_pelapor.$nomor','$new_nomor','$uraian_pengaduan','$ktp','$bukti1','$media','Belum Diterima','$tanggal')";
+          $query1=$this->db->query($perintah1);
+
+           if($query==true&&$query1==true){
+             return $no_telepon;
+           }else{
+             return 0;
+           }
       }
 
       function upload_ktp($name){
-          $config['upload_path']          = './assets/upload/';
+          $config['upload_path']          = './upload/pengaduan/';
           $config['allowed_types']        = 'gif|jpg|png';
           $config['file_name']            = $name;
           $config['overwrite']		      	= false;
@@ -106,7 +99,7 @@
         }
 
       function upload_bukti1($bukti1){
-          $config['upload_path']          = './assets/upload/';
+          $config['upload_path']          = './upload/pengaduan/';
           $config['allowed_types']        = 'gif|jpg|png';
           $config['file_name']            = $bukti1;
           $config['overwrite']		      	= true;
@@ -124,7 +117,7 @@
         }
 
         function upload_bukti2($name){
-            $config['upload_path']          = './assets/upload/';
+            $config['upload_path']          = './upload/pengaduan/';
             $config['allowed_types']        = 'gif|jpg|png';
             $config['file_name']            = $name;
             $config['overwrite']		      	= true;
