@@ -72,7 +72,7 @@
           <div class="input-style input-style-1 input-required">
             <span>Bukti</span>
             <em>(Jika Ada)</em>
-            <input type="file" accept="image/*" name="bukti1" placeholder="Pekerjaan" required />
+            <input type="file" accept="image/*" name="bukti1" placeholder="Pekerjaan" >
 
           </div>
           <p align="center">

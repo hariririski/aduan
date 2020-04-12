@@ -48,7 +48,7 @@
           $nomor=0;
           $id_pelapor = mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
           $file_ktp=$this->random_name(20);
-          $ktp=$this->upload_ktp($file_ktp);
+          $ktp=$this->uploadImage($file_ktp);
 
           $file_bukti1=$this->random_name(20);
           $bukti1=$this->upload_bukti1($file_bukti1);
@@ -65,7 +65,7 @@
               $nomor=$a->nomor;
              }
              $nomor++;
-             $new_nomor=$nomor."/".date("Y");
+            $new_nomor=$nomor."/".date("Y");
 
           $media=2;
 
@@ -80,14 +80,60 @@
            }
       }
 
+      public function uploadImage($name) {
+
+      $config['upload_path']   = './upload/pengaduan/';
+      $config['allowed_types'] = 'gif|jpg|png';
+      //$config['max_size']      = 1024;
+      $config['file_name']     = $name;
+      $this->load->library('upload', $config);
+
+      if ( ! $this->upload->do_upload('ktp')) {
+         $error = array('error' => $this->upload->display_errors());
+         $this->resizeImage($uploadedImage['file_name']);
+      }else {
+
+        $uploadedImage = $this->upload->data();
+        $this->resizeImage($uploadedImage['file_name']);
+        print_r('Image Uploaded Successfully.');
+        exit;
+      }
+   }
+
+   public function resizeImage($filename)
+   {
+     echo $filename;
+      $source_path = $_SERVER['DOCUMENT_ROOT'] . '/upload/pengaduan/' . $filename;
+      $target_path = $_SERVER['DOCUMENT_ROOT'] . '/upload/pengaduan/';
+      $config_manip = array(
+          'image_library' => 'gd2',
+          'source_image' => $source_path,
+          'new_image' => $target_path,
+          'maintain_ratio' => TRUE,
+          'width' => 500,
+      );
+
+      $this->load->library('image_lib', $config_manip);
+      if (!$this->image_lib->resize()) {
+          echo $this->image_lib->display_errors();
+      }
+
+      $this->image_lib->clear();
+   }
+
+
+
+
+
+
+
+
       function upload_ktp($name){
           $config['upload_path']          = './upload/pengaduan/';
           $config['allowed_types']        = 'gif|jpg|png';
           $config['file_name']            = $name;
           $config['overwrite']		      	= false;
           $config['max_size']             = 10024; // 1MB
-          // $config['max_width']            = 1024;
-          // $config['max_height']           = 768;
 
           $this->load->library('upload', $config);
 

@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			 $this->load->database();
          $this->load->model('M_lapor_hp');
          $this->load->model('M_info');
-
+         
   		}
 
          public function home()
