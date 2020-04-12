@@ -48,6 +48,11 @@
             <input required type="text" name="nama_lengkap" placeholder="Nama Lengkap">
           </div>
           <div class="input-style input-style-1 input-required">
+            <span>NIK (Nomor Induk Kependudukan)</span>
+            <em>(Wajib di isi)</em>
+            <input required type="number" name="nik" placeholder="NIK">
+          </div>
+          <div class="input-style input-style-1 input-required">
             <span>ALamat </span>
             <em>(Wajib di isi)</em>
             <input required type="text" name="alamat" placeholder="Alamat">
@@ -62,7 +67,7 @@
             <em>(Wajib di isi)</em>
             <textarea  required name="uraian_pengaduan" placeholder="Uraian Pengaduan"></textarea>
           </div>
-          <h6 >Foto KTP</h6>
+          <!-- <h6 >Foto KTP</h6>
           <div class="input-style input-style-1 input-required">
             <span>KTP</span>
             <em>(Wajib di isi)</em>
@@ -74,7 +79,7 @@
             <em>(Jika Ada)</em>
             <input type="file" accept="image/*" name="bukti1" placeholder="Pekerjaan" >
 
-          </div>
+          </div> -->
           <p align="center">
             <button  style="padding: 15px 100px!important;" class="button button-full button-m shadow-large button-round-small bg-green1-dark top-30 bottom-0">Kirim</button>
           </p>

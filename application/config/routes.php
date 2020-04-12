@@ -68,6 +68,9 @@ $route['cek'] = 'Hp/cek_pengaduan';
 $route['pengecekan'] = 'Hp/cek_pengecekan';
 $route['pengecekan_url'] = 'Hp/cek_pengecekan_url';
 $route['pengaduan_hp'] = 'Lapor_hp/tambah_hp';
+$route['pengaduan'] = 'Lapor_hp/tambah_dekstop';
+$route['umum_cek'] = 'Umum_Home/umum_cek';
+$route['umum_cek_awal'] = 'Umum_Home/umum_cek';
 
 
 

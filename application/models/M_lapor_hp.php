@@ -43,15 +43,15 @@
           $pekerjaan = $this->input->post('pekerjaan');
           $no_telepon = $this->input->post('no_telepon');
           $uraian_pengaduan = $this->input->post('uraian_pengaduan');
-          $jenis_pengaduan = $this->input->post('jenis_pengaduan');
+          $nik = $this->input->post('nik');
           $tanggal = date("Y-m-d");
           $nomor=0;
           $id_pelapor = mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
-          $file_ktp=$this->random_name(20);
-          $ktp=$this->uploadImage($file_ktp);
+          //$file_ktp=$this->random_name(20);
+          //$ktp=$this->uploadImage($file_ktp);
 
-          $file_bukti1=$this->random_name(20);
-          $bukti1=$this->upload_bukti1($file_bukti1);
+          //$file_bukti1=$this->random_name(20);
+          //$bukti1=$this->upload_bukti1($file_bukti1);
 
           $perintah0="INSERT INTO `pelapor`(`nama`, `alamat`, `email`, `pekerjaan`, `no_telepon`, `id_pelapor`)VALUES ('$nama_lengkap','$alamat','$email','$pekerjaan','$no_telepon','$id_pelapor')";
           $query=$this->db->query($perintah0);
@@ -69,8 +69,8 @@
 
           $media=2;
 
-          $perintah1="INSERT INTO `data_pengaduan`(`id_pelapor`, `id_pengaduan`, `nomor`, `uraian`, `ktp`, `bukti1`, `id_media_pelaporan`, `penerima`,`tanggal_pengaduan`)
-                      VALUES ('$id_pelapor','$id_pelapor.$nomor','$new_nomor','$uraian_pengaduan','$ktp','$bukti1','$media','Belum Diterima','$tanggal')";
+          $perintah1="INSERT INTO `data_pengaduan`(`id_pelapor`, `id_pengaduan`, `nomor`, `uraian`, `id_media_pelaporan`, `penerima`,`tanggal_pengaduan`,`nik`)
+                      VALUES ('$id_pelapor','$id_pelapor.$nomor','$new_nomor','$uraian_pengaduan','$media','Belum Diterima','$tanggal','$nik')";
           $query1=$this->db->query($perintah1);
 
            if($query==true&&$query1==true){

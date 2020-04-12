@@ -49,13 +49,7 @@
                     <!--second level end-->
                 </li>
                 <li>
-                    <a href="#">Pengaduan <i class="fa fa-caret-down"></i></a>
-                    <!--second level -->
-                    <ul>
-                        <li><a href="listing.html">Data Pengaduan</a></li>
-                        <li><a href="listing2.html">Laporan Pengaduan</a></li>
-                    </ul>
-                    <!--second level end-->
+                    <a href="<?php echo site_url(); ?>umum_cek" >Pantau Pengaduan</a>
                 </li>
                 <li>
                     <a href="<?php echo site_url(); ?>tentang" >Tentang</a>
