@@ -31,76 +31,48 @@
         <h1><i class="fa fa-arrow-left back-button"></i>Informasi Pertanahan</h1>
         <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
       </div>
-      <div class="one-half">
-        <div class="content-boxed content-boxed-full shadow-small">
-          <a href="#" class="caption bottom-15" data-height="200">
-            <div class="caption-bottom left-10 bottom-10">
-              <h4 class="color-white">Project Title 1</h4>
+
+
+		<?php
+		$no = $this->uri->segment('3') + 1;
+		foreach($user as $u){
+		?>
+
+          <div class="one-half">
+            <div class="content-boxed content-boxed-full shadow-small">
+              <a href="#" class="caption bottom-15" data-height="200">
+                <div class="caption-bottom left-10 bottom-10">
+                  <h4 class="color-white"><?php echo $u->judul ?></h4>
+                </div>
+                <div class="caption-overlay bg-gradient"></div>
+                <div class="caption-bg bg-10"></div>
+              </a>
+              <div class="content bottom-0">
+                <p>
+                  <?php echo $u->tanggal ?>
+                  <?php echo $u->artikel ?>
+                </p>
+                <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">READ MORE</a>
+              </div>
             </div>
-            <div class="caption-overlay bg-gradient"></div>
-            <div class="caption-bg bg-10"></div>
-          </a>
-          <div class="content bottom-0">
-            <p>
-              A small description about your project goes here. Then, you can access the portfolio project to see it in detail.
-            </p>
-            <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">READ MORE</a>
           </div>
-        </div>
-      </div>
-      <div class="one-half last-column">
-        <div class="content-boxed content-boxed-full shadow-small">
-          <a href="#" class="caption bottom-15" data-height="200">
-            <div class="caption-bottom left-10 bottom-10">
-              <h4 class="color-white">Project Title 2</h4>
-            </div>
-            <div class="caption-overlay bg-gradient"></div>
-            <div class="caption-bg bg-10"></div>
-          </a>
-          <div class="content bottom-0">
-            <p>
-              A small description about your project goes here. Then, you can access the portfolio project to see it in detail.
-            </p>
-            <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">READ MORE</a>
-          </div>
-        </div>
-      </div>
-      <div class="clear"></div>
-      <div class="one-half">
-        <div class="content-boxed content-boxed-full shadow-small">
-          <a href="#" class="caption bottom-15" data-height="200">
-            <div class="caption-bottom left-10 bottom-10">
-              <h4 class="color-white">Project Title 3</h4>
-            </div>
-            <div class="caption-overlay bg-gradient"></div>
-            <div class="caption-bg bg-10"></div>
-          </a>
-          <div class="content bottom-0">
-            <p>
-              A small description about your project goes here. Then, you can access the portfolio project to see it in detail.
-            </p>
-            <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">READ MORE</a>
-          </div>
-        </div>
-      </div>
-      <div class="one-half last-column">
-        <div class="content-boxed content-boxed-full shadow-small">
-          <a href="#" class="caption bottom-15" data-height="200">
-            <div class="caption-bottom left-10 bottom-10">
-              <h4 class="color-white">Project Title 4</h4>
-            </div>
-            <div class="caption-overlay bg-gradient"></div>
-            <div class="caption-bg bg-10"></div>
-          </a>
-          <div class="content bottom-0">
-            <p>
-              A small description about your project goes here. Then, you can access the portfolio project to see it in detail.
-            </p>
-            <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">READ MORE</a>
-          </div>
-        </div>
-      </div>
-      <div class="clear"></div>
+
+	<?php } ?>
+
+	<?php
+	echo $this->pagination->create_links();
+	?>
+  <div class="pagination">
+<a href="#"><i class="fa fa-angle-left"></i></a>
+<a href="#" class="no-border">1</a>
+<a href="#" class="no-border">2</a>
+<a href="#" class="bg-highlight color-white">3</a>
+<a href="#" class="no-border">4</a>
+<a href="#" class="no-border">5</a>
+<a href="#"><i class="fa fa-angle-right"></i></a>
+</div>
+<div class="clear"></div>
+
 
 
     </div>

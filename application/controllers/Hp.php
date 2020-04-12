@@ -8,7 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			 $this->load->library('session');
   			 $this->load->database();
          $this->load->model('M_lapor_hp');
-         //$this->load->model('M_lapor');
+         $this->load->model('M_info');
+
   		}
 
          public function home()
@@ -21,8 +22,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        	}
          public function info()
        	{
-
-       		$this->load->view('hp/info');
+          $data1=$this->uri->segment(3);
+          if (!isset($data1)){
+            $page=0;
+          }else {
+            $page=$this->uri->segment(3);
+          }
+          $this->load->library('pagination');
+      		$data = $this->M_info->jumlah_data();
+          $jumlah_data=$data['0']->jumlah;
+      		$config['base_url'] = base_url().'hp/info/';
+      		$config['total_rows'] = $jumlah_data;
+      		$config['per_page'] = 5;
+      		$from = $page;
+      		$this->pagination->initialize($config);
+      		$data['user'] = $this->M_info->data($config['per_page'],$from);
+       		$this->load->view('hp/info',$data);
        	}
          public function lapor()
        	{
