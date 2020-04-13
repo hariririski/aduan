@@ -29,13 +29,7 @@
           <h1><i class="fa fa-arrow-left back-button"></i>Progress Pengaduan</h1>
           <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
         </div>
-        <div class="content-boxed shadow-large">
-          <div class="content bottom-0">
-            <p class="bottom-20">
-              Anda Dapat Memantau Progress Pengaduan Anda
-            </p>
-          </div>
-        </div>
+        
 
         <?php
         foreach($data_pengaduan as $detail){

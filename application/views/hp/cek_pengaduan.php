@@ -22,7 +22,7 @@
       <a href="#" data-toggle-theme class="header-icon header-icon-2"><i class="fas fa-lightbulb"></i></a>
       <a href="settings.html" class="header-icon header-icon-3"><i class="fas fa-cog"></i></a>
     </div>
-    <div class="page-content">
+    <div class="page-content" style="padding-bottom: 0px;">
       <div data-height="150" class="page-title-bg bg-20"></div>
       <div data-height="150" class="page-title-bg dark-mode-tint"></div>
       <div data-height="150" class="page-title-bg opacity-90 bg-highlight"></div>
@@ -50,6 +50,7 @@
 
         </div>
         <div class="caption-overlay bg-theme opacity-90"></div>
+        a
         <div class="caption-bg bg-28"></div>
       </div>
 

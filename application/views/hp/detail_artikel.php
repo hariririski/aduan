@@ -32,7 +32,7 @@
       <div data-height="150" class="page-title-bg opacity-90 bg-highlight"></div>
       <div class="page-title-small color-white bottom-30">
         <h1><i class="fa fa-arrow-left back-button"></i>Artikel</h1>
-        <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
+        
       </div>
       <div class="content-boxed content-boxed-full">
         <div data-height="350" class="caption shadow-large bottom-0">
@@ -91,7 +91,7 @@
 
     <?php echo $this->load->view('hp/share/menu_bawah', '', TRUE);?>
 
-    <?php echo $this->load->view('hp/share/menu_samping', '', TRUE);?>
+
 
     <?php echo $this->load->view('hp/share/menu_atas', '', TRUE);?>
 
