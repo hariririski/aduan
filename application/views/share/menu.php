@@ -49,7 +49,7 @@
                     <!--second level end-->
                 </li>
                 <li>
-                    <a href="<?php echo site_url(); ?>umum_cek" >Pantau Pengaduan</a>
+                    <a href="<?php echo site_url(); ?>umum_cek_awal" >Pantau Pengaduan</a>
                 </li>
                 <li>
                     <a href="<?php echo site_url(); ?>tentang" >Tentang</a>

@@ -36,16 +36,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
          public function umum_cek()
        	{
-          $no_telepon =$no_telepon = $this->input->get('no_telepon');
-          $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
+          $id = $this->input->get('id');
+          $data['data_pengaduan'] = $this->M_lapor_hp->detail_pengaduan($id);
        		$this->load->view('umum_cek',$data);
        	}
-        //  public function umum_cek_awal()
-       	// {
-        //   $no_telepon =$no_telepon = $this->input->get('no_telepon');
-        //   $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
-       	// 	$this->load->view('umum_cek',$data);
-       	// }
+         public function umum_cek_awal()
+       	{
+          $no_telepon = $this->input->get('no_telepon');
+          $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
+       		$this->load->view('umum_cek_awal',$data);
+       	}
 
         public function cek()
        {

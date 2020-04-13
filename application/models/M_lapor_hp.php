@@ -75,7 +75,7 @@
           $query1=$this->db->query($perintah1);
 
            if($query==true&&$query1==true){
-             return $no_telepon;
+             return ($id_pelapor.$nomor);
            }else{
              return 0;
            }

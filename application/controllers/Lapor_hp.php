@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function tambah_dekstop(){
             $cek= $this->M_lapor_hp->add();
             if($cek>0){
-              redirect("umum_cek?no_telepon=".$cek."");
+              redirect("umum_cek?id=".$cek."");
             }else{
             echo"alert(Maaf, Gagal Menambahkan Pengaduan)";
             redirect('beranda');

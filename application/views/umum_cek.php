@@ -79,7 +79,7 @@
                   <div id="tab-inpt1" class="tab-content first-tab">
                     <div class="profile-edit-container fl-wrap block_box">
                       <div class="custom-form" style="padding: 20px;">
-                        <form action="<?php echo site_url(); ?>pengaduan" method="post" enctype="multipart/form-data">
+                        <form action="<?php echo site_url(); ?>umum_cek_awal" method="get" enctype="multipart/form-data">
                           <div class="row">
                             <div class="col-sm-12">
                               <label style="padding: 10px;">Nomor Handphone <i class="fal fa-user" style="top: 50px;"></i></label>
@@ -109,81 +109,91 @@
           <div class="sec-circle fl-wrap"></div>
 
           <div class="list-single-main-item fl-wrap block_box">
-            <div class="list-single-main-item-title">
-              <h3>Proses Pengaduan<span>  </span></h3>
-            </div>
+
 
             <?php
               foreach($data_pengaduan as $data_pengaduan){
             ?>
             <div class="list-single-main-item_content fl-wrap">
-              <div class="reviews-comments-wrap">
+              <div class="reviews-comments-wrap" style="width: 100%;">
                 <!-- reviews-comments-item -->
-                <div class="reviews-comments-item only-comments">
-                  <div class="review-comments-avatar">
-                    <img src="<?php echo site_url(); ?>assets/umum/images/avatar/4s.png" alt="">
+              <div class="list-single-main-item fl-wrap block_box">
+                  <div class="list-single-main-item-title">
+                    <h3>Pengaduan<span>  </span></h3>
                   </div>
-                  <div class="reviews-comments-item-text fl-wrap">
-                    <div class="reviews-comments-header fl-wrap">
-                      <h4><a href="#"><?php echo $data_pengaduan->nama; ?></a></h4>
-                    </div>
-                    <p><?php echo $data_pengaduan->uraian; ?></p>
-                    <div class="reviews-comments-item-footer fl-wrap">
-                      <div class="reviews-comments-item-date"><span>
-                        <i class="far fa-calendar-check">
-                        </i>
-                        <?php
-                        $bulan = array (
-                            1 => 'Januari',
-                            'Februari',
-                            'Maret',
-                            'April',
-                            'Mei',
-                            'Juni',
-                            'Juli',
-                            'Agustus',
-                            'September',
-                            'Oktober',
-                            'November',
-                            'Desember'
-                          );
-                          $pecahkan = explode('-',  $data_pengaduan->tanggal_pengaduan);
-                          $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
-                        ?>
-                      <?php echo $tanggal;?>
-                      </span>
-                    </div>
+                  <div class="list-single-main-item_content fl-wrap">
+                    <div class="reviews-comments-wrap" style="width: 100%;">
+                      <!-- reviews-comments-item -->
+                      <div class="reviews-comments-item only-comments">
+                        <div class="review-comments-avatar">
+                          <img src="<?php echo site_url(); ?>assets/umum/images/avatar/4s.png" alt="">
+                        </div>
+                        <div class="reviews-comments-item-text fl-wrap">
+                          <div class="reviews-comments-header fl-wrap">
+                            <h4><a href="#"><?php echo $data_pengaduan->nama; ?></a></h4>
+                          </div>
+                          <p>" <?php echo $data_pengaduan->uraian; ?>"</p>
+                          <div class="reviews-comments-item-footer fl-wrap">
+                            <div class="reviews-comments-item-date"><span>
+                              <h4>
+                              <a href="#">
+                                <?php
+                                $bulan = array (
+                                    1 => 'Januari',
+                                    'Februari',
+                                    'Maret',
+                                    'April',
+                                    'Mei',
+                                    'Juni',
+                                    'Juli',
+                                    'Agustus',
+                                    'September',
+                                    'Oktober',
+                                    'November',
+                                    'Desember'
+                                  );
+                                  $pecahkan = explode('-',  $data_pengaduan->tanggal_pengaduan);
+                                  $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+                                ?>
+                              <?php echo $tanggal;?></span></div>
 
+                          </div>
+                        </div>
+                      </div>
+                      <!--reviews-comments-item end-->
+                      <!-- reviews-comments-item -->
+                      <div class="reviews-comments-item only-comments">
+                        <div class="review-comments-avatar">
+                          <img src="<?php echo site_url(); ?>assets/umum/images/avatar/kantah.png" alt="">
+                        </div>
+                        <div class="reviews-comments-item-text fl-wrap">
+                          <div class="reviews-comments-header fl-wrap">
+                            <h4><a href="#">Kantor Pertanahan Kota Banda Aceh</a></h4>
+                          </div>
+                          <p>"
+                            <?php if($detail->status==0){
+                              ?>
+                              Sedang Dalam Proses Penyelesaian
+                              <?php
+                            }else{
+                              ?>
+                              <?php echo $detail->tindak_lanjut;?>
+                              <?php
+                            }
+                            ?>
+                          "</p>
+                          <div class="reviews-comments-item-footer fl-wrap">
+                            <div class="reviews-comments-item-date">
+                              
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!--reviews-comments-item end-->
                     </div>
                   </div>
                 </div>
-                <!--reviews-comments-item end-->
-                <!-- reviews-comments-item -->
-                <div class="reviews-comments-item only-comments">
-                  <div class="review-comments-avatar">
-                    <img src="<?php echo site_url(); ?>assets/umum/images/avatar/kantah.png" alt="">
-                  </div>
-                  <div class="reviews-comments-item-text fl-wrap">
-                    <div class="reviews-comments-header fl-wrap">
-                      <h4><a href="#">Kantor Pertanahan</a></h4>
-                    </div>
-                    <p>
-
-                      <?php if($data_pengaduan->status==0){
-                        ?>
-                        Sedang Dalam Proses Penyelesaian
-                        <?php
-                      }else{
-                        ?>
-                        <?php echo $data_pengaduan->tindak_lanjut;?>
-                        <?php
-                      }
-                      ?>
-                    </p>
-
-                  </div>
-                </div>
-                <!--reviews-comments-item end-->
               </div>
             </div>
             <?php

@@ -79,7 +79,7 @@
                   <div id="tab-inpt1" class="tab-content first-tab">
                     <div class="profile-edit-container fl-wrap block_box">
                       <div class="custom-form" style="padding: 20px;">
-                        <form action="<?php echo site_url(); ?>pengaduan" method="post" enctype="multipart/form-data">
+                        <form action="<?php echo site_url(); ?>umum_cek_awal" method="get" enctype="multipart/form-data">
                           <div class="row">
                             <div class="col-sm-12">
                               <label style="padding: 10px;">Nomor Handphone <i class="fal fa-user" style="top: 50px;"></i></label>
@@ -108,49 +108,75 @@
 
           <div class="sec-circle fl-wrap"></div>
 
-          <div class="list-single-main-item fl-wrap block_box">
-            <div class="list-single-main-item-title">
-              <h3>Proses Pengaduan<span>  </span></h3>
-            </div>
-            <div class="list-single-main-item_content fl-wrap">
-              <div class="reviews-comments-wrap">
-                <!-- reviews-comments-item -->
-                <div class="reviews-comments-item only-comments">
-                  <div class="review-comments-avatar">
-                    <img src="<?php echo site_url(); ?>assets/umum/images/avatar/4.jpg" alt="">
-                  </div>
-                  <div class="reviews-comments-item-text fl-wrap">
-                    <div class="reviews-comments-header fl-wrap">
-                      <h4><a href="#">Liza Rose</a></h4>
-                    </div>
-                    <p>" Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. "</p>
-                    <div class="reviews-comments-item-footer fl-wrap">
-                      <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>12 April 2018</span></div>
-                      <a href="#" class="reply-item">Reply</a>
-                    </div>
-                  </div>
+
+          <div class="list-single-main-item_content fl-wrap">
+            <div class="reviews-comments-wrap" style="width: 100%;">
+              <!-- reviews-comments-item -->
+            <div class="list-single-main-item fl-wrap block_box">
+                <div class="list-single-main-item-title">
+                  <h3>Pengaduan<span>  </span></h3>
                 </div>
-                <!--reviews-comments-item end-->
-                <!-- reviews-comments-item -->
-                <div class="reviews-comments-item only-comments">
-                  <div class="review-comments-avatar">
-                    <img src="<?php echo site_url(); ?>assets/umum/images/avatar/6.jpg" alt="">
-                  </div>
-                  <div class="reviews-comments-item-text fl-wrap">
-                    <div class="reviews-comments-header fl-wrap">
-                      <h4><a href="#">Adam Koncy</a></h4>
+
+
+                <div class="list-single-main-item_content fl-wrap">
+                  <?php
+                    foreach($data_pengaduan as $data_pengaduan){
+                  ?>
+                  <div class="reviews-comments-wrap" style="width: 100%;">
+                    <!-- reviews-comments-item -->
+                    <div class="reviews-comments-item only-comments">
+                      <div class="review-comments-avatar">
+                        <img src="<?php echo site_url(); ?>assets/umum/images/avatar/4s.png" alt="">
+                      </div>
+                      <div class="reviews-comments-item-text fl-wrap">
+                        <div class="reviews-comments-header fl-wrap">
+                          <h4><a href="#"><?php echo $data_pengaduan->nama; ?></a></h4>
+                        </div>
+                        <p>" <?php echo $data_pengaduan->uraian; ?>"</p>
+                        <div class="reviews-comments-item-footer fl-wrap">
+                          <div class="reviews-comments-item-date"><span>
+                            <h4>
+                            <a href="#">
+                              <?php
+                              $bulan = array (
+                                  1 => 'Januari',
+                                  'Februari',
+                                  'Maret',
+                                  'April',
+                                  'Mei',
+                                  'Juni',
+                                  'Juli',
+                                  'Agustus',
+                                  'September',
+                                  'Oktober',
+                                  'November',
+                                  'Desember'
+                                );
+                                $pecahkan = explode('-',  $data_pengaduan->tanggal_pengaduan);
+                                $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+                              ?>
+                            <?php echo $tanggal;?></span></div>
+                            <a href="<?php echo site_url(); ?>umum_cek?id=<?php echo $data_pengaduan->id_pengaduan; ?>" class="reply-item">Detail</a>
+
+                        </div>
+
+                      </div>
                     </div>
-                    <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere convallis purus non cursus. Cras metus neque, gravida sodales massa ut. "</p>
-                    <div class="reviews-comments-item-footer fl-wrap">
-                      <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>03 December 2017</span></div>
-                      <a href="#" class="reply-item">Reply</a>
-                    </div>
+                    <!--reviews-comments-item end-->
+
+
                   </div>
+                  <br>
+                  <?php
+                  }
+                  ?>
                 </div>
-                <!--reviews-comments-item end-->
+
+
               </div>
             </div>
           </div>
+
 
 
         </div>
