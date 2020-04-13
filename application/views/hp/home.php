@@ -20,7 +20,8 @@
     <?php echo $this->load->view('hp/share/header', '', TRUE);?>
     <div class="page-content">
       <div class="page-title-large color-white bottom-30">
-        <h1 data-username="Selamat Datang di Aplikasi Pengaduan" >Aplikasi <br> Pengaduan</h1>
+        <h2 data-username="Selamat Datang di Aplikasi Pengaduan" >KIBAN</h2>
+        <h6 data-username="Selamat Datang di Aplikasi Pengaduan" >Konsultasi Informasi Beserta Pengaduan</h6>
         <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
       </div>
       <div data-height="210" class="page-title-bg preload-image" data-src="<?php echo site_url(); ?>assets/hp/images/pictures/20s.jpg"></div>
@@ -30,9 +31,9 @@
       <div class="single-slider slider-full owl-no-dots owl-carousel">
         <div class="caption bottom-0 round-medium shadow-large" data-height="350">
           <div class="caption-bottom bottom-10 center-text">
-            <h1 class="bolder font-28">Nama Aplikasi Pengaduan</h1>
+            <h1 class="bolder font-28">KIBAN</h1>
             <p class="color-theme boxed-text-huge opacity-60">
-              Azures brings beauty and colors to your Mobile device with a stunning user interface to match.
+              Konsultasi Informasi Beserta Pengaduan
             </p>
           </div>
           <div class="caption-overlay bg-gradient-fade"></div>

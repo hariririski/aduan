@@ -8,8 +8,8 @@
   </div>
   <div class="menu-header">
     <a href="#" class="bg-highlight shadow-small"></a>
-    <h1 class="center-text font-800 font-28 line-height-medium uppercase">Azures</h1>
-    <p class="under-heading center-text font-11">Put a little <span class="color-highlight">color</span> in your life!</p>
+    <h1 class="center-text font-800 font-28 line-height-medium uppercase">KIBAN</h1>
+    <p class="under-heading center-text font-11"><span class="color-highlight">Konsultasi Informasi Beserta Pengaduan</p>
   </div>
   <div class="content top-20 bottom-50">
     <div class="link-list link-list-1">
