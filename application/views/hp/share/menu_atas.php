@@ -1,3 +1,4 @@
+  
 <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached round-medium" data-menu-height="480" data-menu-effect="menu-over" >
   <div data-height="140" class="page-title-bg bg-20"></div>
   <div data-height="140" class="page-title-bg dark-mode-tint"></div>
@@ -8,7 +9,7 @@
   </div>
   <div class="content-boxed content-boxed-full shadow-small">
     <p class="boxed-text-huge top-15 bottom-10">
-      
+
     </p>
     <div class="highlight-changer bottom-10">
       <a href="#" data-change-highlight="blue2"><i class="fa fa-circle color-blue2-dark"></i><span class="color-blue2-light">Default</span></a>

@@ -38,7 +38,7 @@
                         <div class="overlay op7"></div>
                         <div class="container">
                             <div class="section-title center-align big-title">
-                                <h2><span>Aplikasi Pengaduan Kantor Pertanahan Kota Banda Aceh</span></h2>
+                                <h2><span>Aplikasi KIBAN <BR> Konsultasi Informasi Beserta Pengaduan</span></h2>
                                 <span class="section-separator"></span>
 
                             </div>
@@ -50,39 +50,43 @@
                     <!--  section  end-->
                     <section   id="sec1" data-scrollax-parent="true">
                         <div class="container">
-                            <div class="section-title">
-                                <h2> How We Work</h2>
-                                <div class="section-subtitle">who we are</div>
-                                <span class="section-separator"></span>
-                                <p>Explore some of the best tips from around the city from our partners and friends.</p>
-                            </div>
+
                             <!--about-wrap -->
                             <div class="about-wrap">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="list-single-main-media fl-wrap" style="box-shadow: 0 9px 26px rgba(58, 87, 135, 0.2);">
                                             <img src="<?php echo site_url(); ?>assets/umum/images/all/55.jpg" class="respimg" alt="">
-											<a href="https://vimeo.com/70851162" class="promo-link   image-popup"><i class="fal fa-video"></i><span>Our Story</span></a>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="ab_text">
                                             <div class="ab_text-title fl-wrap">
-                                                <h3>Our Awesome  Team <span>Story</span></h3>
-                                                <h4>Check video presentation to find   out more about us .</h4>
-                                                <span class="section-separator fl-sec-sep"></span>
+                                                <h3>Kantor Pertanahan Kota Banda Aceh</h3>
+
+                                            <span class="section-separator fl-sec-sep"></span>
                                             </div>
-                                            <p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus. Sed tempor iaculis massa faucibus feugiat. </p>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra.
+                                            <p>Kantor Pertanahan Kota Banda Aceh merupakan Kantor Pelayanan dalam bidang pertanahan, merupakan perpanjangan pelayanan bagi masyarakat setempat dari seluruh program yang dibuat oleh Kementerian Agraria dan Tata Ruang/Badan Pertahanan Nasional.
+                                              Persoalan pertanahan yang berada dalam wilayah Kota Banda Aceh bukanlah suatu pekerjaan yang mudah karena begitu kompleks untuk di selesaikan. Maka dari itu Kantor Pertanahan Kota Banda Aceh mencoba mencari jalan bagaimana dapat menampung permasalahan dan pengaduan dari masyarakat agar bisa terpetakan dan segera bisa dicarikan solusinya, baik itu untuk peningkatan pelayanan pada Kantor Pertanahan Kota Banda Aceh dan pengaduan terkait pertanahan. Hal tersebutlah yang melatarbelakangi pembuatan Aplikasi KIBAN (Konsultasi Informasi Beserta Pengaduan).
                                             </p>
-                                            <a href="#sec3" class="btn color2-bg float-btn custom-scroll-link">Our Team <i class="fal fa-users"></i></a>
+                                            <BR>
+                                            <div class="ab_text-title fl-wrap">
+                                                <h3>Aplikasi KIBAN</span></h3>
+
+                                            <span class="section-separator fl-sec-sep"></span>
+                                            <p>
+                                              KIBAN Merupakan sistem informasi Pengaduan berbasis WEB, yang merupakan pengembangan dari aplikasi pengaduan yang telah aktif sejak tahun 2018 dimana terdapat perombakan total  aplikasi dari desain hingga fitur yang diberikan yang dapat melaporkan segala persoalan pertanahan.
+                                              Aplikasi KIBAN dapat dengan cepat menanggapi, mensikapi dan memberikan jawaban/solusi dari berbagai pengaduan yang masuk melalui Aplikasi KIBAN, Twitter, Whatsapp, Instagram, Maupun Aplikasi Lapor.go.id.
+                                              Kami berharap dengan adanya Aplikasi KIBAN dapat memberikan pelayanan yang maksimal yang dibutuhkan oleh masyarakat Kota Banda Aceh.
+                                            </p>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- about-wrap end  -->
-                          
+
                         </div>
                     </section>
                     <!--section end-->

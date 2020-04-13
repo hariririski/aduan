@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="<?php echo site_url(); ?>assets/hp/styles/css.css">
   <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/hp/styles/framework.css">
   <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/hp/fonts/css/fontawesome-all.min.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url(); ?>assets/hp/app/icons/icon-192x192.png">
+  <?php echo $this->load->view('hp/share/logo', '', TRUE);?>
 </head>
 <body class="theme-light" data-highlight="blue2">
   <div id="page">
@@ -21,7 +21,7 @@
       <a href="i<?php echo site_url(); ?>assets/hp" class="header-subtitle">Kembali</a>
       <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
       <a href="#" data-toggle-theme class="header-icon header-icon-2"><i class="fas fa-lightbulb"></i></a>
-      
+
     </div>
     <div class="page-content">
       <div data-height="150" class="page-title-bg bg-20"></div>

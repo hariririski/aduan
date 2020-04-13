@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="<?php echo site_url(); ?>assets/hp/styles/css.css">
   <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/hp/styles/framework.css">
   <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/hp/fonts/css/fontawesome-all.min.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url(); ?>assets/hp/app/icons/icon-192x192.png">
+  <?php echo $this->load->view('hp/share/logo', '', TRUE);?>
+
 </head>
 <body class="theme-light" data-highlight="blue2">
   <div id="page">
@@ -19,10 +20,10 @@
     </div>
     <?php echo $this->load->view('hp/share/header', '', TRUE);?>
     <div class="page-content">
-      <div class="page-title-large color-white bottom-30">
+      <div class="page-title-large color-white bottom-30" >
         <h2 data-username="Selamat Datang di Aplikasi Pengaduan" >KIBAN</h2>
         <h6 data-username="Selamat Datang di Aplikasi Pengaduan" >Konsultasi Informasi Beserta Pengaduan</h6>
-        <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
+        <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark" ></a>
       </div>
       <div data-height="210" class="page-title-bg preload-image" data-src="<?php echo site_url(); ?>assets/hp/images/pictures/20s.jpg"></div>
       <div data-height="210" class="page-title-bg dark-mode-tint"></div>
@@ -41,9 +42,9 @@
         </div>
         <div class="caption bottom-0 round-medium shadow-large" data-height="350">
           <div class="caption-bottom bottom-10 center-text">
-            <h1 class="bolder font-24">Beyond Powerful Aplikasi Pengaduan</h1>
+            <h1 class="bolder font-24">Aplikasi KIBAN Multi Device</h1>
             <p class="color-theme boxed-text-huge opacity-60">
-              Azures is a Mobile Web App Kit, fully featured, supporting PWA and Native Dark Mode!
+              Aplikasi KIBAN Dapat Di Akses Di Semua Gadget Anda
             </p>
           </div>
           <div class="caption-overlay bg-gradient-fade"></div>
@@ -51,13 +52,11 @@
         </div>
         <div class="caption bottom-0 round-medium shadow-large" data-height="350">
           <div class="caption-bottom bottom-10 center-text">
-            <h1 class="bolder font-24">Pentingnya Pengaduan masyarakat</h1>
-            <p class="color-theme boxed-text-huge opacity-60">
-              We build custom, premium products, that are easy to use and provide all features for you!
-            </p>
+            <h1 class="bolder font-24">"Kepuasan Masyarakat Semangat Kami Untuk Lebih Baik"</h1>
+
           </div>
           <div class="caption-overlay bg-gradient-fade"></div>
-          <div class="caption-bg owl-lazy" data-src="<?php echo site_url(); ?>assets/hp/images/pictures/14m.jpg"></div>
+          <div class="caption-bg owl-lazy" data-src="<?php echo site_url(); ?>assets/hp/images/pictures/1n.jpg"></div>
         </div>
       </div>
 

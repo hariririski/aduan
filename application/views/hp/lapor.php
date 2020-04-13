@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="<?php echo site_url(); ?>assets/hp/styles/css.css">
   <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/hp/styles/framework.css">
   <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/hp/fonts/css/fontawesome-all.min.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url(); ?>assets/hp/app/icons/icon-192x192.png">
+  <?php echo $this->load->view('hp/share/logo', '', TRUE);?>
 </head>
 <body class="theme-light" data-highlight="blue2">
   <div id="page">
