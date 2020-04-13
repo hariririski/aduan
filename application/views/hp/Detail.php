@@ -1,266 +1,151 @@
-<!doctype html>
-<html lang="en" class="color-theme-blue">
-
-
-
+<!DOCTYPE HTML>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="Maxartkiller">
-
-    <title>Detail Pengaduan</title>
-
-    <!-- Material design icons CSS -->
-    <link rel="stylesheet" href="<?php echo site_url(); ?>assets/hp/vendor/materializeicon/material-icons.css">
-
-    <!-- Roboto fonts CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo site_url(); ?>assets/hp/vendor/bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Swiper CSS -->
-    <link href="<?php echo site_url(); ?>assets/hp/vendor/swiper/css/swiper.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="<?php echo site_url(); ?>assets/hp/css/style.css" rel="stylesheet">
-</head>
-
-<body>
-  <!-- Loader -->
-  <?php echo $this->load->view('share/Loading', '', TRUE);?>
-  <!-- Loader ends -->
-
-  <!-- sidebar -->
-  <?php echo $this->load->view('share/Menu_hpside', '', TRUE);?>
-  <!-- sidebar ends -->
-
-  <!-- wrapper starts -->
-  <div class="wrapper">
-
-      <!-- header -->
-        <?php echo $this->load->view('share/Hp_header', '', TRUE);?>
-      <!-- header ends -->
-
-      <?php
-      foreach($data_pengaduan as $detail){
-      ?>
-
-
-        <!-- page content here -->
-        <div class="container-fluid bg-template">
-            <div class="row hn-114 position-relative">
-            </div>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>Detail</title>
+  <link rel="stylesheet" href="<?php echo site_url(); ?>assets/hp/styles/css.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/hp/styles/framework.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>assets/hp/fonts/css/fontawesome-all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url(); ?>assets/hp/app/icons/icon-192x192.png"></head>
+  <body class="theme-light" data-highlight="blue2">
+    <div id="page">
+      <div id="page-preloader">
+        <div class="loader-main"><div class="preload-spinner border-highlight"></div></div>
+      </div>
+      <div class="header header-fixed header-logo-app header-auto-show">
+        <a href="<?php echo site_url(); ?>hp" class="header-subtitle">kembali</a>
+        <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
+        <a href="#" data-toggle-theme class="header-icon header-icon-2"><i class="fas fa-lightbulb"></i></a>
+        <a href="settings.html" class="header-icon header-icon-3"><i class="fas fa-cog"></i></a>
+      </div>
+      <div class="page-content">
+        <div data-height="150" class="page-title-bg bg-20"></div>
+        <div data-height="150" class="page-title-bg dark-mode-tint"></div>
+        <div data-height="150" class="page-title-bg opacity-90 bg-highlight"></div>
+        <div class="page-title-small color-white bottom-30">
+          <h1><i class="fa fa-arrow-left back-button"></i>Progress Pengaduan Anda</h1>
+          <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
         </div>
-        <div class="container top-30 position-relative">
-            <div class="card shadow-sm">
-                <div class="card-body">
-
-                    <div class="row mb-4">
-                        <div class="col-auto">
-                            <figure class="avatar avatar-100">
-                                <img src="<?php echo site_url(); ?>assets/hp/images/avatar.png" alt="">
-                            </figure>
-                        </div>
-                        <div class="col pl-0 align-self-center">
-
-                            <h5 class="mb-1 font-weight-normal"><?php echo $detail->nama;?></h5>
-                            <p class="small text-mute"><?php echo $detail->no_telepon;?></p>
-                            <p class="small text-mute"><?php echo $detail->pekerjaan;?></p>
-                        </div>
-                    </div>
-                    <div class="row py-3 border-top border-bottom mb-4">
-                        <div class="col">
-                            <p class="my-0 text-secondary text-mute">Status</p>
-                            <h5 class="font-weight-normal mb-0"><?php if($pengaduan->status==0){echo"Sedang Diproses";}else{echo"Selesai";} ?></h5>
-
-                        </div>
-                        <div class="col border-left-dashed">
-                            <p class="my-0 text-secondary text-mute">Jenis</p>
-                            <h5 class="font-weight-normal mb-0">  <?php echo $detail->nama_jenis_pengaduan;?></h5>
-
-                        </div>
-                        <div class="col border-left-dashed">
-                            <p class="my-0 text-secondary text-mute">Tanggal </p>
-                            <h5 class="font-weight-normal mb-0">
-                              <?php
-                              $bulan = array (
-                                  1 => 'Januari',
-                                  'Februari',
-                                  'Maret',
-                                  'April',
-                                  'Mei',
-                                  'Juni',
-                                  'Juli',
-                                  'Agustus',
-                                  'September',
-                                  'Oktober',
-                                  'November',
-                                  'Desember'
-                                );
-                                $pecahkan = explode('-', $detail->tanggal_pengaduan);
-                                $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
-                              ?>
-                              <?php echo $tanggal;?>
-
-                            </h5>
-
-                        </div>
-                    </div>
-
-                    <h4>Uraian Pengaduan</h4>
-                    <p class="text-mute">  <?php echo $detail->uraian;?></p>
-                    <div class="col-4 mb-3">
-                              <figure class="overflow-hidden rounded text-center">
-                                  <img src="<?php echo site_url(); ?>assets/upload/<?php echo $detail->nama_bukti1;?>" alt="" class="w-100 mx-auto">
-                              </figure>
-                          </div>
-                    <div class="col-4 mb-3">
-                              <figure class="overflow-hidden rounded text-center">
-                                  <img src="<?php echo site_url(); ?>assets/upload/<?php echo $detail->nama_bukti1;?>" alt="" class="w-100 mx-auto">
-                              </figure>
-                          </div>
-                    <h4>Balasan</h4>
-                     <?php echo $detail->tindak_lanjut;?>
-                </div>
-            </div>
+        <div class="content-boxed shadow-large">
+          <div class="content bottom-0">
+            <p class="bottom-20">
+              Anda Dapat Memantau Progress Pengaduan Anda
+            </p>
+          </div>
         </div>
 
-      <?php
-      }
-      ?>
+        <?php
+        foreach($data_pengaduan as $detail){
+        ?>
 
-    </div>
-    <!-- wrapper ends -->
+        <div class="timeline-body">
+          <div class="timeline-deco"></div>
+          <div class="timeline-item">
+            <i class="fab fa-facebook-f font-20 bg-facebook shadow-large timeline-icon"></i>
+            <div class="timeline-item-content-full round-small">
 
-<?php echo $this->load->view('share/Menu_hp', '', TRUE);?>
-    <!-- color chooser menu start -->
-    <div class="modal fade " id="colorscheme" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content ">
-                <div class="modal-header theme-header border-0">
-                    <h6 class="">Color Picker</h6>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="user-group-manager border-highlight" style="padding: 10px;">
+                  <img class="shadow-large bg-highlight" src="<?php echo site_url(); ?>assets/hp/images/avatars/4s.png" alt="img">
+                  <h4 class="color-theme" ><?php echo $detail->nama;?></h4>
+
                 </div>
-                <div class="modal-body pt-0">
-                    <div class="text-center theme-color">
-                        <button class="m-1 btn red-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="red"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn blue-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="blue"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn yellow-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="yellow"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn green-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="green"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn pink-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="pink"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn orange-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="orange"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn purple-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="purple"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn deeppurple-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="deeppurple"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn lightblue-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="lightblue"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn teal-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="teal"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn lime-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="lime"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn deeporange-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="deeporange"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn gray-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="gray"><i class="material-icons w-50">color_lens_outline</i></button>
-                        <button class="m-1 btn black-theme-bg text-white btn-rounded-54 shadow-sm" data-theme="black"><i class="material-icons w-50">color_lens_outline</i></button>
-                    </div>
+                <div class="user-group-title">
+                  <h3 class="color-theme bolder bottom-0"><?php echo $detail->nama_jenis_pengaduan;?></h3>
+                  <br>
                 </div>
-                <div class="modal-footer">
-                    <div class="col-6 text-left">
-                        <div class="row">
-                            <div class="col-auto text-right align-self-center"><i class="material-icons text-warning md-36 vm">wb_sunny</i></div>
-                            <div class="col-auto text-center align-self-center px-0">
-                                <div class="custom-control custom-switch float-right">
-                                    <input type="checkbox" name="themelayout" class="custom-control-input" id="theme-dark">
-                                    <label class="custom-control-label" for="theme-dark"></label>
-                                </div>
-                            </div>
-                            <div class="col-auto text-left align-self-center"><i class="material-icons text-dark md-36 vm">brightness_2</i></div>
-                        </div>
-                    </div>
-                    <div class="col-6 text-right">
-                        <div class="row">
-                            <div class="col-auto text-right align-self-center">LTR</div>
-                            <div class="col-auto text-center align-self-center px-0">
-                                <div class="custom-control custom-switch float-right">
-                                    <input type="checkbox" name="rtllayout" class="custom-control-input" id="theme-rtl">
-                                    <label class="custom-control-label" for="theme-rtl"></label>
-                                </div>
-                            </div>
-                            <div class="col-auto text-left align-self-center">RTL</div>
-                        </div>
-                    </div>
+                <div class="user-group-users">
+                  <?php echo $detail->uraian;?>
                 </div>
+                <div class="clear"></div>
+
+
             </div>
-        </div>
-    </div>
-    <!-- color chooser menu ends -->
+          </div>
+          <div class="timeline-item">
+            <i class="fab fa-instagram font-18 bg-instagram shadow-large timeline-icon"></i>
+            <div class="timeline-item-content round-small">
+              <h4 class="color-theme center-text" >
+                Progress Pengaduan
+              </h4>
+              <div class="divider-icon bg-yellow1-light">
+                <i class="fa font-17 color-yellow1-dark">
+                </i>
+              </div>
+              <div class="user-group-manager border-highlight" style="padding: 10px;">
+                <img class="shadow-large bg-highlight" src="<?php echo site_url(); ?>assets/hp/images/avatars/4s.png" alt="img">
+                <h4 class="color-theme" >Kantor Pertanahan Kota Banda Aceh</h4>
 
-
-    <!-- jquery, popper and bootstrap js -->
-    <script src="<?php echo site_url(); ?>assets/hp/js/jquery-3.3.1.min.js"></script>
-    <script src="<?php echo site_url(); ?>assets/hp/js/popper.min.js"></script>
-    <script src="<?php echo site_url(); ?>assets/hp/vendor/bootstrap-4.4.1/js/bootstrap.min.js"></script>
-
-    <!-- cookie js -->
-    <script src="<?php echo site_url(); ?>assets/hp/vendor/cookie/jquery.cookie.js"></script>
-
-    <!-- swiper js -->
-    <script src="<?php echo site_url(); ?>assets/hp/vendor/swiper/js/swiper.min.js"></script>
-
-    <!-- swiper js -->
-    <script src="<?php echo site_url(); ?>assets/hp/vendor/sparklines/jquery.sparkline.min.js"></script>
-
-    <!-- template custom js -->
-    <script src="<?php echo site_url(); ?>assets/hp/js/main.js"></script>
-
-    <!-- page level script -->
-    <script>
-        $(window).on('load', function() {
-            $(".sparklinechart").sparkline([5, 6, -7, 2, 0, -4, -2, 4], {
-                type: 'bar',
-                zeroAxis: false,
-                barColor: '#00bf00',
-                height: '30',
-            });
-            $(".sparklinechart2").sparkline([-5, -6, 4, -2, 0, 4, 2, -4], {
-                type: 'bar',
-                zeroAxis: false,
-                barColor: '#00bf00',
-                height: '30',
-            });
-
-            /* Swiper slider */
-            var swiper = new Swiper('.swiper-prices', {
-                slidesPerView: 'auto',
-                spaceBetween: 0,
-                pagination: false,
-            });
-            var swiper = new Swiper('.swiper-categories', {
-                slidesPerView: 'auto',
-                spaceBetween: 20,
-                pagination: false,
-            });
-            var swiper = new Swiper('.swiper-shares', {
-                slidesPerView: 5,
-                spaceBetween: 0,
-                pagination: false,
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    },
+              </div>
+              <div class="user-group-title">
+                <h3 class="color-theme bolder bottom-0">Proses Penyelesaian</h3>
+                <br>
+              </div>
+              <div class="user-group-users">
+                <?php if($detail->status==0){
+                  ?>
+                  Sedang Dalam Proses Penyelesaian
+                  <?php
+                }else{
+                  ?>
+                  <?php echo $detail->tindak_lanjut;?>
+                  <?php
                 }
-            });
-        })
+                ?>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <i class="fa fa-map-marker bg-blue2-dark shadow-large timeline-icon"></i>
+            <div class="timeline-item-content round-small">
+              <h4 class="color-theme center-text" >
+                Status Pengaduan
+              </h5>
 
-    </script>
+              <div class="top-30 ">
+                <?php if($detail->status==0){
+                  ?>
+                  <div class="shadow-large alert alert-large alert-round-medium bg-yellow1-dark">
+                    <i class="fa fa-exclamation-triangle"></i>
+                    <strong class="uppercase ultrabold">Proses</strong>
+                    <span>Terima Kasih Atas Waktunya</span>
+                    <i class="fa fa-times"></i>
+                  </div>
+                  <?php
+                }else{
+                  ?>
+                  <div class="shadow-large alert alert-large alert-round-medium bg-green1-dark">
+                    <i class="fa fa-check"></i>
+                    <strong class="uppercase ultrabold">Selesai</strong>
+                    <span>Terima Kasih</span>
+                    <i class="fa fa-times"></i>
+                  </div>
+                  <?php
+                }
+                ?>
+              </div>
+            </div>
+          </div>
 
-</body>
+        </div>
+        <?php
+        }
+        ?>
 
+      </div>
 
+      <?php echo $this->load->view('hp/share/menu_bawah', '', TRUE);?>
 
-</html>
+      <?php echo $this->load->view('hp/share/menu_samping', '', TRUE);?>
+
+      <?php echo $this->load->view('hp/share/menu_atas', '', TRUE);?>
+
+      <div class="menu-hider"></div>
+    </div>
+    <script type="text/javascript" src="<?php echo site_url(); ?>assets/hp/scripts/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo site_url(); ?>assets/hp/scripts/plugins.js"></script>
+    <script type="text/javascript" src="<?php echo site_url(); ?>assets/hp/scripts/custom.js"></script>
+  </body>
