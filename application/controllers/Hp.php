@@ -84,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       public function cek_pengecekan_url()
      {
        $no_telepon =$this->input->get('no_telepon');
-       $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
+       $data['data_pengaduan'] = $this->M_lapor_hp->detail_pengaduan($no_telepon);
 
        $this->load->view('hp/cek_pengecekan',$data);
      }

@@ -33,16 +33,16 @@
       <div data-height="150" class="caption caption-margins round-medium shadow-large">
         <div class="caption-center">
           <form class="row" action="<?php echo site_url(); ?>pengecekan" method="post">
-          <table class="caption-center  shadow-large" width="100%">
+          <table class="caption-center  shadow-large" width="100%" style="background-color: transparent;">
             <tr>
-              <td width="90%">
-                <div style="left: 78%; width: 95%;font-size: 20px;"class=" button button-s bg-highlight button-round-medium button-center-medium search-box search-color bg-green1-dark shadow-tiny round-medium ">
+              <td width="90%" style="background-color: #f2f4f3">
+                <div style="left: 78%; width: 95%;font-size: 20px; margin-top:0px;}"class=" button button-s bg-highlight button-round-medium button-center-medium search-box search-color bg-green1-dark shadow-tiny round-medium ">
                 <i class="fa fa-search"></i>
                 <input type="number" name="no_telepon" placeholder="Nomor Hp  ">
                 </div>
               </td>
-              <td>
-                  <button style="padding: 25px 40px!important;"class="button button-full shadow-large button-round-small bg-green1-dark  bottom-0">Cari</button>
+              <td style="background-color: #f2f4f3">
+                  <button style="padding: 25px 40px!important; margin-top:0px;"class="button button-full shadow-large button-round-small bg-green1-dark  bottom-0">Cari</button>
               </td>
             </tr>
           </table>

@@ -19,14 +19,14 @@
         <a href="<?php echo site_url(); ?>hp" class="header-subtitle">kembali</a>
         <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-2"><i class="fas fa-lightbulb"></i></a>
-        <a href="settings.html" class="header-icon header-icon-3"><i class="fas fa-cog"></i></a>
+      
       </div>
       <div class="page-content">
         <div data-height="150" class="page-title-bg bg-20"></div>
         <div data-height="150" class="page-title-bg dark-mode-tint"></div>
         <div data-height="150" class="page-title-bg opacity-90 bg-highlight"></div>
         <div class="page-title-small color-white bottom-30">
-          <h1><i class="fa fa-arrow-left back-button"></i>Progress Pengaduan Anda</h1>
+          <h1><i class="fa fa-arrow-left back-button"></i>Progress Pengaduan</h1>
           <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
         </div>
         <div class="content-boxed shadow-large">
@@ -44,30 +44,63 @@
         <div class="timeline-body">
           <div class="timeline-deco"></div>
           <div class="timeline-item">
-            <i class="fab fa-facebook-f font-20 bg-facebook shadow-large timeline-icon"></i>
+            <i class="fas fa-bullhorn font-20 bg-facebook shadow-large timeline-icon"></i>
             <div class="timeline-item-content-full round-small">
 
-                <div class="user-group-manager border-highlight" style="padding: 10px;">
-                  <img class="shadow-large bg-highlight" src="<?php echo site_url(); ?>assets/hp/images/avatars/4s.png" alt="img">
-                  <h4 class="color-theme" ><?php echo $detail->nama;?></h4>
+              <br>
+                <div class="content bottom-10">
+                  <div class="float-left">
+                    <h4 class="bolder"><?php echo $detail->nama;?></h4>
+                    <p class="font-10 under-heading bottom-15"><?php echo $detail->nama_jenis_pengaduan;?></p>
+                  </div>
+
+                  <div class="divider clear bottom-15"></div>
+                  <div class="one-half">
+                    <strong class="color-theme">Tanggal:</strong>
+                    <p class="font-12 bottom-15"><i class="far fa-calendar right-5"></i><?php echo $detail->tanggal_pengaduan;?></p>
+                  </div>
+                  <div class="one-half last-column">
+                    <strong class="color-theme">Nomor Handphone:</strong>
+                    <p class="font-12 bottom-15"><?php echo $detail->no_telepon;?></p>
+                  </div>
+                  <div class="clear"></div>
+                  <strong class="color-theme">Uraian</strong>
+                  <p>
+                    <?php echo $detail->uraian;?>
+                  </p>
 
                 </div>
-                <div class="user-group-title">
-                  <h3 class="color-theme bolder bottom-0"><?php echo $detail->nama_jenis_pengaduan;?></h3>
-                  <br>
-                </div>
-                <div class="user-group-users">
-                  <?php echo $detail->uraian;?>
-                </div>
-                <div class="clear"></div>
-
 
             </div>
           </div>
           <div class="timeline-item">
-            <i class="fab fa-instagram font-18 bg-instagram shadow-large timeline-icon"></i>
+            <i class="fas fa-clipboard-list font-18 bg-instagram shadow-large timeline-icon"></i>
             <div class="timeline-item-content round-small">
-              <h4 class="color-theme center-text" >
+
+              <div class="content bottom-10">
+                <div class="float-left">
+                  <h4 class="bolder">Kantor Pertanahan Kota Banda Aceh</h4>
+                  <p class="font-10 under-heading bottom-15">Administrator</p>
+                </div>
+
+                <div class="divider clear bottom-15"></div>
+
+                <div class="clear"></div>
+                <strong class="color-theme">Tindak Lanjut</strong>
+                <p>
+                  <?php if($detail->status==0){
+                    ?>
+                    Sedang Dalam Proses Penyelesaian
+                    <?php
+                  }else{
+                    ?>
+                    <?php echo $detail->tindak_lanjut;?>
+                    <?php
+                  }
+                  ?>
+                </p>
+
+              <!-- <h4 class="color-theme center-text" >
                 Progress Pengaduan
               </h4>
               <div class="divider-icon bg-yellow1-light">
@@ -94,12 +127,12 @@
                   <?php
                 }
                 ?>
-              </div>
+              </div> -->
               <div class="clear"></div>
             </div>
           </div>
           <div class="timeline-item">
-            <i class="fa fa-map-marker bg-blue2-dark shadow-large timeline-icon"></i>
+            <i class="fas fa-check bg-blue2-dark shadow-large timeline-icon"></i>
             <div class="timeline-item-content round-small">
               <h4 class="color-theme center-text" >
                 Status Pengaduan

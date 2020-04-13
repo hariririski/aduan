@@ -109,14 +109,11 @@
       <div class="content-boxed shadow-small bottom-40 top-50">
         <div class="content">
           <h2 class="center-text">Laporkan Masalah Anda</h2>
-          <p class="boxed-text-huge bottom-30">
-            Our products are designed to simplify the way you code a page, with
-            focus on easy, copy and paste.
-          </p>
+
           <div class="divider divider-small bg-highlight bottom-30"></div>
           <div class="list-columns-left bottom-25">
             <div>
-              <i class="far fa-star color-yellow1-dark fa-3x"></i>
+              <i class="fas fa-bullhorn color-yellow1-dark fa-3x"></i>
               <h1 class="bold font-16">Laporkan Masalah Anda</h1>
               <p>
                 Anda Dapat Melaporkan Maslah Tanah Anda, Sertifikat Tanah, Layanan Pengaduan, Pegawai Kantor Pertanahan Kota Banda Aceh .
@@ -125,7 +122,7 @@
           </div>
           <div class="list-columns-left bottom-25">
             <div>
-              <i class="fa fa-mobile-alt color-highlight fa-3x"></i>
+              <i class="fas fa-clipboard-list color-highlight fa-3x"></i>
               <h1 class="bold font-16">Pengaduan Anda Akan di Proses</h1>
               <p>
                 Pengaduan Anda Akan Di Proses Dengan Cepat Berdasarkan Aduan dan Data Yang Anda Berikan.
