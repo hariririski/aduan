@@ -17,6 +17,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $data['informasi'] = $this->M_info->lihat();
        		$this->load->view('admin_data_info',$data);
        	}
+         public function detail_hp()
+       	{
+          $id =$this->input->get('id');
+          $data['informasi'] = $this->M_info->detail_hp($id);
+       		$this->load->view('hp/detail_artikel',$data);
+       	}
 
    }
 ?>

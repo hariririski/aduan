@@ -70,14 +70,14 @@
                   <?php
                     $str = $u->artikel;
                     $arr = explode(" ", str_replace(",", ", ", $str));
-                    for ($index = 0; $index < 15; $index++) {
+                    for ($index = 0; $index < 10; $index++) {
                        echo $arr[$index]. " ";
                     }
 
                   ?>
 
                 </p>
-                <a href="#" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">Selengkapnya</a>
+                <a href="<?php echo site_url(); ?>artikel_hp?id=<?php echo $u->no ?>" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">Selengkapnya</a>
               </div>
             </div>
           </div>
