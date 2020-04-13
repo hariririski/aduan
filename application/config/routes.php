@@ -78,7 +78,7 @@ $route['detail_lapor_admin'] = 'Admin_Pengaduan/detail_lapor_admin';
 $route['tindak_lanjut'] = 'Admin_Pengaduan/tindak_lanjut';
 $route['bidang'] = 'Admin_Bidang';
 $route['cetak'] = 'Admin_Pengaduan/cetak_lapor';
-$route['artikel_hp'] = 'Admin_informasi/detail_hp';
+$route['artikel_hp'] = 'Admin_Informasi/detail_hp';
 
 
 
