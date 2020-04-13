@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			 $this->load->database();
          $this->load->model('M_lapor_hp');
          $this->load->model('M_info');
-         
+
   		}
 
          public function home()
@@ -83,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      }
       public function cek_pengecekan_url()
      {
-       $no_telepon =$no_telepon = $this->input->get('no_telepon');
+       $no_telepon =$this->input->get('no_telepon');
        $data['data_pengaduan'] = $this->M_lapor_hp->data_pengaduan($no_telepon);
 
        $this->load->view('hp/cek_pengecekan',$data);

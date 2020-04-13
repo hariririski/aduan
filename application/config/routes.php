@@ -71,6 +71,10 @@ $route['pengaduan_hp'] = 'Lapor_hp/tambah_hp';
 $route['pengaduan'] = 'Lapor_hp/tambah_dekstop';
 $route['umum_cek'] = 'Umum_Home/umum_cek';
 $route['umum_cek_awal'] = 'Umum_Home/umum_cek';
+$route['admin_lapor'] = 'Admin_Pengaduan/lapor';
+$route['media_pelaporan'] = 'Admin_Media_Pelaporan';
+$route['pengaduan_admin'] = 'Lapor_hp/tambah';
+$route['detail_lapor_admin'] = 'Admin_Pengaduan/detail_lapor_admin';
 
 
 

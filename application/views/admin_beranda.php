@@ -194,7 +194,7 @@
                                                <td><?php echo $pengaduan->nama_jenis_pengaduan; ?></td>
 
                                                <td><?php echo $pengaduan->nama_media_pelaporan; ?></td>
-                                               <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
+                                               <td><a href="<?php echo site_url(); ?>detail_lapor_admin?id=<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
                                            </tr>
                                           <?php } ?>
                                         </tbody>

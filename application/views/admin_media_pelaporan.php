@@ -3,7 +3,7 @@
 <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
-        <title>Data Pengaduan</title>
+        <title>Media Pelaporan</title>
         <?php echo $this->load->view('share/author', '', TRUE);?>
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
@@ -13,7 +13,6 @@
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/color.css">
 
         <?php echo $this->load->view('share/table_header', '', TRUE);?>
-
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="<?php echo site_url(); ?>assets/umum/images/favicon.ico">
     </head>
@@ -54,7 +53,7 @@
                             <!-- dashboard content-->
                             <div class="col-md-9">
                                 <div class="dashboard-title fl-wrap">
-                                    <h3>Data Pengaduan</h3>
+                                    <h3>Data Media Pelaporan</h3>
                                 </div>
                                 <!-- list-single-facts -->
 
@@ -65,41 +64,22 @@
                                 			<thead>
                                 				<tr>
                                 					<th>No</th>
-                                          <th>Status</th>
-                                					<th>Tanggal</th>
-                                					<th>Nama</th>
-                                					<th>Jenis Pengaduan</th>
-                                          <th>Media Lapor</th>
-                                          <th>Detail</th>
+                                					<th>Nama Media Pelaporan</th>
+                                					<th>Aksi</th>
                                 				</tr>
                                 			</thead>
                                 			<tbody>
                                         <?php
                                           $i=0;
-                                             foreach($semua_pengaduan as $pengaduan){
+                                             foreach($media_pelaporan as $media_pelaporan){
                                                $i++;
                                         ?>
                                         <tr>
                                              <td><?php echo $i; ?></td>
-                                             <td>
-                                               <?php if($pengaduan->status==0){
-                                                ?>
-                                                <div class="alert alert-warning" style="padding: 10px; margin-bottom: 0px;" role="alert">
-                                                    <?php echo"Proses";}else{ ?>
-                                                </div>
-                                                <div class="alert alert-success" style="padding: 10px; margin-bottom: 0px;" role="alert">
-                                                    <?php echo"Selesai";} ?>
-                                                </div>
-
-                                             </td>
-                                             <td><?php echo date('d F Y', strtotime($pengaduan->tanggal_pengaduan));  ?></td>
-                                             <td><?php echo $pengaduan->nama; ?></td>
-                                             <td><?php echo $pengaduan->nama_jenis_pengaduan; ?></td>
-                                             <td><?php echo $pengaduan->nama_media_pelaporan; ?></td>
-                                             <td><a href="<?php echo site_url(); ?>detail_lapor_admin?id=<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
+                                             <td><?php echo $media_pelaporan->nama_media_pelaporan;  ?></td>
+                                             <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $media_pelaporan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
                                          </tr>
                                         <?php } ?>
-
                                 			</tbody>
                                 		</table>
                                 	</div>

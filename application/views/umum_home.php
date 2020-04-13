@@ -74,57 +74,57 @@
                                 <!--tabs -->
 
                                 <div class="tabs-container fl-wrap  ">
-                                    <!--tab -->
-                                    <div class="tab">
-                                        <div id="tab-inpt1" class="tab-content first-tab">
-                                          <div class="profile-edit-container fl-wrap block_box">
-                                          <div class="custom-form" style="padding: 20px;">
-                                            <form action="<?php echo site_url(); ?>pengaduan" method="post" enctype="multipart/form-data">
-                                              <div class="row">
-                                                  <div class="col-sm-6">
-                                                      <label style="padding: 10px;">NIK <i class="fal fa-user" style="top: 50px;"></i></label>
-                                                      <input required type="text" name="nik" placeholder="NIK" value="">
-                                                  </div>
-                                                  <div class="col-sm-6">
-                                                      <label style="padding: 10px;">Nama Lengkap  <i class="fal fa-user" style="top: 50px;"></i></label>
-                                                      <input required type="text" name="nama_lengkap" placeholder="Nama Anda" value="">
-                                                  </div>
-                                                  <div class="col-sm-6">
-                                                      <label style="padding: 10px;">Nomor HP  <i class="far fa-phone" style="top: 50px;"></i></label>
-                                                      <input required type="text"  name="no_telepon" placeholder="0822 3788 3433" value="">
-                                                  </div>
-                                                  <div class="col-sm-6">
-                                                      <label style="padding: 10px;">Alamat<i class="far fa-envelope" style="top: 50px;"></i>  </label>
-                                                      <input required type="text"  name="alamat" placeholder="Desa Setu, Kecamatan Baiturahman" value="">
-                                                  </div>
-                                                  <div class="col-sm-6">
-                                                      <label style="padding: 10px;">Pekerjaan<i class="far fa-user" style="top: 50px;"></i>  </label>
-                                                      <input required type="text" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="">
-                                                  </div>
+                                  <!--tab -->
+                                  <div class="tab">
+                                    <div id="tab-inpt1" class="tab-content first-tab">
+                                      <div class="profile-edit-container fl-wrap block_box">
+                                        <div class="custom-form" style="padding: 20px;">
+                                          <form action="<?php echo site_url(); ?>pengaduan" method="post" enctype="multipart/form-data">
+                                            <div class="row">
+                                              <div class="col-sm-6">
+                                                <label style="padding: 10px;">NIK <i class="fal fa-user" style="top: 50px;"></i></label>
+                                                <input required type="text" name="nik" placeholder="NIK" value="">
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <label style="padding: 10px;">Nama Lengkap  <i class="fal fa-user" style="top: 50px;"></i></label>
+                                                <input required type="text" name="nama_lengkap" placeholder="Nama Anda" value="">
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <label style="padding: 10px;">Nomor HP  <i class="far fa-phone" style="top: 50px;"></i></label>
+                                                <input required type="text"  name="no_telepon" placeholder="0822 3788 3433" value="">
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <label style="padding: 10px;">Alamat<i class="far fa-envelope" style="top: 50px;"></i>  </label>
+                                                <input required type="text"  name="alamat" placeholder="Desa Setu, Kecamatan Baiturahman" value="">
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <label style="padding: 10px;">Pekerjaan<i class="far fa-user" style="top: 50px;"></i>  </label>
+                                                <input required type="text" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="">
+                                              </div>
 
-                                              </div>
-                                              <label style="padding: 10px;"> Uraian Pengaduan</label>
-                                              <textarea cols="40" rows="3"  name="uraian_pengaduan" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"></textarea>
-                                              <!-- <label style="padding: 10px;">KTP</label>
-                                              <div class="photoUpload">
-                                                  <span><i class="fal fa-image"></i> <strong>KTP</strong></span>
-                                                  <input type="file" class="upload">
-                                              </div>
-                                              <label style="padding: 10px;">Upload Bukti (Bila Ada)</label>
-                                              <div class="photoUpload">
-                                                  <span><i class="fal fa-image"></i> <strong>Upload Bukti</strong></span>
-                                                  <input type="file" class="upload">
-                                              </div> -->
-                                            <p align="center">
-                                            <button type="submit" class="btn color2-bg "> Kirim Pengaduan <i class="fas fa-caret-right"></i></button>
-                                          </p>
-                                           </form>
+                                            </div>
+                                            <label style="padding: 10px;"> Uraian Pengaduan</label>
+                                            <textarea cols="40" rows="3"  name="uraian_pengaduan" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"></textarea>
+                                            <!-- <label style="padding: 10px;">KTP</label>
+                                            <div class="photoUpload">
+                                            <span><i class="fal fa-image"></i> <strong>KTP</strong></span>
+                                            <input type="file" class="upload">
                                           </div>
+                                          <label style="padding: 10px;">Upload Bukti (Bila Ada)</label>
+                                          <div class="photoUpload">
+                                          <span><i class="fal fa-image"></i> <strong>Upload Bukti</strong></span>
+                                          <input type="file" class="upload">
+                                        </div> -->
+                                            <p align="center">
+                                              <button type="submit" class="btn color2-bg "> Kirim Pengaduan <i class="fas fa-caret-right"></i></button>
+                                            </p>
+                                          </form>
                                         </div>
-                                        </div>
-                                    </div>
-
+                                  </div>
                                 </div>
+                              </div>
+
+                            </div>
                                 <!--tabs end-->
                             </div>
                             <!-- main-search-input-tabs end-->
