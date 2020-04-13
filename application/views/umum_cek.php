@@ -112,21 +112,48 @@
             <div class="list-single-main-item-title">
               <h3>Proses Pengaduan<span>  </span></h3>
             </div>
+
+            <?php
+              foreach($data_pengaduan as $data_pengaduan){
+            ?>
             <div class="list-single-main-item_content fl-wrap">
               <div class="reviews-comments-wrap">
                 <!-- reviews-comments-item -->
                 <div class="reviews-comments-item only-comments">
                   <div class="review-comments-avatar">
-                    <img src="<?php echo site_url(); ?>assets/umum/images/avatar/4.jpg" alt="">
+                    <img src="<?php echo site_url(); ?>assets/umum/images/avatar/4s.png" alt="">
                   </div>
                   <div class="reviews-comments-item-text fl-wrap">
                     <div class="reviews-comments-header fl-wrap">
-                      <h4><a href="#">Liza Rose</a></h4>
+                      <h4><a href="#"><?php echo $data_pengaduan->nama; ?></a></h4>
                     </div>
-                    <p>" Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. "</p>
+                    <p><?php echo $data_pengaduan->uraian; ?></p>
                     <div class="reviews-comments-item-footer fl-wrap">
-                      <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>12 April 2018</span></div>
-                      <a href="#" class="reply-item">Reply</a>
+                      <div class="reviews-comments-item-date"><span>
+                        <i class="far fa-calendar-check">
+                        </i>
+                        <?php
+                        $bulan = array (
+                            1 => 'Januari',
+                            'Februari',
+                            'Maret',
+                            'April',
+                            'Mei',
+                            'Juni',
+                            'Juli',
+                            'Agustus',
+                            'September',
+                            'Oktober',
+                            'November',
+                            'Desember'
+                          );
+                          $pecahkan = explode('-',  $data_pengaduan->tanggal_pengaduan);
+                          $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+                        ?>
+                      <?php echo $tanggal;?>
+                      </span>
+                    </div>
+
                     </div>
                   </div>
                 </div>
@@ -134,22 +161,34 @@
                 <!-- reviews-comments-item -->
                 <div class="reviews-comments-item only-comments">
                   <div class="review-comments-avatar">
-                    <img src="<?php echo site_url(); ?>assets/umum/images/avatar/6.jpg" alt="">
+                    <img src="<?php echo site_url(); ?>assets/umum/images/avatar/kantah.png" alt="">
                   </div>
                   <div class="reviews-comments-item-text fl-wrap">
                     <div class="reviews-comments-header fl-wrap">
-                      <h4><a href="#">Adam Koncy</a></h4>
+                      <h4><a href="#">Kantor Pertanahan</a></h4>
                     </div>
-                    <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere convallis purus non cursus. Cras metus neque, gravida sodales massa ut. "</p>
-                    <div class="reviews-comments-item-footer fl-wrap">
-                      <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>03 December 2017</span></div>
-                      <a href="#" class="reply-item">Reply</a>
-                    </div>
+                    <p>
+
+                      <?php if($data_pengaduan->status==0){
+                        ?>
+                        Sedang Dalam Proses Penyelesaian
+                        <?php
+                      }else{
+                        ?>
+                        <?php echo $data_pengaduan->tindak_lanjut;?>
+                        <?php
+                      }
+                      ?>
+                    </p>
+
                   </div>
                 </div>
                 <!--reviews-comments-item end-->
               </div>
             </div>
+            <?php
+            }
+            ?>
           </div>
 
 
