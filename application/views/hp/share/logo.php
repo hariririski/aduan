@@ -10,4 +10,4 @@
   background-image: url(<?php echo site_url(); ?>assets/hp/images/1.jpg);
   }
 </style>
-<link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url(); ?>assets/hp/app/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url(); ?>assets/hp/app/icons/favicon.ico">
