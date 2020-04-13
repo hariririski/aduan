@@ -3,7 +3,7 @@
 <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
-        <title>Detail Pengaduan</title>
+        <title>Tindak Lanjut</title>
         <?php echo $this->load->view('share/author', '', TRUE);?>
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
@@ -67,28 +67,28 @@
                                       <div class="row">
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">NIK <i class="fal fa-user" style="top: 50px;"></i></label>
-                                          <input required type="text" name="nik" placeholder="NIK" value="<?php echo $detail->nik; ?>">
+                                          <input required type="text"  disabled name="nik" placeholder="NIK" value="<?php echo $detail->nik; ?>">
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Nama Lengkap  <i class="fal fa-user" style="top: 50px;"></i></label>
-                                          <input required type="text" name="nama_lengkap" placeholder="Nama Anda" value="<?php echo $detail->nama; ?>">
+                                          <input required type="text" disabled name="nama_lengkap" placeholder="Nama Anda" value="<?php echo $detail->nama; ?>">
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Nomor HP  <i class="far fa-phone" style="top: 50px;"></i></label>
-                                          <input required type="text"  name="no_telepon" placeholder="0822 3788 3433" value="<?php echo $detail->no_telepon; ?>">
+                                          <input required type="text"  disabled name="no_telepon" placeholder="0822 3788 3433" value="<?php echo $detail->no_telepon; ?>">
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Alamat<i class="far fa-envelope" style="top: 50px;"></i>  </label>
-                                          <input required type="text"  name="alamat" placeholder="Desa Setu, Kecamatan Baiturahman" value="<?php echo $detail->alamat; ?>">
+                                          <input required type="text"  disabled name="alamat" placeholder="Desa Setu, Kecamatan Baiturahman" value="<?php echo $detail->alamat; ?>">
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Pekerjaan<i class="far fa-user" style="top: 50px;"></i>  </label>
-                                          <input required type="text" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="<?php echo $detail->pekerjaan; ?>">
+                                          <input required type="text" disabled name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="<?php echo $detail->pekerjaan; ?>">
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Jenis Pengaduan<i class="far fa-user" style="top: 50px;"></i>  </label>
                                           <div class="listsearch-input-item">
-                                            <select data-placeholder="City" name="jenis_pengaduan" class="chosen-select no-search-select" required >
+                                            <select data-placeholder="City" disabled name="jenis_pengaduan" class="chosen-select no-search-select" required >
                                                 <option value="<?php echo $detail->id_jenis_pengaduan; ?>"><?php echo $detail->nama_jenis_pengaduan; ?></option>
                                                 <?php
                                                    foreach($jenis_pengaduan as $pengaduan){
@@ -102,10 +102,10 @@
                                             </select>
                                           </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                           <label style="padding: 10px;">Media Pelaporan<i class="far fa-user" style="top: 50px;"></i>  </label>
                                           <div class="listsearch-input-item">
-                                            <select name="media_pelaporan" class="chosen-select no-search-select" required >
+                                            <select name="media_pelaporan"disabled class="chosen-select no-search-select" required >
                                               <option value="<?php echo $detail->id_media_pelaporan; ?>"><?php echo $detail->nama_media_pelaporan; ?></option>
                                               <?php
                                                  foreach($media_pelaporan as $media_pelaporan){
@@ -119,21 +119,31 @@
                                             </select>
                                           </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                          <label style="padding: 10px;">Bidang<i class="far fa-user" style="top: 50px;"></i>  </label>
-                                          <div class="listsearch-input-item">
-                                            <select name="media_pelaporan" disabled class="chosen-select no-search-select">
-                                              <option value=""><?php echo $detail->nama_bidang; ?></option>
-
-                                            </select>
-                                          </div>
-                                        </div>
-
+                                        
                                       </div>
                                       <label style="padding: 10px;"> Uraian Pengaduan</label>
-                                      <textarea cols="40" rows="3"  name="uraian_pengaduan" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"><?php echo $detail->uraian; ?></textarea>
+                                      <textarea cols="40" rows="3"  disabled name="uraian_pengaduan" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"><?php echo $detail->uraian; ?></textarea>
+                                      <div class="row">
+                                      <div class="col-sm-12">
+                                        <label style="padding: 10px;">Bidang<i class="far fa-user" style="top: 50px;"></i>  </label>
+                                        <div class="listsearch-input-item">
+                                          <select name="media_pelaporan" class="chosen-select no-search-select" required >
+                                            <option value="<?php echo $detail->id_bidang; ?>"><?php echo $detail->nama_bidang; ?></option>
+                                            <?php
+                                               foreach($bidang as $bidang){
+                                                 if($detail->id_bidang!=$bidang->id_bidang){
+                                             ?>
+                                             <option value="<?php echo $bidang->id_bidang; ?>"><?php echo $bidang->nama_bidang; ?></option>
+                                           <?php
+                                                }
+                                              }
+                                            ?>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
                                       <label style="padding: 10px;"> Tindak Lanjut</label>
-                                      <textarea cols="40" rows="3" disabled name="tindak_lanjut" placeholder="tindak_lanjut" style="margin-bottom:20px;"><?php echo $detail->tindak_lanjut; ?></textarea>
+                                      <textarea cols="40" rows="3"  name="tindak_lanjut" placeholder="Tindak Lanjut" style="margin-bottom:20px;"><?php echo $detail->tindak_lanjut; ?></textarea>
 
                                       <div class="col-sm-12">
                                         <?php
@@ -158,35 +168,9 @@
                                         ?>
                                         <p align="center">
                                         <button type="submit" class="btn btn-primary">Update</button>
-                                        <?php
-                                        if($detail->jenis_pengaduan==0){
 
-                                        ?>
-                                        <a href="#" disabled  class="btn btn-success" style="margin-top: 20px;">Cetak</a>
-                                        <a href="#" disabled  class="btn btn-warning" style="margin-top: 20px;">Tindak Lanjut</a>
-                                        
-                                        <?php
-                                        }else{
-                                          ?>
-                                          <script>
-                                            function openWin() {
-                                              window.open("<?php echo site_url(); ?>cetak?id=<?php echo $detail->id_pengaduan; ?>","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=1000, height=700");
-                                            }
-                                            </script>
-                                          <a  onclick="openWin()" class="btn btn-success" style="margin-top: 20px;">Cetak</a>
-                                          <a href="<?php echo site_url(); ?>tindak_lanjut?id=<?php echo $detail->id_pengaduan; ?>"  class="btn btn-warning" style="margin-top: 20px;">Tindak Lanjut</a>
 
-                                          <?php
-                                        }
-                                        ?>
-                                        <?php
-                                            $level=$this->session->userdata('level');
-                                            if(($level)==2){
-                                        ?>
-                                        <a href="<?php echo site_url(); ?>lapor_hp/hapus?id=<?php echo $detail->id_pengaduan; ?>&&id2=<?php echo $detail->id_pelapor; ?>" style="margin-top: 20px;" class="btn btn-danger">Hapus</a>
-                                        <?php
-                                      }
-                                      ?>
+
 
                                         </p>
                                       </div>

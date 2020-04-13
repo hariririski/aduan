@@ -25,6 +25,7 @@
             <li><a href="<?php echo site_url(); ?>jenis_pengaduan"> <i class="fal fa-calendar-check"></i> Jenis Pengaduan </a></li>
             <li><a href="<?php echo site_url(); ?>jenis_informasi"><i class="fal fa-comments-alt"></i> Jenis Informasi </a></li>
             <li><a href="<?php echo site_url(); ?>media_pelaporan"><i class="fal fa-comments-alt"></i> Media Pelaporan </a></li>
+            <li><a href="<?php echo site_url(); ?>bidang"><i class="fal fa-comments-alt"></i> Bidang</a></li>
             <li><a href="dashboard-add-listing.html"><i class="fal fa-file-plus"></i> Konfigurasi</a></li>
         </ul>
     </div>

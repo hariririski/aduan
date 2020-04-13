@@ -75,6 +75,9 @@ $route['admin_lapor'] = 'Admin_Pengaduan/lapor';
 $route['media_pelaporan'] = 'Admin_Media_Pelaporan';
 $route['pengaduan_admin'] = 'Lapor_hp/tambah';
 $route['detail_lapor_admin'] = 'Admin_Pengaduan/detail_lapor_admin';
+$route['tindak_lanjut'] = 'Admin_Pengaduan/tindak_lanjut';
+$route['bidang'] = 'Admin_Bidang';
+$route['cetak'] = 'Admin_Pengaduan/cetak_lapor';
 
 
 

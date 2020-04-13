@@ -3,7 +3,7 @@
 <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
-        <title>Data Pengaduan</title>
+        <title>Data Bidang</title>
         <?php echo $this->load->view('share/author', '', TRUE);?>
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/reset.css">
@@ -54,7 +54,7 @@
                             <!-- dashboard content-->
                             <div class="col-md-9">
                                 <div class="dashboard-title fl-wrap">
-                                    <h3>Data Pengaduan</h3>
+                                    <h3>Data Bidang</h3>
                                 </div>
                                 <!-- list-single-facts -->
 
@@ -65,43 +65,22 @@
                                 			<thead>
                                 				<tr>
                                 					<th>No</th>
-                                          <th>Nomor</th>
-                                          <th>Status</th>
-                                					<th>Tanggal</th>
-                                					<th>Nama</th>
-                                					
-                                          <th>Media Lapor</th>
-                                          <th>Detail</th>
+                                					<th>Bidang</th>
+                                					<th width="40px">Detail</th>
                                 				</tr>
                                 			</thead>
                                 			<tbody>
                                         <?php
                                           $i=0;
-                                             foreach($semua_pengaduan as $pengaduan){
+                                             foreach($bidang as $bidang){
                                                $i++;
                                         ?>
                                         <tr>
                                              <td><?php echo $i; ?></td>
-                                             <td><?php echo $pengaduan->nomor; ?></td>
-                                             <td>
-                                               <?php if($pengaduan->status==0){
-                                                ?>
-                                                <div class="alert alert-warning" style="padding: 10px; margin-bottom: 0px;" role="alert">
-                                                    <?php echo"Proses";}else{ ?>
-                                                </div>
-                                                <div class="alert alert-success" style="padding: 10px; margin-bottom: 0px;" role="alert">
-                                                    <?php echo"Selesai";} ?>
-                                                </div>
-
-                                             </td>
-                                             <td><?php echo date('d F Y', strtotime($pengaduan->tanggal_pengaduan));  ?></td>
-                                             <td><?php echo $pengaduan->nama; ?></td>
-
-                                             <td><?php echo $pengaduan->nama_media_pelaporan; ?></td>
-                                             <td><a href="<?php echo site_url(); ?>detail_lapor_admin?id=<?php echo $pengaduan->id_pengaduan; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
+                                             <td><?php echo $bidang->nama_bidang; ?></td>
+                                             <td><a href="<?php echo site_url(); ?>lapor/detail_lapor/<?php echo $bidang->id_bidang; ?>"><button type="button" class="btn btn-primary">Detail</button></a></td>
                                          </tr>
                                         <?php } ?>
-
                                 			</tbody>
                                 		</table>
                                 	</div>

@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          $this->load->model('M_lapor');
          $this->load->model('M_jenis_pengaduan');
          $this->load->model('M_media_pelaporan');
+         $this->load->model('M_bidang');
 
 
   		}
@@ -33,6 +34,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $data['media_pelaporan'] = $this->M_media_pelaporan->lihat();
           $data['detail'] = $this->M_lapor->detail_pengaduan($id);
        		$this->load->view('admin_detail_lapor',$data);
+       	}
+         public function tindak_lanjut()
+       	{
+          $id =$this->input->get('id');
+          $data['bidang'] = $this->M_bidang->lihat();
+          $data['detail'] = $this->M_lapor->detail_pengaduan($id);
+       		$this->load->view('admin_tindak_lanjut',$data);
+       	}
+
+        public function cetak_lapor()
+       	{
+          $id =$this->input->get('id');
+          $data['jenis_pengaduan'] = $this->M_lapor->lihat();
+          $data['data_pengaduan'] = $this->M_lapor->detail_pengaduan($id);
+       		$this->load->view('admin_cetak_lapor',$data);
        	}
 
    }
