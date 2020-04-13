@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function tambah_hp(){
             $cek= $this->M_lapor_hp->add();
             if($cek>0){
-              redirect("pengecekan_url?no_telepon=".$cek."");
+              redirect("hp/detail/".$cek."");
             }else{
             echo"alert(Maaf, Gagal Menambahakan Pengaduan)";
             redirect('hp');
