@@ -132,68 +132,58 @@
                                     <div class="listing-item">
                                         <article class="geodir-category-listing fl-wrap">
                                             <div class="geodir-category-img">
-                                                <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
-                                                <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                                <img src="<?php echo site_url(); ?>assets/umum/images/all/1.jpg" alt="">
+                                                <div class="geodir-js-favorite_btn"></i><span>Save</span></div>
+                                                <a href="#" class="geodir-category-img-wrap fl-wrap">
+                                                <img src="<?php echo site_url(); ?>upload/artikel/<?php echo $u->foto ?>" alt="">
                                                 </a>
-                                                <div class="listing-avatar"><a href="author-single.html"><img src="<?php echo site_url(); ?>assets/umum/images/avatar/1.jpg" alt=""></a>
-                                                    <span class="avatar-tooltip">Added By  <strong>Alisa Noory</strong></span>
-                                                </div>
-                                                <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Open Now</div>
-                                                <div class="geodir-category-opt">
-                                                    <div class="listing-rating-count-wrap">
-                                                        <div class="review-score">4.8</div>
-                                                        <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                                        <br>
-                                                        <div class="reviews-count">12 reviews</div>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                             <div class="geodir-category-content fl-wrap title-sin_item">
                                                 <div class="geodir-category-content-title fl-wrap">
                                                     <div class="geodir-category-content-title-item">
-                                                        <h3 class="title-sin_map"><a href="listing-single.html">Luxary Resaturant</a><span class="verified-badge"><i class="fal fa-check"></i></span></h3>
-                                                        <div class="geodir-category-location fl-wrap"><a href="#" ><i class="fas fa-map-marker-alt"></i> 27th Brooklyn New York, USA</a></div>
+                                                        <h3 class="title-sin_map"><a href="listing-single.html"><?php echo $u->judul ?></a><span class="verified-badge"><i class="fal fa-check"></i></span></h3>
+                                                        <div class="geodir-category-location fl-wrap"><a href="#" > <?php
+                                                          $bulan = array (
+                                                              1 => 'Januari',
+                                                              'Februari',
+                                                              'Maret',
+                                                              'April',
+                                                              'Mei',
+                                                              'Juni',
+                                                              'Juli',
+                                                              'Agustus',
+                                                              'September',
+                                                              'Oktober',
+                                                              'November',
+                                                              'Desember'
+                                                            );
+                                                            $pecahkan = explode('-', date('d F Y', strtotime($u->tanggal)));
+                                                            $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+                                                            ?><?php echo $tanggal;?>,</a></div>
                                                     </div>
                                                 </div>
                                                 <div class="geodir-category-text fl-wrap">
-                                                    <p class="small-text">Sed interdum metus at nisi tempor laoreet. Integer gravida orci a justo sodales.</p>
-                                                    <div class="facilities-list fl-wrap">
-                                                        <div class="facilities-list-title">Facilities : </div>
-                                                        <ul class="no-list-style">
-                                                            <li class="tolt"  data-microtip-position="top" data-tooltip="Free WiFi"><i class="fal fa-wifi"></i></li>
-                                                            <li class="tolt"  data-microtip-position="top" data-tooltip="Parking"><i class="fal fa-parking"></i></li>
-                                                            <li class="tolt"  data-microtip-position="top" data-tooltip="Non-smoking Rooms"><i class="fal fa-smoking-ban"></i></li>
-                                                            <li class="tolt"  data-microtip-position="top" data-tooltip="Pets Friendly"><i class="fal fa-dog-leashed"></i></li>
-                                                        </ul>
-                                                    </div>
+                                                    <p class="small-text">
+                                                      <?php
+                                                        $str = $u->artikel;
+                                                        $arr = explode(" ", str_replace(",", ", ", $str));
+                                                        for ($index = 0; $index < 10; $index++) {
+                                                           echo $arr[$index]. " ";
+                                                        }
+
+                                                      ?>
+                                                    </p>
+
                                                 </div>
                                                 <div class="geodir-category-footer fl-wrap">
-                                                    <a class="listing-item-category-wrap">
-                                                        <div class="listing-item-category red-bg"><i class="fal fa-cheeseburger"></i></div>
-                                                        <span>Restaurants</span>
+                                                    <a class="listing-item-category-wrap" >
+
+                                                        <span style="top: 0px;"><?php echo $u->nama_jenis_informasi; ?></span>
                                                     </a>
                                                     <div class="geodir-opt-list">
-                                                        <ul class="no-list-style">
-                                                            <li><a href="#" class="show_gcc"><i class="fal fa-envelope"></i><span class="geodir-opt-tooltip">Contact Info</span></a></li>
-                                                            <li><a href="#1" class="single-map-item" data-newlatitude="40.72956781" data-newlongitude="-73.99726866"><i class="fal fa-map-marker-alt"></i><span class="geodir-opt-tooltip">On the map <strong>1</strong></span> </a></li>
-                                                            <li>
-                                                                <div class="dynamic-gal gdop-list-link" data-dynamicPath="[{'src': '<?php echo site_url(); ?>assets/umum/images/all/1.jpg'},{'src': '<?php echo site_url(); ?>assets/umum/images/all/24.jpg'}, {'src': '<?php echo site_url(); ?>assets/umum/images/all/12.jpg'}]"><i class="fal fa-search-plus"></i><span class="geodir-opt-tooltip">Gallery</span></div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="price-level geodir-category_price">
-                                                        <span class="price-level-item" data-pricerating="3"></span>
-                                                        <span class="price-name-tooltip">Pricey</span>
-                                                    </div>
-                                                    <div class="geodir-category_contacts">
-                                                        <div class="close_gcc"><i class="fal fa-times-circle"></i></div>
-                                                        <ul class="no-list-style">
-                                                            <li><span><i class="fal fa-phone"></i> Call : </span><a href="#">+38099231212</a></li>
-                                                            <li><span><i class="fal fa-envelope"></i> Write : </span><a href="#">yourmail@domain.com</a></li>
-                                                        </ul>
+                                                        &nbsp; &nbsp;<a href="<?php echo site_url(); ?>artikel?id=<?php echo $u->no; ?>"><button type="button" class="btn  color2-bg" style="padding: 5px 20px 5px 20px;top: -15px;">Detail</button></a>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </article>
                                     </div>
