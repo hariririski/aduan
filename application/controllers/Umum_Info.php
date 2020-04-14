@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
          public function index()
        	{
-
+          $this->load->helper('url');
           echo $data1=$this->uri->segment(2);
           if (!isset($data1)){
             $page=0;
@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       		$data = $this->M_info->jumlah_data();
           $jumlah_data=$data['0']->jumlah;
-      		$config['base_url'] = base_url().'info/';
+      		$config['base_url'] = base_url().'info';
       		$config['total_rows'] = $jumlah_data;
       		$config['per_page'] = 6;
       		$from = $page;

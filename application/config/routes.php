@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Umum_Home/cek';
 $route['beranda'] = 'Umum_Home';
 $route['tentang'] = 'Umum_Tentang';
-$route['info'] = 'Umum_Info';
+$route['info'] = 'Umum_Info/index';
 $route['admin_info'] = 'Admin_Informasi';
 $route['admin'] = 'Admin_Beranda';
 $route['data_admin'] = 'Admin';
