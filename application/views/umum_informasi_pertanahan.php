@@ -158,7 +158,7 @@
                                                             );
                                                             $pecahkan = explode('-', date('d F Y', strtotime($u->tanggal)));
                                                             $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
-                                                            ?><?php echo $tanggal;?>,</a></div>
+                                                            ?><?php echo $tanggal;?></a></div>
                                                     </div>
                                                 </div>
                                                 <div class="geodir-category-text fl-wrap">
