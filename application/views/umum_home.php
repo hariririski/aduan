@@ -311,7 +311,7 @@
                                             <span class="process-count">01 </span>
                                             <div class="time-line-icon"><i class="fal fa-map-marker-alt"></i></div>
                                             <h4>Laporkan Masalah Anda</h4>
-                                            <p>Anda Dapat Melaporkan Maslah Tanah Anda, Sertifikat Tanah, Layanan Pengaduan, Pegawai Kantor Pertanahan Kota Banda Aceh Dll..</p>
+                                            <p>Anda Dapat Melaporkan Masalah Tanah Anda Terkait Sertifikat Tanah, Layanan Pengaduan, Pegawai Kantor Pertanahan Kota Banda Aceh Dll..</p>
                                         </div>
                                         <span class="pr-dec"></span>
                                     </li>
@@ -374,8 +374,19 @@
                                                 <div class="testi-avatar"><img src="<?php echo site_url(); ?>assets/umum/images/avatar/umum.webp" alt=""></div>
                                                 <div class="testimonilas-text fl-wrap" style="height: 300px;">
 
-                                                    <p>"<?php echo $pengaduan->uraian;
-                                                        echo ", ";
+                                                    <p>"
+                                                      <?php
+                                                      $str = $pengaduan->uraian;
+                                                        $arr = explode(" ", str_replace(",", ", ", $str));
+                                                        for ($index = 0; $index < 20; $index++) {
+                                                            echo $arr[$index]. " ";
+                                                        }
+                                                        echo " ...";
+                                                        echo '"';
+
+                                                      ?></p>
+                                                      <?php
+                                                        echo "<br> ";
                                                       $tanggal=$pengaduan->tanggal_pengaduan;
                                                       $bulan = array (
                                                     		1 =>   'Januari',
@@ -394,7 +405,7 @@
                                                     	$pecahkan = explode('-', $tanggal);
                                                     	echo $newtanggal=$pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
                                                       ?>
-                                                    "</p>
+                                                    </p>
                                                     <a href="#" class="testi-link" target="_blank"><?php echo $pengaduan->media_lapor; ?></a>
                                                     <div class="testimonilas-avatar fl-wrap">
                                                         <h3><?php echo $pengaduan->nama; ?></h3>
