@@ -32,7 +32,7 @@
       <div data-height="150" class="page-title-bg opacity-90 bg-highlight"></div>
       <div class="page-title-small color-white bottom-30">
         <h1><i class="fa fa-arrow-left back-button"></i>Artikel</h1>
-        
+
       </div>
       <div class="content-boxed content-boxed-full">
         <div data-height="350" class="caption shadow-large bottom-0">
@@ -54,7 +54,7 @@
                   'November',
                   'Desember'
                 );
-                $pecahkan = explode('-', date('d F Y', strtotime($informasi->judul)));
+                $pecahkan = explode('-', date('d F Y', strtotime($informasi->tanggal)));
                 $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
                 ?><?php echo $tanggal;?>,
             </p>

@@ -184,7 +184,7 @@
                                                       <?php
                                                       $str = $informasi->artikel;
                                                         $arr = explode(" ", str_replace(",", ", ", $str));
-                                                        for ($index = 0; $index < 40; $index++) {
+                                                        for ($index = 0; $index < 20; $index++) {
                                                             echo $arr[$index]. " ";
                                                         }
 
@@ -197,7 +197,7 @@
                                                         <span style="top: 0px;"><?php echo $informasi->nama_jenis_informasi; ?></span>
                                                     </a>
                                                     <div class="geodir-opt-list">
-                                                        &nbsp; &nbsp;<button type="button" class="btn  color2-bg" style="padding: 5px 20px 5px 20px;top: -10px;">Detail</button>
+                                                        &nbsp; &nbsp;<a href="<?php echo site_url(); ?>artikel?id=<?php echo $informasi->no; ?>"><button type="button" class="btn  color2-bg" style="padding: 5px 20px 5px 20px;top: -10px;">Detail</button></a>
                                                     </div>
                                                 </div>
                                             </div>

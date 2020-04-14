@@ -116,7 +116,7 @@
               <i class="fas fa-bullhorn color-yellow1-dark fa-3x"></i>
               <h1 class="bold font-16">Laporkan Masalah Anda</h1>
               <p>
-                Anda Dapat Melaporkan Maslah Tanah Anda, Sertifikat Tanah, Layanan Pengaduan, Pegawai Kantor Pertanahan Kota Banda Aceh .
+                Anda Dapat Melaporkan Masalah Tanah Anda Terkait Sertifikat Tanah, Layanan Pengaduan, Pegawai Kantor Pertanahan Kota Banda Aceh Dan Lain Lain.
               </p>
             </div>
           </div>
