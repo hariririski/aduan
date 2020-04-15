@@ -58,13 +58,18 @@
                                 <!-- list-single-facts -->
 
                                 <!-- list-single-facts end -->
+                                <?php
+                                   foreach($detail as $detail){
+                                 ?>
                                 <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                   <div class="custom-form" style="padding: 20px;">
-                                    <form action="<?php echo site_url(); ?>pengaduan_admin" method="post" enctype="multipart/form-data">
-                                      <?php
-                                         foreach($detail as $detail){
-                                       ?>
+                                    <form action="<?php echo site_url(); ?>update_pengaduan?id=<?php echo $detail->id_pengaduan; ?>&&id2=<?php echo $detail->id_pelapor; ?>" method="post" enctype="multipart/form-data">
+
                                       <div class="row">
+                                        <div class="col-sm-6">
+                                          <label style="padding: 10px;">Nomor <i class="fal fa-user" style="top: 50px;"></i></label>
+                                          <input required type="text" name="nik" placeholder="NIK" value="<?php echo $detail->nomor; ?>">
+                                        </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">NIK <i class="fal fa-user" style="top: 50px;"></i></label>
                                           <input required type="text" name="nik" placeholder="NIK" value="<?php echo $detail->nik; ?>">
@@ -84,6 +89,10 @@
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Pekerjaan<i class="far fa-user" style="top: 50px;"></i>  </label>
                                           <input required type="text" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="<?php echo $detail->pekerjaan; ?>">
+                                        </div>
+                                        <div class="col-sm-6">
+                                          <label style="padding: 10px;">Tanggal<i class="far fa-user" style="top: 50px;"></i>  </label>
+                                          <input required type="date" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="<?php echo $detail->tanggal; ?>">
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Jenis Pengaduan<i class="far fa-user" style="top: 50px;"></i>  </label>
@@ -145,7 +154,7 @@
 
                                                     <div class="dashboard-message-text">
                                                         <i class="far fa-info green-bg"></i>
-                                                        <p style="color:white;font-size: 18px;"> Data Belum Lengkap, Mohon Di Lengkapi! </p>
+                                                        <p style="color:white;font-size: 18px;"> Jenis Pengaduan Belum Di Pilih </p>
                                                     </div>
 
                                                 </div>
@@ -164,7 +173,7 @@
                                         ?>
                                         <a href="#" disabled  class="btn btn-success" style="margin-top: 20px;">Cetak</a>
                                         <a href="#" disabled  class="btn btn-warning" style="margin-top: 20px;">Tindak Lanjut</a>
-                                        
+
                                         <?php
                                         }else{
                                           ?>
@@ -190,11 +199,11 @@
 
                                         </p>
                                       </div>
-                                      <?php } ?>
+
                                     </form>
                                   </div>
-                                </div>
-
+                                  </div>
+                                    <?php } ?>
                             </div>
                             <!-- dashboard content end-->
                         </div>

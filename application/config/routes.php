@@ -80,6 +80,7 @@ $route['bidang'] = 'Admin_Bidang';
 $route['cetak'] = 'Admin_Pengaduan/cetak_lapor';
 $route['artikel_hp'] = 'Admin_Informasi/detail_hp';
 $route['artikel'] = 'Admin_Informasi/detail';
+$route['update_pengaduan'] = 'Admin_Pengaduan/update';
 
 
 

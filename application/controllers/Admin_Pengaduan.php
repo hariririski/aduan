@@ -51,5 +51,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        		$this->load->view('admin_cetak_lapor',$data);
        	}
 
+        public function update(){
+            $id =$this->input->get('id');
+            $id2 =$this->input->get('id2');
+            $cek= $this->M_lapor->edit($id,$id2);
+            if($cek>0){
+              redirect('detail_lapor_admin?id='.$id);
+            }else{
+              redirect('detail_lapor_admin?id='.$id);
+       	    }
+        }
+
    }
 ?>

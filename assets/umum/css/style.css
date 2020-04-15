@@ -1917,7 +1917,7 @@ section.gray-section .section-separator {
 	width:100%;
 	position:relative;
 }
-.custom-form  textarea , .custom-form input[type="text"] , .custom-form  input[type=email] , .custom-form  input[type=password] , .custom-form  input[type=button] , .listsearch-input-item input[type="text"]{
+.custom-form  textarea , .custom-form input[type="text"] , .custom-form  input[type=email] , .custom-form  input[type=password] , .custom-form  input[type=button] , .listsearch-input-item input[type="text"],.custom-form  input[type=date]{
     float: left;
     border: 1px solid #e5e7f2;
     background: #f9f9f9;

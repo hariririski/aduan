@@ -21,6 +21,33 @@
         $query=$this->db->query("SELECT * FROM `data_pengaduan` LEFT join pelapor on data_pengaduan.id_pelapor=pelapor.id_pelapor left join jenis_pengaduan on jenis_pengaduan.id_jenis_pengaduan=data_pengaduan.jenis_pengaduan left join bidang on bidang.id_bidang=data_pengaduan.id_bidang left join media_pelaporan on media_pelaporan.id_media_pelaporan=data_pengaduan.id_media_pelaporan WHERE data_pengaduan.id_pengaduan='$id'");
         return $query->result();
       }
+      function edit($id,$id_pelapor){
+        $nama_lengkap = $this->input->post('nama_lengkap');
+        $nik = $this->input->post('nik');
+        $alamat = $this->input->post('alamat');
+        $email = $this->input->post('email');
+        $pekerjaan = $this->input->post('pekerjaan');
+        $no_telepon = $this->input->post('no_telepon');
+        $uraian_pengaduan = $this->input->post('uraian_pengaduan');
+        $jenis_pengaduan = $this->input->post('jenis_pengaduan');
+        $tanggal = $this->input->post('tanggal');
+        $nomor = $this->input->post('nomor');
+        $penyelesaian = $this->input->post('penyelesaian');
+        $status=1;
+
+        $perintah1="UPDATE `pelapor` SET `nama`='$nama_lengkap',`alamat`='$alamat',
+                    `email`='$email',`pekerjaan`='$pekerjaan',`no_telepon`='$no_telepon'
+                    WHERE `id_pelapor`='$id_pelapor'";
+        $query=$this->db->query($perintah1);
+        echo $perintah1="UPDATE `data_pengaduan`set `nomor`=[value-3],`tanggal_pengaduan`=[value-4],`uraian`=[value-5],`ktp`=[value-6],
+                    `bukti1`=[value-7],`bukti2`=[value-8],`jenis_pengaduan`=[value-9],`tindak_lanjut`=[value-10],
+                    `status`=[value-11],`id_media_pelaporan`=[value-12],`penerima`=[value-13],`id_bidang`=[value-14],
+                    `nama_bukti1`=[value-15],`nama_bukti2`=[value-16],`nik`=[value-17]
+                    WHERE `id_pengaduan`='$id_pengaduan'";
+        $query=$this->db->query($perintah1);
+        return $query;
+
+     }
      //  function laporan($tgl1,$tgl2){
      //    $query=$this->db->query("SELECT * FROM `data_pengaduan` LEFT join pelapor on data_pengaduan.id_pelapor=pelapor.id_pelapor left join jenis_pengaduan on jenis_pengaduan.id_jenis_pengaduan=data_pengaduan.jenis_pengaduan WHERE (tanggal_pengaduan BETWEEN  '$tgl1' AND '$tgl2')");
      //    return $query->result();

