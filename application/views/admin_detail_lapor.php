@@ -92,7 +92,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Tanggal<i class="far fa-user" style="top: 50px;"></i>  </label>
-                                          <input required type="date" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="<?php echo $detail->tanggal; ?>">
+                                          <input required type="date" name="tanggal" placeholder="Pegawai Negeri Sipil" value='01/01/2020<?php $newDate = date("m/d/Y", strtotime($detail->tanggal_pengaduan)); ?>'>
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Jenis Pengaduan<i class="far fa-user" style="top: 50px;"></i>  </label>

@@ -1941,7 +1941,7 @@ section.gray-section .section-separator {
 	font-size: 12px;
  	font-family: 'Roboto' ;
 }
-.custom-form  textarea:focus , .custom-form input[type="text"]:focus  , .custom-form  input[type=email]:focus  , .custom-form  input[type=password]:focus , .listsearch-input-item input[type="text"]:focus  {
+.custom-form  textarea:focus , .custom-form input[type="text"]:focus  , .custom-form  input[type=email]:focus  , .custom-form  input[type=password]:focus , .listsearch-input-item input[type="text"], .listsearch-input-item input[type="date"]:focus  {
 	background:#fff;
 	box-shadow: 0px 10px 14px 0px rgba(12, 0, 46, 0.06);
 }
@@ -1955,7 +1955,7 @@ section.gray-section .section-separator {
 	-webkit-appearance: none;
 }
 .custom-form  input  {
-	margin-bottom:20px;
+	
 }
 .filter-tags input , .custom-form  .filter-tags input {
 	float:left;
