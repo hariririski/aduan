@@ -64,5 +64,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        	    }
         }
 
+        public function proses_tindak_lanjut(){
+            $id =$this->input->get('id');
+            $id2 =$this->input->get('id2');
+            $cek= $this->M_lapor->tindak_lanjut($id,$id2);
+            if($cek>0){
+              echo ("<script LANGUAGE='JavaScript'>window.alert('Succesfully Updated');window.location.href='detail_lapor_admin?id=".$id."';</script>");
+
+
+            }else{
+                echo ("<script LANGUAGE='JavaScript'>window.alert('Gagal Updated');window.location.href='detail_lapor_admin?id=".$id."';</script>");
+       	    }
+        }
+
    }
 ?>

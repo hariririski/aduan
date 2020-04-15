@@ -139,7 +139,8 @@
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Penerima<i class="far fa-user" style="top: 50px;"></i>  </label>
-                                          <input disabled type="text" name="penerima" placeholder="Pegawai Negeri Sipil" value='<?php echo $level=$this->session->userdata('nama');?>'>
+                                          <input type="text" name="penerima" placeholder="Pegawai Negeri Sipil" value='<?php echo $level=$this->session->userdata('nama');?>'>
+
                                         </div>
                                       </div>
                                       <label style="padding: 10px;"> Uraian Pengaduan</label>

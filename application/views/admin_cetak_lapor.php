@@ -266,8 +266,8 @@
                                              echo '<tr>';
                                                echo '<td style="vertical-align:top">';
                                                if($pengaduan->id_jenis_pengaduan==$detail->id_jenis_pengaduan){
-                                                 echo "<b><u>".$huruf[$j]."</u></b>";
-                                                  echo "<b><u>. </u></b>";
+                                                 echo "".$huruf[$j]."";
+                                                  echo ".";
                                                }else{
                                                  echo $huruf[$j];
                                                  echo ". ";
@@ -276,7 +276,7 @@
                                                echo "</td>";
                                                echo '<td style="vertical-align:top">';
                                                if($pengaduan->id_jenis_pengaduan==$detail->id_jenis_pengaduan){
-                                                 echo "<b><u>".$pengaduan->nama_jenis_pengaduan."</u></b>";
+                                                 echo "".$pengaduan->nama_jenis_pengaduan."";
                                                }else{
                                                  echo $pengaduan->nama_jenis_pengaduan;
                                                }

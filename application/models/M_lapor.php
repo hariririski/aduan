@@ -43,11 +43,26 @@
         $query=$this->db->query($perintah1);
         $perintah2="UPDATE `data_pengaduan`set `nomor`='$nomor',`tanggal_pengaduan`='$tanggal',`uraian`='$uraian_pengaduan',
                     `jenis_pengaduan`='$jenis_pengaduan',`id_media_pelaporan`='$media_pelaporan',`penerima`='$penerima'
-                    WHERE `id_pengaduan`='$id_pengaduan'";
+                    WHERE `id_pengaduan`='$id'";
         $query2=$this->db->query($perintah2);
         return $query2;
 
      }
+
+     function tindak_lanjut($id,$id_pelapor){
+       $bidang = $this->input->post('bidang');
+       $tindak_lanjut = $this->input->post('tindak_lanjut');
+       $status=1;
+       $tanggal = date("Y-m-d");
+       $perintah2="UPDATE `data_pengaduan`set `tindak_lanjut`='$tindak_lanjut',`status`=$status,`id_bidang`='$bidang',`tanggal_selesai`='$tanggal'
+                   WHERE `id_pengaduan`='$id'";
+       $query2=$this->db->query($perintah2);
+       return $query2;
+
+    }
+
+
+
      //  function laporan($tgl1,$tgl2){
      //    $query=$this->db->query("SELECT * FROM `data_pengaduan` LEFT join pelapor on data_pengaduan.id_pelapor=pelapor.id_pelapor left join jenis_pengaduan on jenis_pengaduan.id_jenis_pengaduan=data_pengaduan.jenis_pengaduan WHERE (tanggal_pengaduan BETWEEN  '$tgl1' AND '$tgl2')");
      //    return $query->result();

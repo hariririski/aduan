@@ -47,9 +47,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $id2 =$this->input->get('id2');
             $cek= $this->M_lapor->hapus($id,$id2);
             if($cek>0){
-              echo ("<script LANGUAGE='JavaScript'>window.alert('Berhasil Hapus Pengduan');window.location.href='data';</script>");
+              echo ("<script LANGUAGE='JavaScript'>window.alert('Berhasil Hapus Pengduan');window.location.href='../data';</script>");
             }else{
-            //redirect('detail_lapor_admin?id='.$cek);
+            echo ("<script LANGUAGE='JavaScript'>window.alert('gagal Hapus Pengduan');window.location.href='data';</script>");
        	    }
         }
 

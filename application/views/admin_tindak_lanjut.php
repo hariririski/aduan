@@ -58,12 +58,13 @@
                                 <!-- list-single-facts -->
 
                                 <!-- list-single-facts end -->
+                                <?php
+                                   foreach($detail as $detail){
+                                 ?>
                                 <div class="list-single-main-item fl-wrap block_box " style="padding: 20px;">
                                   <div class="custom-form" style="padding: 20px;">
-                                    <form action="<?php echo site_url(); ?>pengaduan_admin" method="post" enctype="multipart/form-data">
-                                      <?php
-                                         foreach($detail as $detail){
-                                       ?>
+                                    <form action="<?php echo site_url(); ?>p_tindak_lanjut?id=<?php echo $detail->id_pengaduan; ?>&&id2=<?php echo $detail->id_pelapor; ?>" method="post" enctype="multipart/form-data">
+
                                       <div class="row">
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">NIK <i class="fal fa-user" style="top: 50px;"></i></label>
@@ -119,7 +120,7 @@
                                             </select>
                                           </div>
                                         </div>
-                                        
+
                                       </div>
                                       <label style="padding: 10px;"> Uraian Pengaduan</label>
                                       <textarea cols="40" rows="3"  disabled name="uraian_pengaduan" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"><?php echo $detail->uraian; ?></textarea>
@@ -127,7 +128,7 @@
                                       <div class="col-sm-12">
                                         <label style="padding: 10px;">Bidang<i class="far fa-user" style="top: 50px;"></i>  </label>
                                         <div class="listsearch-input-item">
-                                          <select name="media_pelaporan" class="chosen-select no-search-select" required >
+                                          <select name="bidang" class="chosen-select no-search-select" required >
                                             <option value="<?php echo $detail->id_bidang; ?>"><?php echo $detail->nama_bidang; ?></option>
                                             <?php
                                                foreach($bidang as $bidang){
@@ -174,11 +175,11 @@
 
                                         </p>
                                       </div>
-                                      <?php } ?>
+
                                     </form>
                                   </div>
                                 </div>
-
+                                <?php } ?>
                             </div>
                             <!-- dashboard content end-->
                         </div>
