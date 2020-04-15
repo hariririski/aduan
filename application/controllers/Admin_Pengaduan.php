@@ -56,9 +56,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $id2 =$this->input->get('id2');
             $cek= $this->M_lapor->edit($id,$id2);
             if($cek>0){
-              redirect('detail_lapor_admin?id='.$id);
+              echo ("<script LANGUAGE='JavaScript'>window.alert('Succesfully Updated');window.location.href='detail_lapor_admin?id=".$id."';</script>");
+
+
             }else{
-              redirect('detail_lapor_admin?id='.$id);
+                echo ("<script LANGUAGE='JavaScript'>window.alert('Gagal Updated');window.location.href='detail_lapor_admin?id=".$id."';</script>");
        	    }
         }
 

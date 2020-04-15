@@ -30,8 +30,10 @@
         $no_telepon = $this->input->post('no_telepon');
         $uraian_pengaduan = $this->input->post('uraian_pengaduan');
         $jenis_pengaduan = $this->input->post('jenis_pengaduan');
-        $tanggal = $this->input->post('tanggal');
+        $media_pelaporan = $this->input->post('media_pelaporan');
+        $tanggal = $this->input->post('tanggal_pengaduan');
         $nomor = $this->input->post('nomor');
+        $penerima = $this->input->post('penerima');
         $penyelesaian = $this->input->post('penyelesaian');
         $status=1;
 
@@ -39,13 +41,11 @@
                     `email`='$email',`pekerjaan`='$pekerjaan',`no_telepon`='$no_telepon'
                     WHERE `id_pelapor`='$id_pelapor'";
         $query=$this->db->query($perintah1);
-        echo $perintah1="UPDATE `data_pengaduan`set `nomor`=[value-3],`tanggal_pengaduan`=[value-4],`uraian`=[value-5],`ktp`=[value-6],
-                    `bukti1`=[value-7],`bukti2`=[value-8],`jenis_pengaduan`=[value-9],`tindak_lanjut`=[value-10],
-                    `status`=[value-11],`id_media_pelaporan`=[value-12],`penerima`=[value-13],`id_bidang`=[value-14],
-                    `nama_bukti1`=[value-15],`nama_bukti2`=[value-16],`nik`=[value-17]
+        $perintah2="UPDATE `data_pengaduan`set `nomor`='$nomor',`tanggal_pengaduan`='$tanggal',`uraian`='$uraian_pengaduan',
+                    `jenis_pengaduan`='$jenis_pengaduan',`id_media_pelaporan`='$media_pelaporan',`penerima`='$penerima'
                     WHERE `id_pengaduan`='$id_pengaduan'";
-        $query=$this->db->query($perintah1);
-        return $query;
+        $query2=$this->db->query($perintah2);
+        return $query2;
 
      }
      //  function laporan($tgl1,$tgl2){
@@ -80,9 +80,9 @@
 
 
       function hapus($id_pengaduan,$id_pelapor){
-        echo $perintah1="DELETE FROM `pelapor` WHERE id_pelapor='$id_pelapor'";
+        $perintah1="DELETE FROM `pelapor` WHERE id_pelapor='$id_pelapor'";
         $query=$this->db->query($perintah1);
-        echo $perintah2="DELETE FROM `data_pengaduan` WHERE id_pengaduan='$id_pengaduan'";
+        $perintah2="DELETE FROM `data_pengaduan` WHERE id_pengaduan='$id_pengaduan'";
         $query2=$this->db->query($perintah2);
         return $id_pengaduan;
       }

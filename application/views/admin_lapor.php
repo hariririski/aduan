@@ -83,6 +83,10 @@
                                           <input required type="text" name="pekerjaan" placeholder="Pegawai Negeri Sipil" value="">
                                         </div>
                                         <div class="col-sm-6">
+                                          <label style="padding: 10px;">Tanggal<i class="far fa-user" style="top: 50px;"></i>  </label>
+                                          <input required type="date" name="tanggal_pengaduan" placeholder="Pegawai Negeri Sipil" >
+                                        </div>
+                                        <div class="col-sm-6">
                                           <label style="padding: 10px;">Jenis Pengaduan<i class="far fa-user" style="top: 50px;"></i>  </label>
                                           <div class="listsearch-input-item">
                                             <select required data-placeholder="City" name="jenis_pengaduan" class="chosen-select no-search-select" >

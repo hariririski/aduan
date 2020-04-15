@@ -91,7 +91,7 @@
           $jenis_pengaduan = $this->input->post('jenis_pengaduan');
           $media_pelaporan = $this->input->post('media_pelaporan');
           $nik = $this->input->post('nik');
-          $tanggal = date("Y-m-d");
+          $tanggal = $this->input->post('tanggal_pengaduan');
           $nomor=0;
           $id_pelapor = mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
           //$file_ktp=$this->random_name(20);
@@ -116,7 +116,7 @@
 
           $media=2;
 
-          echo $perintah1="INSERT INTO `data_pengaduan`(`id_pelapor`, `id_pengaduan`, `nomor`, `uraian`, `penerima`,`tanggal_pengaduan`,`nik`,`jenis_pengaduan`,`id_media_pelaporan`)
+          $perintah1="INSERT INTO `data_pengaduan`(`id_pelapor`, `id_pengaduan`, `nomor`, `uraian`, `penerima`,`tanggal_pengaduan`,`nik`,`jenis_pengaduan`,`id_media_pelaporan`)
                       VALUES ('$id_pelapor','$id_pelapor$nomor','$new_nomor','$uraian_pengaduan','Belum Diterima','$tanggal','$nik','$jenis_pengaduan','$media_pelaporan')";
           $query1=$this->db->query($perintah1);
 

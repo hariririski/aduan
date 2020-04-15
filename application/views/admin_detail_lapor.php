@@ -68,7 +68,7 @@
                                       <div class="row">
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Nomor <i class="fal fa-user" style="top: 50px;"></i></label>
-                                          <input required type="text" name="nik" placeholder="NIK" value="<?php echo $detail->nomor; ?>">
+                                          <input required type="text" name="nomor" placeholder="NIK" value="<?php echo $detail->nomor; ?>">
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">NIK <i class="fal fa-user" style="top: 50px;"></i></label>
@@ -92,7 +92,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Tanggal<i class="far fa-user" style="top: 50px;"></i>  </label>
-                                          <input required type="date" name="tanggal" placeholder="Pegawai Negeri Sipil" value='01/01/2020<?php $newDate = date("m/d/Y", strtotime($detail->tanggal_pengaduan)); ?>'>
+                                          <input required type="date" name="tanggal_pengaduan" placeholder="Pegawai Negeri Sipil" value='<?php echo $detail->tanggal_pengaduan; ?>'>
                                         </div>
                                         <div class="col-sm-6">
                                           <label style="padding: 10px;">Jenis Pengaduan<i class="far fa-user" style="top: 50px;"></i>  </label>
@@ -137,7 +137,10 @@
                                             </select>
                                           </div>
                                         </div>
-
+                                        <div class="col-sm-6">
+                                          <label style="padding: 10px;">Penerima<i class="far fa-user" style="top: 50px;"></i>  </label>
+                                          <input disabled type="text" name="penerima" placeholder="Pegawai Negeri Sipil" value='<?php echo $level=$this->session->userdata('nama');?>'>
+                                        </div>
                                       </div>
                                       <label style="padding: 10px;"> Uraian Pengaduan</label>
                                       <textarea cols="40" rows="3"  name="uraian_pengaduan" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"><?php echo $detail->uraian; ?></textarea>
@@ -165,6 +168,7 @@
                                         }
 
                                         ?>
+
                                         <p align="center">
                                         <button type="submit" class="btn btn-primary">Update</button>
                                         <?php
