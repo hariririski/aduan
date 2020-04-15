@@ -32,13 +32,10 @@
       <div class="single-slider slider-full owl-no-dots owl-carousel">
         <div class="caption bottom-0 round-medium shadow-large" data-height="350">
           <div class="caption-bottom bottom-10 center-text">
-            <h1 class="bolder font-28">KIBAN</h1>
-            <p class="color-theme boxed-text-huge opacity-60">
-              Konsultasi Informasi Beserta Pengaduan
-            </p>
+
           </div>
-          <div class="caption-overlay bg-gradient-fade"></div>
-          <div class="caption-bg owl-lazy" data-src="<?php echo site_url(); ?>assets/hp/images/pictures/17m.jpg"></div>
+          <div class="caption-overlay "></div>
+          <div class="caption-bg owl-lazy" data-src="<?php echo site_url(); ?>assets/hp/images/1.png"></div>
         </div>
         <div class="caption bottom-0 round-medium shadow-large" data-height="350">
           <div class="caption-bottom bottom-10 center-text">
