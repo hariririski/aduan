@@ -54,9 +54,9 @@
        $tindak_lanjut = $this->input->post('tindak_lanjut');
        $status=1;
        $tanggal = date("Y-m-d");
-       echo $perintah2="UPDATE `data_pengaduan`set `tindak_lanjut`='$tindak_lanjut',`status`=$status,`id_bidang`='$bidang',`tanggal_selesai`='$tanggal'
+       $perintah2="UPDATE `data_pengaduan`set `tindak_lanjut`='$tindak_lanjut',`status`=$status,`id_bidang`='$bidang',`tanggal_selesai`='$tanggal'
                    WHERE `id_pengaduan`='$id'";
-       //$query2=$this->db->query($perintah2);
+       $query2=$this->db->query($perintah2);
        return $query2;
 
     }
