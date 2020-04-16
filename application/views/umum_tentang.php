@@ -76,7 +76,7 @@
 
                                             <span class="section-separator fl-sec-sep"></span>
                                             <p>
-                                              KIBAN Merupakan sistem informasi Pengaduan berbasis WEB, yang merupakan pengembangan dari aplikasi pengaduan yang telah aktif sejak tahun 2018 dimana terdapat perombakan total  aplikasi dari desain hingga fitur yang diberikan yang dapat melaporkan segala persoalan pertanahan.
+                                              KIBAN Merupakan sistem informasi Pengaduan berbasis WEB, yang merupakan pengembangan dari aplikasi pengaduan yang telah aktif sejak tahun 2019 dimana terdapat perombakan total  aplikasi dari desain hingga fitur yang diberikan yang dapat melaporkan segala persoalan pertanahan.
                                               Aplikasi KIBAN dapat dengan cepat menanggapi, mensikapi dan memberikan jawaban/solusi dari berbagai pengaduan yang masuk melalui Aplikasi KIBAN, Twitter, Whatsapp, Instagram, Maupun Aplikasi Lapor.go.id.
                                               Kami berharap dengan adanya Aplikasi KIBAN dapat memberikan pelayanan yang maksimal yang dibutuhkan oleh masyarakat Kota Banda Aceh.
                                             </p>
