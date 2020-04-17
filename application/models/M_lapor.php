@@ -5,6 +5,50 @@
         $query=$this->db->query("SELECT * FROM jenis_pengaduan");
         return $query->result();
       }
+      function tahun_max(){
+        $query=$this->db->query("SELECT max(YEAR(tanggal_pengaduan)) as tahun FROM `data_pengaduan`");
+        return $query->result();
+      }
+      function tahun_min(){
+        $query=$this->db->query("SELECT min(YEAR(tanggal_pengaduan)) as tahun FROM `data_pengaduan`");
+        return $query->result();
+      }
+      function jumlah_pengaduan_tahun($id){
+        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM data_pengaduan where year(tanggal_pengaduan)='$id'");
+        return $query->result();
+      }
+      function pengaduan_selesai_tahun($id){
+        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM data_pengaduan WHERE status='1' and  year(tanggal_pengaduan)='$id'");
+        return $query->result();
+      }
+      function pengaduan_proses_tahun($id){
+        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM data_pengaduan WHERE status='0' and year(tanggal_pengaduan)='$id'");
+        return $query->result();
+      }
+      function jumlah_pengaduan(){
+        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM data_pengaduan");
+        return $query->result();
+      }
+      function pengaduan_selesai(){
+        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM data_pengaduan WHERE status='1' ");
+        return $query->result();
+      }
+      function pengaduan_proses(){
+        $query=$this->db->query("SELECT COUNT(*) as jumlah FROM data_pengaduan WHERE status='0'");
+        return $query->result();
+      }
+      function tahun(){
+        $query=$this->db->query("SELECT DISTINCT YEAR(tanggal_pengaduan) as tahun FROM `data_pengaduan`");
+        return $query->result();
+      }
+      function detail_pengaduan1(){
+        $query=$this->db->query("SELECT * FROM `data_pengaduan` LEFT join pelapor on data_pengaduan.id_pelapor=pelapor.id_pelapor left join jenis_pengaduan on jenis_pengaduan.id_jenis_pengaduan=data_pengaduan.jenis_pengaduan left join media_pelaporan on media_pelaporan.id_media_pelaporan=data_pengaduan.id_media_pelaporan ORDER BY data_pengaduan.tanggal_pengaduan DESC");
+        return $query->result();
+      }
+      function detail_pengaduan2($id){
+        $query=$this->db->query("SELECT * FROM `data_pengaduan` LEFT join pelapor on data_pengaduan.id_pelapor=pelapor.id_pelapor left join jenis_pengaduan on jenis_pengaduan.id_jenis_pengaduan=data_pengaduan.jenis_pengaduan left join media_pelaporan on media_pelaporan.id_media_pelaporan=data_pengaduan.id_media_pelaporan  where year(data_pengaduan.tanggal_pengaduan)='$id' ORDER BY data_pengaduan.tanggal_pengaduan DESC");
+        return $query->result();
+      }
       function semua_pengaduan(){
         $query=$this->db->query("SELECT * FROM `data_pengaduan` LEFT join pelapor on data_pengaduan.id_pelapor=pelapor.id_pelapor left join jenis_pengaduan on jenis_pengaduan.id_jenis_pengaduan=data_pengaduan.jenis_pengaduan left join media_pelaporan on media_pelaporan.id_media_pelaporan=data_pengaduan.id_media_pelaporan ORDER BY data_pengaduan.tanggal_pengaduan DESC");
         return $query->result();

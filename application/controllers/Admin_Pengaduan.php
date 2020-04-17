@@ -27,6 +27,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $data['media_pelaporan'] = $this->M_media_pelaporan->lihat();
        		$this->load->view('admin_lapor',$data);
        	}
+         public function laporan()
+       	{
+          $data['tahun'] = $this->M_lapor->tahun();
+       		$this->load->view('admin_laporan',$data);
+       	}
+         public function detail_laporan()
+       	{
+          $id =$this->input->get('id');
+          if($id==0){
+            $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan();
+            $data['tahun_min'] = $this->M_lapor->tahun_min();
+            $data['tahun_max'] = $this->M_lapor->tahun_max();
+            $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai();
+            $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses();
+            $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan1($id);
+          }else{
+            $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan_tahun($id);
+            $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
+            $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
+            $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan2($id);
+          }
+       		$this->load->view('admin_detail_laporan',$data);
+       	}
          public function detail_lapor_admin()
        	{
           $id =$this->input->get('id');

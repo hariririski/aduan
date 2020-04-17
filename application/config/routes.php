@@ -82,6 +82,8 @@ $route['artikel_hp'] = 'Admin_Informasi/detail_hp';
 $route['artikel'] = 'Admin_Informasi/detail';
 $route['update_pengaduan'] = 'Admin_Pengaduan/update';
 $route['p_tindak_lanjut'] = 'Admin_Pengaduan/proses_tindak_lanjut';
+$route['laporan'] = 'Admin_Pengaduan/laporan';
+$route['detail_laporan'] = 'Admin_Pengaduan/detail_laporan';
 
 
 

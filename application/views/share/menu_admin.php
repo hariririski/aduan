@@ -9,7 +9,8 @@
             <li><a href="<?php echo site_url(); ?>data"><i class="fal fa-rss"></i>Data Pengaduan</a></li>
             <li><a href="<?php echo site_url(); ?>admin_lapor"><i class="fal fa-user-edit"></i> Tambah Pengaduan</a></li>
             <li><a href="<?php echo site_url(); ?>admin_info"><i class="fal fa-envelope"></i> Informasi </a></li>
-            <li><a href="dashboard-password.html"><i class="fal fa-key"></i>Tambah Informasi</a></li>
+            <li><a href="<?php echo site_url(); ?>admin_info"><i class="fal fa-key"></i>Tambah Informasi</a></li>
+            <li><a href="<?php echo site_url(); ?>laporan"><i class="fal fa-key"></i>Laporan</a></li>
         </ul>
     </div>
     <!-- user-profile-menu end-->
