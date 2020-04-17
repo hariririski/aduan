@@ -59,7 +59,7 @@
                                             <!-- inline-facts -->
                                             <div class="inline-facts-wrap gradient-bg ">
                                                 <div class="inline-facts">
-                                                    <i class="fal fa-chart-bar"></i>
+
                                                     <div class="milestone-counter">
                                                         <div class="stats animaper">
                                                             <div class="num" data-content="0" data-num="<?php
@@ -83,7 +83,7 @@
                                             <!-- inline-facts  -->
                                             <div class="inline-facts-wrap gradient-bg ">
                                                 <div class="inline-facts">
-                                                    <i class="fal fa-comments-alt"></i>
+
                                                     <div class="milestone-counter">
                                                         <div class="stats animaper">
                                                             <div class="num" data-content="0" data-num="<?php
@@ -107,7 +107,7 @@
                                             <!-- inline-facts  -->
                                             <div class="inline-facts-wrap gradient-bg ">
                                                 <div class="inline-facts">
-                                                    <i class="fal fa-envelope-open-dollar"></i>
+
                                                     <div class="milestone-counter">
                                                         <div class="stats animaper">
                                                             <div class="num" data-content="0" data-num="<?php
@@ -131,7 +131,7 @@
                                             <!-- inline-facts  -->
                                             <div class="inline-facts-wrap gradient-bg ">
                                                 <div class="inline-facts">
-                                                    <i class="fal fa-envelope-open-dollar"></i>
+                                                    
                                                     <div class="milestone-counter">
                                                         <div class="stats animaper">
                                                             <div class="num" data-content="0" data-num="<?php

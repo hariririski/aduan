@@ -5,6 +5,22 @@
         $query=$this->db->query("SELECT * FROM jenis_pengaduan");
         return $query->result();
       }
+      function media_pelaporan(){
+        $query=$this->db->query("SELECT media_pelaporan.nama_media_pelaporan as nama, COUNT(data_pengaduan.id_media_pelaporan) as jumlah from data_pengaduan, media_pelaporan WHERE data_pengaduan.id_media_pelaporan=media_pelaporan.id_media_pelaporan  GROUP by data_pengaduan.id_media_pelaporan");
+        return $query->result();
+      }
+      function jenis_pengaduan(){
+        $query=$this->db->query("SELECT jenis_pengaduan.nama_jenis_pengaduan as nama, COUNT(jenis_pengaduan) as jumlah from data_pengaduan, jenis_pengaduan WHERE data_pengaduan.jenis_pengaduan=jenis_pengaduan.id_jenis_pengaduan  GROUP by data_pengaduan.jenis_pengaduan");
+        return $query->result();
+      }
+      function media_pelaporan_tahun($id){
+        $query=$this->db->query("SELECT media_pelaporan.nama_media_pelaporan as nama, COUNT(data_pengaduan.id_media_pelaporan) as jumlah from data_pengaduan, media_pelaporan WHERE data_pengaduan.id_media_pelaporan=media_pelaporan.id_media_pelaporan and year(data_pengaduan.tanggal_pengaduan)='$id' GROUP by data_pengaduan.id_media_pelaporan");
+        return $query->result();
+      }
+      function jenis_pengaduan_tahun($id){
+        $query=$this->db->query("SELECT jenis_pengaduan.nama_jenis_pengaduan as nama, COUNT(jenis_pengaduan) as jumlah from data_pengaduan, jenis_pengaduan WHERE data_pengaduan.jenis_pengaduan=jenis_pengaduan.id_jenis_pengaduan and year(data_pengaduan.tanggal_pengaduan)='$id' GROUP by data_pengaduan.jenis_pengaduan");
+        return $query->result();
+      }
       function tahun_max(){
         $query=$this->db->query("SELECT max(YEAR(tanggal_pengaduan)) as tahun FROM `data_pengaduan`");
         return $query->result();

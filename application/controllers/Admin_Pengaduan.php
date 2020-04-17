@@ -44,10 +44,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan();
             $data['tahun_min'] = $this->M_lapor->tahun_min();
             $data['tahun_max'] = $this->M_lapor->tahun_max();
+            $data['media_pelaporan'] = $this->M_lapor->media_pelaporan();
+            $data['jenis_pengaduan'] = $this->M_lapor->jenis_pengaduan();
             $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai();
             $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses();
             $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan1($id);
           }else{
+            $data['media_pelaporan'] = $this->M_lapor->media_pelaporan_tahun($id);
+            $data['jenis_pengaduan'] = $this->M_lapor->jenis_pengaduan_tahun($id);
             $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan_tahun($id);
             $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
             $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);

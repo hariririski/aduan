@@ -83,7 +83,7 @@
                                                   <!-- inline-facts -->
                                                   <div class="inline-facts-wrap gradient-bg ">
                                                       <div class="inline-facts">
-                                                          <i class="fal fa-chart-bar"></i>
+
                                                           <div class="milestone-counter">
                                                               <div class="stats animaper">
                                                                   <div class="num" data-content="0" data-num="<?php
@@ -107,7 +107,7 @@
                                                   <!-- inline-facts  -->
                                                   <div class="inline-facts-wrap gradient-bg ">
                                                       <div class="inline-facts">
-                                                          <i class="fal fa-comments-alt"></i>
+
                                                           <div class="milestone-counter">
                                                               <div class="stats animaper">
                                                                   <div class="num" data-content="0" data-num="<?php
@@ -131,7 +131,7 @@
                                                   <!-- inline-facts  -->
                                                   <div class="inline-facts-wrap gradient-bg ">
                                                       <div class="inline-facts">
-                                                          <i class="fal fa-envelope-open-dollar"></i>
+
                                                           <div class="milestone-counter">
                                                               <div class="stats animaper">
                                                                   <div class="num" data-content="0" data-num="<?php
@@ -155,7 +155,7 @@
                                                   <!-- inline-facts  -->
                                                   <div class="inline-facts-wrap gradient-bg ">
                                                       <div class="inline-facts">
-                                                          <i class="fal fa-envelope-open-dollar"></i>
+                                                          
                                                           <div class="milestone-counter">
                                                               <div class="stats animaper">
                                                                   <div class="num" data-content="0" data-num="<?php
@@ -179,7 +179,109 @@
                                       </div>
 
                                   </div>
+                                  <div class="col-md-12">
+                                      <!-- list-single-facts -->
+                                      <div class="list-single-facts fl-wrap">
+                                          <div class="row">
+                                              <div class="col-md-6">
+                                                  <!-- inline-facts -->
+                                                  <div class="inline-facts-wrap gradient-bg " style="background-color: #f3f6f9;background: -webkit-linear-gradient(top, #f3f6f9,#f3f6f9);">
+                                                      <div class="inline-facts">
 
+                                                          <div class="milestone-counter">
+                                                              <div class="stats animaper">
+
+                                                                <table class="table table-border checkout-table" style="width:100%">
+                                                                  <thead>
+                                                                    <tr>
+                                                                      <th>No</th>
+                                                                      <th >Jenis Pengaduan</th>
+                                                                      <th>Jumlah</th>
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                    <?php
+                                                                      $i=0;
+                                                                      $jumlah=0;
+                                                                         foreach($jenis_pengaduan as $jenis_pengaduan){
+                                                                           $i++;
+                                                                           $jumlah+=$jenis_pengaduan->jumlah;
+
+                                                                    ?>
+                                                                    <tr>
+                                                                         <td><?php echo $i; ?></td>
+                                                                         <td align="left"><?php echo $jenis_pengaduan->nama; ?></td>
+                                                                         <td><?php echo $jenis_pengaduan->jumlah; ?></td>
+
+                                                                     </tr>
+                                                                    <?php } ?>
+                                                                    <tr>
+                                                                      <td>#</td>
+                                                                      <td>Total</td>
+                                                                      <td><?php echo $jumlah; ?></td>
+                                                                    </tr>
+                                                                  </tbody>
+                                                                </table>
+                                                              </div>
+                                                          </div>
+
+                                                      </div>
+
+                                                  </div>
+                                                  <!-- inline-facts end -->
+                                              </div>
+                                              <div class="col-md-6">
+                                                  <!-- inline-facts  -->
+                                                  <div class="inline-facts-wrap gradient-bg " style="background-color: #f3f6f9;background: -webkit-linear-gradient(top, #f3f6f9,#f3f6f9);">
+                                                      <div class="inline-facts">
+
+                                                          <div class="milestone-counter">
+                                                              <div class="stats animaper">
+                                                                <table class="table table-border checkout-table" style="width:100%">
+                                                                  <thead>
+                                                                    <tr>
+                                                                      <th>No</th>
+                                                                      <th>Media Pengaduan</th>
+                                                                      <th>Jumlah</th>
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                    <?php
+                                                                      $i=0;
+                                                                      $jumlah1=0;
+                                                                         foreach($media_pelaporan as $media_pelaporan){
+                                                                           $i++;
+                                                                             $jumlah1+=$media_pelaporan->jumlah;
+                                                                    ?>
+                                                                    <tr>
+                                                                         <td><?php echo $i; ?></td>
+                                                                         <td align="left"><?php echo $media_pelaporan->nama; ?></td>
+                                                                         <td><?php echo $media_pelaporan->jumlah; ?></td>
+
+                                                                     </tr>
+
+                                                                    <?php } ?>
+                                                                    <tr>
+                                                                      <td>#</td>
+                                                                      <td>Total</td>
+                                                                      <td><?php echo $jumlah1; ?></td>
+                                                                    </tr>
+                                                                  </tbody>
+                                                                </table>
+                                                              </div>
+                                                          </div>
+
+                                                      </div>
+
+                                                  </div>
+                                                  <!-- inline-facts end -->
+                                              </div>
+
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div class="col-md-12">
                                   <table id="example" class="display responsive nowrap" style="width:100%">
                                     <thead>
                                       <tr>
@@ -225,6 +327,10 @@
                                     </tbody>
                                   </table>
                                 </div>
+                                  <br>
+                                  <br>
+
+                                </div>
 
                             </div>
                             <!-- dashboard content end-->
@@ -247,7 +353,7 @@
         <!-- Main end -->
         <!--=============== scripts  ===============-->
         <?php echo $this->load->view('share/table_footer', '', TRUE);?>
-              
+
         <!-- <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script> -->
         <script src="<?php echo site_url(); ?>assets/umum/js/plugins.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/scripts.js"></script>
