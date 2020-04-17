@@ -13,6 +13,8 @@
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/color.css">
 
         <?php echo $this->load->view('share/table_header', '', TRUE);?>
+
+
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="<?php echo site_url(); ?>assets/umum/images/favicon.ico">
     </head>
@@ -178,7 +180,6 @@
 
                                   </div>
 
-
                                   <table id="example" class="display responsive nowrap" style="width:100%">
                                     <thead>
                                       <tr>
@@ -246,10 +247,10 @@
         <!-- Main end -->
         <!--=============== scripts  ===============-->
         <?php echo $this->load->view('share/table_footer', '', TRUE);?>
+              
         <!-- <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script> -->
         <script src="<?php echo site_url(); ?>assets/umum/js/plugins.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/scripts.js"></script>
-        <script src="<?php echo site_url(); ?>assets/umum/js/charts.js"></script>
-        <script src="<?php echo site_url(); ?>assets/umum/js/dashboard.js"></script>
+
 
 </html>

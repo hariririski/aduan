@@ -23,7 +23,7 @@
       <a href="#" data-toggle-theme class="header-icon header-icon-2"><i class="fas fa-lightbulb"></i></a>
 
     </div>
-    <div class="page-content" style="padding-bottom: 160px;">
+    <div class="page-content" style="padding-bottom: 160px;background-color: #ffffff;">
       <div data-height="150" class="page-title-bg bg-20"></div>
       <div data-height="150" class="page-title-bg dark-mode-tint"></div>
       <div data-height="150" class="page-title-bg opacity-90 bg-highlight"></div>

@@ -32,6 +32,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $data['tahun'] = $this->M_lapor->tahun();
        		$this->load->view('admin_laporan',$data);
        	}
+         public function chart()
+       	{
+
+       		$this->load->view('chart');
+       	}
          public function detail_laporan()
        	{
           $id =$this->input->get('id');
