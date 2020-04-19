@@ -49,17 +49,17 @@ class Telegram extends CI_Controller {
       $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
       $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
       $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan2($id);
-      $nama_media=0;
+      $nama_media;
       foreach ($data['media_pelaporan'] as $isi) {
 
             $nama_media=$isi->nama_media_pelaporan;
          }
-      $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$nama_media";
+      $pesan_balik=$nama_media;
     }
     else {
         $pesan_balik = "Mohon maaf format yang Anda kirim salah, silahkan kirim ulang dengan Format DAFTAR%23[NAMA]%23[ALAMAT]%23[HP] Contoh Monster Mahoni%23Jalan Anggrek No 1 Jakarta%2308581234567";
     }
-    //$API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
+    $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
