@@ -16,18 +16,13 @@ class Telegram extends CI_Controller {
 
 
   public function index(){
-    $botToken = "1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg";
+
     $website = "https://api.telegram.org/bot".$botToken;
-
-
     $token = "bot"."1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg";
-
     $updates = file_get_contents("php://input");
-
     $updates = json_decode($updates,true);
     $pesan = $updates[message][text];
     $chat_id = $updates[message][chat][id];
-
     $pesan = strtoupper($pesan);
     if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
@@ -35,7 +30,7 @@ class Telegram extends CI_Controller {
       $alamat = $datas[2];
       $hp = $datas[3];
       $pesan_balik="Terimakasih";
-      $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
+
     }
     else if(strpos($pesan,"APORAN#")>0)
     {
@@ -49,17 +44,12 @@ class Telegram extends CI_Controller {
       $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
       $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
       $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan2($id);
-      $nama_media;
-      foreach ($data['media_pelaporan'] as $isi) {
-
-            $nama_media=$isi->nama_media_pelaporan;
-         }
-      $pesan_balik=$nama_media;
+      $pesan_balik=$data['media_pelaporan'];
     }
     else {
         $pesan_balik = "Mohon maaf format yang Anda kirim salah, silahkan kirim ulang dengan Format DAFTAR%23[NAMA]%23[ALAMAT]%23[HP] Contoh Monster Mahoni%23Jalan Anggrek No 1 Jakarta%2308581234567";
     }
-    $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
+     $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
