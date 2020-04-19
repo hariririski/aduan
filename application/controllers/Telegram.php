@@ -100,13 +100,13 @@ class Telegram extends CI_Controller {
           }
 
           $no=1;
-          $pesan.="%0A%0Ajenis_pengaduan%0A";
+          $pesan.="%0A%0AJenis Pengaduan%0A";
           foreach ($data['jenis_pengaduan'] as $isi) {
               $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
               $no++;
           }
           $no=1;
-          $pesan.="%0A%0APengaduan%0A";
+          $pesan.="%0A%0AData Pengaduan%0A";
 
           foreach ($data['pengaduan_proses'] as $isi) {
               $pesan.="Pengaduan Proses %20=%20".$isi->jumlah."%0A";
