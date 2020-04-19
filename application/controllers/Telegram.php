@@ -47,18 +47,18 @@ class Telegram extends CI_Controller {
 
       $no=1;
       $pesan="LAPORAN PENGADUAN TAHUN ".$tahun;
-      $pesan.="Media Pelaporan%0A";
+      $pesan.="%0A%0AMedia Pelaporan%0A";
       foreach ($data['media_pelaporan'] as $isi) {
           $pesan.="No%20:%20".$no."%20%20".$isi->nama." = ".$isi->jumlah."%0A";
           $no++;
       }
 
-      $no=1;
-      $pesan.="%0A%0Ajenis_pengaduan%0A";
-      foreach ($data['jenis_pengaduan'] as $isi) {
-          $pesan.="No%20:%20".$no."%20%20".$isi->nama." = ".$isi->jumlah."%0A";
-          $no++;
-      }
+      // $no=1;
+      // $pesan.="%0A%0Ajenis_pengaduan%0A";
+      // foreach ($data['jenis_pengaduan'] as $isi) {
+      //     $pesan.="No%20:%20".$no."%20%20".$isi->nama." = ".$isi->jumlah."%0A";
+      //     $no++;
+      // }
 
 
 
