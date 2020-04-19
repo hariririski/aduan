@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
         public function index(){
-            $pesan="ada pengaduan dari";
+            $pesan="Pengaduan!\n No :102014 \nTanggal :10-102020 \n Nomor HP:082237653729\n Jenis: Pelayanan Pertanahan \n Media: mandiri \n Uraian: ini belum siap\n";
             $this->telegram_add($pesan);
          }
         public function tambah_hp(){
