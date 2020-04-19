@@ -14,6 +14,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
+
+        public function index(){
+            $pesan="ada pengaduan dari";
+            $this->telegram_add($pesan);
+         }
         public function tambah_hp(){
             $cek= $this->M_lapor_hp->add();
             if($cek>0){
@@ -52,6 +57,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             echo ("<script LANGUAGE='JavaScript'>window.alert('gagal Hapus Pengduan');window.location.href='data';</script>");
        	    }
         }
+
+        public function telegram_add($pesan){
+          define('BOT_TOKEN', '1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg');
+          define('CHAT_ID','-343349381');
+            $pesan = json_encode($pesan);
+            $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=$pesan";
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+            curl_setopt($ch, CURLOPT_URL, $API);
+            $result = curl_exec($ch);
+            curl_close($ch);
+            return $result;
+          }
+
+
 
 
 
