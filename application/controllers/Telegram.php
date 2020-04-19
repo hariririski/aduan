@@ -48,7 +48,7 @@ class Telegram extends CI_Controller {
       $no=1;
       $media;
       foreach ($data['media_pelaporan'] as $isi) {
-          $media+="NO:".$no.$isi->nama.$isi->nama;
+          $media.="NO:".$no.$isi->nama.$isi->nama;
       }
       $pesan_balik=$media;
     }
