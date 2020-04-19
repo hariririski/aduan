@@ -17,7 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         public function index(){
             //$pesan="Pengaduan!\n No :102014 \nTanggal :10-102020 \n Nomor HP:082237653729\n Jenis: Pelayanan Pertanahan \n Media: mandiri \n Uraian: ini belum siap\n";
-            echo $pesan="Pengaduan!\ngggg";
+            $nilai=1000;
+            echo $pesan="Nomor Pengaduan :".$nilai.'\n'."adadadadad";
             $this->telegram_add($pesan);
          }
         public function tambah_hp(){
@@ -62,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function telegram_add($pesan){
           define('BOT_TOKEN', '1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg');
           define('CHAT_ID','-343349381');
-            $pesan = json_encode($pesan);
+            //$pesan = json_encode($pesan);
             $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=$pesan";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
