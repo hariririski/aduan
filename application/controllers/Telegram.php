@@ -29,7 +29,7 @@ class Telegram extends CI_Controller {
     $chat_id = $updates[message][chat][id];
 
     $pesan = strtoupper($pesan);
-    if(strpos($pesan,"LAPOR#")>0){
+    if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
       $nama = $datas[1];
       $alamat = $datas[2];
@@ -37,7 +37,7 @@ class Telegram extends CI_Controller {
       $pesan_balik="Terimakasih";
       $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
     }
-    else if(strpos($pesan,"LAPORAN#")>0)
+    else if(strpos($pesan,"APORAN#")>0)
     {
       $datas = split("#",$pesan);
       $tahun = $datas[1];
