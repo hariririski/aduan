@@ -44,7 +44,13 @@ class Telegram extends CI_Controller {
       $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
       $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
       $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan2($id);
-      $pesan_balik=$data['media_pelaporan'];
+
+      $no=1;
+      $media;
+      foreach ($data['media_pelaporan'] as $isi) {
+          $media+="NO:".$no.$isi->nama.$isi->nama;
+      }
+      $pesan_balik=$media;
     }
     else {
         $pesan_balik = "Mohon maaf format yang Anda kirim salah, silahkan kirim ulang dengan Format DAFTAR%23[NAMA]%23[ALAMAT]%23[HP] Contoh Monster Mahoni%23Jalan Anggrek No 1 Jakarta%2308581234567";

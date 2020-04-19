@@ -56,6 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
             $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
             $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan2($id);
+
           }
        		$this->load->view('admin_detail_laporan',$data);
        	}
