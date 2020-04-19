@@ -42,7 +42,19 @@ class Telegram extends CI_Controller {
       $datas = split("#",$pesan);
       $tahun = $datas[1];
       $pesan_balik = "laporan Tahun".$tahun;
-      $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
+      $id=$tahun;
+      $data['media_pelaporan'] = $this->M_lapor->media_pelaporan_tahun($id);
+      $data['jenis_pengaduan'] = $this->M_lapor->jenis_pengaduan_tahun($id);
+      $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan_tahun($id);
+      $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
+      $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
+      $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan2($id);
+      $nama_media;
+      foreach ($data['media_pelaporan'] as $isi) {
+
+            $nama_media=$isi->nama_media_pelaporan;
+         }
+      echo $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$nama_media";
     }
     else {
         $pesan_balik = "Mohon maaf format yang Anda kirim salah, silahkan kirim ulang dengan Format DAFTAR%23[NAMA]%23[ALAMAT]%23[HP] Contoh Monster Mahoni%23Jalan Anggrek No 1 Jakarta%2308581234567";
