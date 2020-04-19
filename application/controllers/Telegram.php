@@ -29,19 +29,15 @@ class Telegram extends CI_Controller {
     $chat_id = $updates[message][chat][id];
 
     $pesan = strtoupper($pesan);
-    if(strpos($pesan,"AFTAR#")>0){
+    if(strpos($pesan,"LAPOR#")>0){
       $datas = split("#",$pesan);
       $nama = $datas[1];
       $alamat = $datas[2];
       $hp = $datas[3];
-      $sql = "insert into data_telegram values ('$nama','$alamat','$hp', now())";
-      if(mysql_query($sql,$conn)) {
-        $pesan_balik = "Terima kasih Data Anda sudah kami simpan.";
-      }
-      else $pesan_balik = "Data gagal disimpan silahkan coba lagi";
+      $pesan_balik="Terimakasih"
       $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
     }
-    else if(strpos($pesan,"Laporan#")>0)
+    else if(strpos($pesan,"LAPORAN#")>0)
     {
       $datas = split("#",$pesan);
       $tahun = $datas[1];
