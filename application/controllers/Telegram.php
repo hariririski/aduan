@@ -34,7 +34,7 @@ class Telegram extends CI_Controller {
       $nama = $datas[1];
       $alamat = $datas[2];
       $hp = $datas[3];
-      $pesan_balik="Terimakasih"
+      $pesan_balik="Terimakasih";
       $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
     }
     else if(strpos($pesan,"LAPORAN#")>0)
