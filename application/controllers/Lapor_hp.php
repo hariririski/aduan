@@ -16,10 +16,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
         public function index(){
-            //$pesan="Pengaduan!\n No :102014 \nTanggal :10-102020 \n Nomor HP:082237653729\n Jenis: Pelayanan Pertanahan \n Media: mandiri \n Uraian: ini belum siap\n";
-            $nilai=1000;
-            echo $pesan="Nomor Pengaduan :".$nilai.'\n'."adadadadad";
-            $this->telegram_add($pesan);
+
+            $no="10/2020";
+            $tanggal="10 April 2020";
+            $this->telegram_add($no,$tanggal);
          }
         public function tambah_hp(){
             $cek= $this->M_lapor_hp->add();
@@ -60,11 +60,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        	    }
         }
 
-        public function telegram_add($pesan){
+        public function telegram_add($no,$tanggal){
           define('BOT_TOKEN', '1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg');
           define('CHAT_ID','-343349381');
             //$pesan = json_encode($pesan);
-            $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=$pesan";
+            $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=Pengaduan!\n No :$no \nTanggal :$tanggal \n Nomor HP:082237653729\n Jenis: Pelayanan Pertanahan \n Media: mandiri \n Uraian: ini belum siap\n";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
