@@ -43,12 +43,22 @@ class Telegram extends CI_Controller {
       $id=$tahun;
         if($id=="SEMUA"){
           $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan();
+          $data['tahun_min'] = $this->M_lapor->tahun_min();
+          $data['tahun_max'] = $this->M_lapor->tahun_max();
           $data['media_pelaporan'] = $this->M_lapor->media_pelaporan();
           $data['jenis_pengaduan'] = $this->M_lapor->jenis_pengaduan();
           $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai();
           $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses();
           $no=1;
-          $pesan="LAPORAN PENGADUAN TAHUN ".$tahun;
+          $tahun_min;
+          $tahun_max;
+          foreach ($data['tahun_min'] as $isi) {
+            $tahun_min=$isi->tahun;
+          }
+          foreach ($data['tahun_max'] as $isi) {
+            $tahun_max=$isi->tahun;
+          }
+          $pesan="LAPORAN PENGADUAN DARI".$tahun_min." SAMPAI ".$tahun_max;
           $pesan.="%0A%0AMedia Pelaporan%0A";
           foreach ($data['media_pelaporan'] as $isi) {
               $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
