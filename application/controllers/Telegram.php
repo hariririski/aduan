@@ -41,22 +41,16 @@ class Telegram extends CI_Controller {
       else $pesan_balik = "Data gagal disimpan silahkan coba lagi";
     }
     else {
-      echo $pesan_balik = "Mohon maaf format yang Anda kirim salah, silahkan kirim ulang dengan Format DAFTAR%23[NAMA]%23[ALAMAT]%23[HP] Contoh Monster Mahoni%23Jalan Anggrek No 1 Jakarta%2308581234567";
+      $pesan_balik = "Mohon maaf format yang Anda kirim salah, silahkan kirim ulang dengan Format DAFTAR%23[NAMA]%23[ALAMAT]%23[HP] Contoh Monster Mahoni%23Jalan Anggrek No 1 Jakarta%2308581234567";
     }
-    $url = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
-
+    $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
     $ch = curl_init();
-    curl_setopt_array($ch, $optArray);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+    curl_setopt($ch, CURLOPT_URL, $API);
     $result = curl_exec($ch);
-
-    $err = curl_error($ch);
     curl_close($ch);
-
-    if($err<>""){
-      echo "Error: $err";
-    }else{
-      echo "Pesan Terkirim";
-    }
+    return $result;
 
   }
 
