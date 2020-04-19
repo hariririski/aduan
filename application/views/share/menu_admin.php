@@ -16,6 +16,7 @@
     <!-- user-profile-menu end-->
     <?php
         $level=$this->session->userdata('level');
+        $nama=$this->session->userdata('nama');
         if(($level)==2){
     ?>
     <!-- user-profile-menu-->

@@ -112,7 +112,10 @@
                                             </select>
                                           </div>
                                         </div>
-
+                                        <div class="col-sm-6">
+                                          <label style="padding: 10px;">Penerima<i class="far fa-user" style="top: 50px;"></i>  </label>
+                                          <input required type="text" name="penerima" placeholder="Pegawai Negeri Sipil" value="<?php $nama=$this->session->userdata('nama');echo $nama;?>">
+                                        </div>
                                       </div>
                                       <label style="padding: 10px;"> Uraian Pengaduan</label>
                                       <textarea cols="40" rows="3" required  name="uraian_pengaduan" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"></textarea>
