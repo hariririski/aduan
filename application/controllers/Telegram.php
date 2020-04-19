@@ -41,7 +41,7 @@ class Telegram extends CI_Controller {
       else $pesan_balik = "Data gagal disimpan silahkan coba lagi";
       $API = "https://api.telegram.org/$token/sendMessage?parse_mode=markdown&chat_id=$chat_id&text=$pesan_balik";
     }
-    else if($pesan,"Laporan#")>0)
+    else if(($pesan,"Laporan#")>0)
     {
       $datas = split("#",$pesan);
       $tahun = $datas[1];
