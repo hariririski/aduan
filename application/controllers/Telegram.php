@@ -73,7 +73,6 @@ class Telegram extends CI_Controller {
           foreach ($data['jumlah_pengaduan'] as $isi) {
               $pesan.="Jumlah Pengaduan %20=%20".$isi->jumlah."%0A";
           }
-          $pesan.="Total %20=%20".$total."%0A";
           $pesan_balik=$pesan;
         }
         else{
