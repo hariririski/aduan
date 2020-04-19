@@ -69,9 +69,9 @@
             $new_nomor=$nomor."/".date("Y");
 
           $media=2;
-
-          $perintah1="INSERT INTO `data_pengaduan`(`id_pelapor`, `id_pengaduan`, `nomor`, `uraian`, `id_media_pelaporan`, `penerima`,`tanggal_pengaduan`,`nik`)
-                      VALUES ('$id_pelapor','$id_pelapor$nomor','$new_nomor','$uraian_pengaduan','$media','Belum Diterima','$tanggal','$nik')";
+          $jenis_pengaduan=5;
+          $perintah1="INSERT INTO `data_pengaduan`(`id_pelapor`, `id_pengaduan`, `nomor`, `uraian`, `id_media_pelaporan`, `penerima`,`tanggal_pengaduan`,`nik`,`jenis_pengaduan`)
+                      VALUES ('$id_pelapor','$id_pelapor$nomor','$new_nomor','$uraian_pengaduan','$media','Belum Diterima','$tanggal','$nik','$jenis_pengaduan')";
           $query1=$this->db->query($perintah1);
 
           $media="Laptop/Handphone";
