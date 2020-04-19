@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           define('BOT_TOKEN', '1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg');
           define('CHAT_ID','-343349381');
             //$pesan = json_encode($pesan);
-            $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=Pengaduan!\n No :$no \nTanggal :$tanggal \n Nomor HP:082237653729\n Jenis: Pelayanan Pertanahan \n Media: mandiri \n Uraian: ini belum siap\n";
+            echo $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$no %0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20082237653729 %0AJenis%20%20%20%20%20%20%20:%20PelayananPertanahan%0AMedia%20%20%20%20%20:%20mandiri %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');

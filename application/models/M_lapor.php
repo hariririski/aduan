@@ -162,65 +162,19 @@
         return $id_pengaduan;
       }
 
-     //  function upload_bukti1($bukti1){
-     //      $config['upload_path']          = './assets/upload/';
-     //      $config['allowed_types']        = 'gif|jpg|png';
-     //      $config['file_name']            = $bukti1;
-     //      $config['overwrite']		      	= true;
-     //      $config['max_size']             = 10024; // 1MB
-     //      // $config['max_width']            = 1024;
-     //      // $config['max_height']           = 768;
-     //
-     //      $this->load->library('upload', $config);
-     //
-     //      if ($this->upload->do_upload('bukti1')) {
-     //        $data = array('upload_data' => $this->upload->data());
-     //        return $data['upload_data']['file_name'];
-     //      }
-     //      return false;
-     //    }
-     //
-     //    function upload_bukti2($name){
-     //        $config['upload_path']          = './assets/upload/';
-     //        $config['allowed_types']        = 'gif|jpg|png';
-     //        $config['file_name']            = $name;
-     //        $config['overwrite']		      	= true;
-     //        $config['max_size']             = 10024; // 1MB
-     //        // $config['max_width']            = 1024;
-     //        // $config['max_height']           = 768;
-     //
-     //        $this->load->library('upload', $config);
-     //
-     //        if ($this->upload->do_upload('bukti2')) {
-     //          $data = array('upload_data' => $this->upload->data());
-     //          return $data['upload_data']['file_name'];
-     //        }
-     //        return false;
-     //      }
-     //
-     //      function upload_bukti3($name){
-     //          $config['upload_path']          = './assets/upload/';
-     //          $config['allowed_types']        = 'gif|jpg|png';
-     //          $config['file_name']            = $name;
-     //          $config['overwrite']		      	= true;
-     //          $config['max_size']             = 10024; // 1MB
-     //          // $config['max_width']            = 1024;
-     //          // $config['max_height']           = 768;
-     //
-     //          $this->load->library('upload', $config);
-     //
-     //          if ($this->upload->do_upload('bukti3')) {
-     //            $data = array('upload_data' => $this->upload->data());
-     //            return $data['upload_data']['file_name'];
-     //          }
-     //          return false;
-     //        }
-     //
-     //
-     //    function random_name($length) {
-			// 		 $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-			// 		 $password = substr( str_shuffle( $chars ), 0, $length );
-			// 		 return $password;
-			// 	 }
+      public function telegram_add($no,$tanggal){
+        define('BOT_TOKEN', '1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg');
+        define('CHAT_ID','-343349381');
+          //$pesan = json_encode($pesan);
+          echo $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$no %0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20082237653729 %0AJenis%20%20%20%20%20%20%20:%20PelayananPertanahan%0AMedia%20%20%20%20%20:%20mandiri %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa";
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+          curl_setopt($ch, CURLOPT_URL, $API);
+          $result = curl_exec($ch);
+          curl_close($ch);
+          return $result;
+        }
+
     }
 ?>

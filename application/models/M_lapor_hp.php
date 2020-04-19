@@ -74,6 +74,9 @@
                       VALUES ('$id_pelapor','$id_pelapor$nomor','$new_nomor','$uraian_pengaduan','$media','Belum Diterima','$tanggal','$nik')";
           $query1=$this->db->query($perintah1);
 
+          $media="Laptop/Handphone";
+          $this->telegram_add($new_nomor,$nama_lengkap,$no_telepon,$tanggal,$uraian_pengaduan,$media);
+
            if($query==true&&$query1==true){
              return ($id_pelapor.$nomor);
            }else{
@@ -119,6 +122,8 @@
           $perintah1="INSERT INTO `data_pengaduan`(`id_pelapor`, `id_pengaduan`, `nomor`, `uraian`, `penerima`,`tanggal_pengaduan`,`nik`,`jenis_pengaduan`,`id_media_pelaporan`)
                       VALUES ('$id_pelapor','$id_pelapor$nomor','$new_nomor','$uraian_pengaduan','Belum Diterima','$tanggal','$nik','$jenis_pengaduan','$media_pelaporan')";
           $query1=$this->db->query($perintah1);
+          $media="Laptop/Handphone";
+          $this->telegram_add($new_nomor,$nama_lengkap,$no_telepon,$tanggal,$uraian_pengaduan,$media);
 
            if($query==true&&$query1==true){
              return $id_pelapor.$nomor;
@@ -127,111 +132,19 @@
            }
       }
 
-      public function uploadImage($name) {
 
-      $config['upload_path']   = './upload/pengaduan/';
-      $config['allowed_types'] = 'gif|jpg|png';
-      //$config['max_size']      = 1024;
-      $config['file_name']     = $name;
-      $this->load->library('upload', $config);
-
-      if ( ! $this->upload->do_upload('ktp')) {
-         $error = array('error' => $this->upload->display_errors());
-         $this->resizeImage($uploadedImage['file_name']);
-      }else {
-
-        $uploadedImage = $this->upload->data();
-        $this->resizeImage($uploadedImage['file_name']);
-        print_r('Image Uploaded Successfully.');
-        exit;
-      }
-   }
-
-   public function resizeImage($filename)
-   {
-     echo $filename;
-      $source_path = $_SERVER['DOCUMENT_ROOT'] . '/upload/pengaduan/' . $filename;
-      $target_path = $_SERVER['DOCUMENT_ROOT'] . '/upload/pengaduan/';
-      $config_manip = array(
-          'image_library' => 'gd2',
-          'source_image' => $source_path,
-          'new_image' => $target_path,
-          'maintain_ratio' => TRUE,
-          'width' => 500,
-      );
-
-      $this->load->library('image_lib', $config_manip);
-      if (!$this->image_lib->resize()) {
-          echo $this->image_lib->display_errors();
-      }
-
-      $this->image_lib->clear();
-   }
-
-
-
-
-
-
-
-
-      function upload_ktp($name){
-          $config['upload_path']          = './upload/pengaduan/';
-          $config['allowed_types']        = 'gif|jpg|png';
-          $config['file_name']            = $name;
-          $config['overwrite']		      	= false;
-          $config['max_size']             = 10024; // 1MB
-
-          $this->load->library('upload', $config);
-
-          if ($this->upload->do_upload('ktp')) {
-            $data = array('upload_data' => $this->upload->data());
-            return $data['upload_data']['file_name'];
-          }
-          return false;
+      public function telegram_add($new_nomor,$nama_lengkap,$no_telepon,$tanggal,$uraian_pengaduan,$media){
+        define('BOT_TOKEN', '1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg');
+        define('CHAT_ID','-343349381');
+          //$pesan = json_encode($pesan);
+          echo $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan";
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+          curl_setopt($ch, CURLOPT_URL, $API);
+          $result = curl_exec($ch);
+          curl_close($ch);
+          return $result;
         }
-
-      function upload_bukti1($bukti1){
-          $config['upload_path']          = './upload/pengaduan/';
-          $config['allowed_types']        = 'gif|jpg|png';
-          $config['file_name']            = $bukti1;
-          $config['overwrite']		      	= true;
-          $config['max_size']             = 10024; // 1MB
-          // $config['max_width']            = 1024;
-          // $config['max_height']           = 768;
-
-          $this->load->library('upload', $config);
-
-          if ($this->upload->do_upload('bukti1')) {
-            $data = array('upload_data' => $this->upload->data());
-            return $data['upload_data']['file_name'];
-          }
-          return false;
-        }
-
-        function upload_bukti2($name){
-            $config['upload_path']          = './upload/pengaduan/';
-            $config['allowed_types']        = 'gif|jpg|png';
-            $config['file_name']            = $name;
-            $config['overwrite']		      	= true;
-            $config['max_size']             = 10024; // 1MB
-            // $config['max_width']            = 1024;
-            // $config['max_height']           = 768;
-
-            $this->load->library('upload', $config);
-
-            if ($this->upload->do_upload('bukti2')) {
-              $data = array('upload_data' => $this->upload->data());
-              return $data['upload_data']['file_name'];
-            }
-            return false;
-          }
-
-
-        function random_name($length) {
-					 $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-					 $password = substr( str_shuffle( $chars ), 0, $length );
-					 return $password;
-				 }
     }
 ?>
