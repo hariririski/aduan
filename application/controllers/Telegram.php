@@ -41,46 +41,84 @@ class Telegram extends CI_Controller {
       $tahun = $datas[1];
       //$pesan_balik = "laporan Tahun".$tahun;
       $id=$tahun;
-      $data['media_pelaporan'] = $this->M_lapor->media_pelaporan_tahun($id);
-      $data['jenis_pengaduan'] = $this->M_lapor->jenis_pengaduan_tahun($id);
-      $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan_tahun($id);
-      $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
-      $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
-      $data['detail_pengaduan'] = $this->M_lapor->detail_pengaduan2($id);
+        if($id=="SEMUA"){
+          $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan();
+          $data['media_pelaporan'] = $this->M_lapor->media_pelaporan();
+          $data['jenis_pengaduan'] = $this->M_lapor->jenis_pengaduan();
+          $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai();
+          $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses();
+          $no=1;
+          $pesan="LAPORAN PENGADUAN TAHUN ".$tahun;
+          $pesan.="%0A%0AMedia Pelaporan%0A";
+          foreach ($data['media_pelaporan'] as $isi) {
+              $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
+              $no++;
+          }
 
-      $no=1;
-      $pesan="LAPORAN PENGADUAN TAHUN ".$tahun;
-      $pesan.="%0A%0AMedia Pelaporan%0A";
-      foreach ($data['media_pelaporan'] as $isi) {
-          $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
-          $no++;
-      }
+          $no=1;
+          $pesan.="%0A%0Ajenis_pengaduan%0A";
+          foreach ($data['jenis_pengaduan'] as $isi) {
+              $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
+              $no++;
+          }
+          $no=1;
+          $pesan.="%0A%0APengaduan%0A";
+          $total=0;
+          foreach ($data['jumlah_pengaduan'] as $isi) {
+              $pesan.="Jumlah Pengaduan %20=%20".$isi->jumlah."%0A";
+              $total+=$isi->jumlah;
+          }
+          foreach ($data['pengaduan_proses'] as $isi) {
+              $pesan.="Pengaduan Proses %20=%20".$isi->jumlah."%0A";
+              $total+=$isi->jumlah;
+          }
+          foreach ($data['pengaduan_selesai'] as $isi) {
+              $pesan.="Pengaduan Selesai %20=%20".$isi->jumlah."%0A";
+              $total+=$isi->jumlah;
+          }
+          $pesan.="Total %20=%20".$total."%0A";
+          $pesan_balik=$pesan;
+        }
+        else{
+          $data['media_pelaporan'] = $this->M_lapor->media_pelaporan_tahun($id);
+          $data['jenis_pengaduan'] = $this->M_lapor->jenis_pengaduan_tahun($id);
+          $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan_tahun($id);
+          $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
+          $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
 
-      $no=1;
-      $pesan.="%0A%0Ajenis_pengaduan%0A";
-      foreach ($data['jenis_pengaduan'] as $isi) {
-          $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
-          $no++;
-      }
-      $no=1;
-      $pesan.="%0A%0APengaduan%0A";
-      $total=0;
-      foreach ($data['jumlah_pengaduan'] as $isi) {
-          $pesan.="Jumlah Pengaduan %20=%20".$isi->jumlah."%0A";
-          $total+=$isi->jumlah;
-      }
-      foreach ($data['pengaduan_proses'] as $isi) {
-          $pesan.="Pengaduan Proses %20=%20".$isi->jumlah."%0A";
-          $total+=$isi->jumlah;
-      }
-      foreach ($data['pengaduan_selesai'] as $isi) {
-          $pesan.="Pengaduan Selesai %20=%20".$isi->jumlah."%0A";
-          $total+=$isi->jumlah;
-      }
-      $pesan.="Total %20=%20".$total."%0A";
 
+          $no=1;
+          $pesan="LAPORAN PENGADUAN TAHUN ".$tahun;
+          $pesan.="%0A%0AMedia Pelaporan%0A";
+          foreach ($data['media_pelaporan'] as $isi) {
+              $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
+              $no++;
+          }
 
-      $pesan_balik=$pesan;
+          $no=1;
+          $pesan.="%0A%0Ajenis_pengaduan%0A";
+          foreach ($data['jenis_pengaduan'] as $isi) {
+              $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
+              $no++;
+          }
+          $no=1;
+          $pesan.="%0A%0APengaduan%0A";
+          $total=0;
+          foreach ($data['jumlah_pengaduan'] as $isi) {
+              $pesan.="Jumlah Pengaduan %20=%20".$isi->jumlah."%0A";
+              $total+=$isi->jumlah;
+          }
+          foreach ($data['pengaduan_proses'] as $isi) {
+              $pesan.="Pengaduan Proses %20=%20".$isi->jumlah."%0A";
+              $total+=$isi->jumlah;
+          }
+          foreach ($data['pengaduan_selesai'] as $isi) {
+              $pesan.="Pengaduan Selesai %20=%20".$isi->jumlah."%0A";
+              $total+=$isi->jumlah;
+          }
+          $pesan.="Total %20=%20".$total."%0A";
+          $pesan_balik=$pesan;
+        }
     }
     else {
         $pesan_balik = "Mohon maaf format yang Anda kirim salah, silahkan kirim ulang dengan Format DAFTAR%23[NAMA]%23[ALAMAT]%23[HP] Contoh Monster Mahoni%23Jalan Anggrek No 1 Jakarta%2308581234567";
