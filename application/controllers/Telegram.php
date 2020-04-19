@@ -55,11 +55,11 @@ class Telegram extends CI_Controller {
 
       $no=1;
       $pesan.="%0A%0Ajenis_pengaduan%0A";
-      foreach ($data['jenis_pelaporan'] as $isi) {
+      foreach ($data['jenis_pengaduan'] as $isi) {
           $pesan.="No%20:%20".$no."%20%20".$isi->nama." = ".$isi->jumlah."%0A";
           $no++;
       }
-    
+
 
 
       $pesan_balik=$pesan;
