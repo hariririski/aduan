@@ -43,7 +43,7 @@
           $email = "-";
           $pekerjaan = $this->input->post('pekerjaan');
           $no_telepon = $this->input->post('no_telepon');
-          $uraian_pengaduan = $this->input->post('uraian_pengaduan');
+          $uraian_pengaduan = json_encode($this->input->post('uraian_pengaduan'));
           $nik = $this->input->post('nik');
           $tanggal = date("Y-m-d");
           $nomor=0;
