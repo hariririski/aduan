@@ -58,7 +58,7 @@ class Telegram extends CI_Controller {
           foreach ($data['tahun_max'] as $isi) {
             $tahun_max=$isi->tahun;
           }
-          $pesan="LAPORAN PENGADUAN DARI".$tahun_min." SAMPAI ".$tahun_max;
+          $pesan="LAPORAN PENGADUAN TAHUN".$tahun_min." SAMPAI ".$tahun_max;
           $pesan.="%0A%0AMedia Pelaporan%0A";
           foreach ($data['media_pelaporan'] as $isi) {
               $pesan.=$no."%20%20".$isi->nama." : ".$isi->jumlah."%0A";
