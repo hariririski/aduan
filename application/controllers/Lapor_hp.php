@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-        public function index(){
+        public function telegram(){
 
             $no="10/2020";
             $tanggal="10 April 2020";

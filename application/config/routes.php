@@ -85,6 +85,7 @@ $route['p_tindak_lanjut'] = 'Admin_Pengaduan/proses_tindak_lanjut';
 $route['laporan'] = 'Admin_Pengaduan/laporan';
 $route['detail_laporan'] = 'Admin_Pengaduan/detail_laporan';
 $route['chart'] = 'Admin_Pengaduan/chart';
+$route['telegram'] = 'Telegram';
 
 
 
