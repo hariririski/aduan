@@ -63,18 +63,15 @@ class Telegram extends CI_Controller {
           }
           $no=1;
           $pesan.="%0A%0APengaduan%0A";
-          $total=0;
-          foreach ($data['jumlah_pengaduan'] as $isi) {
-              $pesan.="Jumlah Pengaduan %20=%20".$isi->jumlah."%0A";
-              $total+=$isi->jumlah;
-          }
+
           foreach ($data['pengaduan_proses'] as $isi) {
               $pesan.="Pengaduan Proses %20=%20".$isi->jumlah."%0A";
-              $total+=$isi->jumlah;
           }
           foreach ($data['pengaduan_selesai'] as $isi) {
               $pesan.="Pengaduan Selesai %20=%20".$isi->jumlah."%0A";
-              $total+=$isi->jumlah;
+          }
+          foreach ($data['jumlah_pengaduan'] as $isi) {
+              $pesan.="Jumlah Pengaduan %20=%20".$isi->jumlah."%0A";
           }
           $pesan.="Total %20=%20".$total."%0A";
           $pesan_balik=$pesan;
@@ -85,8 +82,6 @@ class Telegram extends CI_Controller {
           $data['jumlah_pengaduan'] = $this->M_lapor->jumlah_pengaduan_tahun($id);
           $data['pengaduan_selesai'] = $this->M_lapor->pengaduan_selesai_tahun($id);
           $data['pengaduan_proses'] = $this->M_lapor->pengaduan_proses_tahun($id);
-
-
           $no=1;
           $pesan="LAPORAN PENGADUAN TAHUN ".$tahun;
           $pesan.="%0A%0AMedia Pelaporan%0A";
@@ -103,20 +98,17 @@ class Telegram extends CI_Controller {
           }
           $no=1;
           $pesan.="%0A%0APengaduan%0A";
-          $total=0;
-          foreach ($data['jumlah_pengaduan'] as $isi) {
-              $pesan.="Jumlah Pengaduan %20=%20".$isi->jumlah."%0A";
-              $total+=$isi->jumlah;
-          }
+
           foreach ($data['pengaduan_proses'] as $isi) {
               $pesan.="Pengaduan Proses %20=%20".$isi->jumlah."%0A";
-              $total+=$isi->jumlah;
           }
           foreach ($data['pengaduan_selesai'] as $isi) {
               $pesan.="Pengaduan Selesai %20=%20".$isi->jumlah."%0A";
-              $total+=$isi->jumlah;
           }
-          $pesan.="Total %20=%20".$total."%0A";
+          foreach ($data['jumlah_pengaduan'] as $isi) {
+              $pesan.="Jumlah Pengaduan %20=%20".$isi->jumlah."%0A";
+          }
+
           $pesan_balik=$pesan;
         }
     }
