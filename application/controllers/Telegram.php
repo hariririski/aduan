@@ -122,7 +122,7 @@ class Telegram extends CI_Controller {
         }
     }
     else {
-        $pesan_balik = "Mohon maaf format yang Anda kirim salah, silahkan kirim ulang dengan Format DAFTAR%23[NAMA]%23[ALAMAT]%23[HP] Contoh Monster Mahoni%23Jalan Anggrek No 1 Jakarta%2308581234567";
+        $pesan_balik = "Mohon maaf format yang Anda Masukkan Salah, silahkan kirim ulang dengan Format LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] Contoh LAPOR%231171044509850001%23SUNTADI%23082237663729%23DESA KUTA ALAM, KECAMATAN KUTA ALAM%23KARYAWAN%23ASSAMMUALAIKUM NAMA YANG TERTERA DI SERTIPIKAT DENGAN KTP BERBEDA, APAKAH NANTI TIDAK BERMASALAH? MOHON DI CEK KEMBALI NOMOR SERTIPIKAT XXXXXXX";
     }
     $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik";
     $ch = curl_init();
