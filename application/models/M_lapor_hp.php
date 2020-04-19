@@ -90,7 +90,7 @@
           $email = "-";
           $pekerjaan = $this->input->post('pekerjaan');
           $no_telepon = $this->input->post('no_telepon');
-          $uraian_pengaduan = $this->input->post('uraian_pengaduan');
+          $uraian_pengaduan = json_encode($this->input->post('uraian_pengaduan'));
           $jenis_pengaduan = $this->input->post('jenis_pengaduan');
           $media_pelaporan = $this->input->post('media_pelaporan');
           $nik = $this->input->post('nik');
@@ -138,7 +138,7 @@
         define('BOT_TOKEN', '1242441147:AAGIV7XHCoqi7itw7thArVMDgJPOLoHzTHg');
         define('CHAT_ID','-343349381');
           //$pesan = json_encode($pesan);
-          $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan";
+          echo $API = "https://api.telegram.org/bot".BOT_TOKEN."/sendmessage?chat_id=".CHAT_ID."&text=Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan";
           $ch = curl_init();
           curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
           curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
