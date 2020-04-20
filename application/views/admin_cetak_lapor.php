@@ -47,7 +47,7 @@
                         <div class="row">
                           <div class="col-md-6 col-lg-6"  >
                               <div >
-                                <img src="<?php echo site_url(); ?>assets/umum/images/kop2.png" width="100%">
+                                <img src="<?php echo site_url(); ?>assets/umum/images/kop3.png" width="100%">
                                   <P align="center">PENGADUAN <BR>
                                   <table align="center">
                                     <tr>
