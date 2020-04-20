@@ -341,6 +341,17 @@
                                   *) Pilih yang sesuai
                                   <br>
                                   <br>
+                                  <table border="1">
+                                    <tr>
+                                      <td>
+                                        Tindak Lanjut :<br>
+                                        Tanggal :
+                                        <?php echo $detail->tanggal_selesai;?>
+                                        <BR>
+                                        <?php echo $detail->uraian;?>
+                                      </td>
+                                    </tr>
+                                  </table>
 
                               </div>
 
