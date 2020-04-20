@@ -98,7 +98,7 @@
                                           <label style="padding: 10px;">Jenis Pengaduan<i class="far fa-user" style="top: 50px;"></i>  </label>
                                           <div class="listsearch-input-item">
                                             <select data-placeholder="City" name="jenis_pengaduan" class="chosen-select no-search-select" required >
-                                                <option value="<?php echo $detail->id_jenis_pengaduan; ?>"><?php echo $detail->nama_jenis_pengaduan; ?></option>
+                                                <option value="<?php if(($detail->id_jenis_pengaduan)==5){echo "";}else{echo $detail->id_jenis_pengaduan;} ?>"><?php echo $detail->nama_jenis_pengaduan; ?></option>
                                                 <?php
                                                    foreach($jenis_pengaduan as $pengaduan){
                                                      if($detail->id_jenis_pengaduan!=$pengaduan->id_jenis_pengaduan){
