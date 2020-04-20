@@ -29,7 +29,7 @@
           <h1><i class="fa fa-arrow-left back-button"></i>Progress Pengaduan</h1>
           <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
         </div>
-        
+
 
         <?php
         foreach($data_pengaduan as $detail){
@@ -94,34 +94,7 @@
                   ?>
                 </p>
 
-              <!-- <h4 class="color-theme center-text" >
-                Progress Pengaduan
-              </h4>
-              <div class="divider-icon bg-yellow1-light">
-                <i class="fa font-17 color-yellow1-dark">
-                </i>
-              </div>
-              <div class="user-group-manager border-highlight" style="padding: 10px;">
-                <img class="shadow-large bg-highlight" src="<?php echo site_url(); ?>assets/hp/images/avatars/4s.png" alt="img">
-                <h4 class="color-theme" >Kantor Pertanahan Kota Banda Aceh</h4>
-
-              </div>
-              <div class="user-group-title">
-                <h3 class="color-theme bolder bottom-0">Proses Penyelesaian</h3>
-                <br>
-              </div>
-              <div class="user-group-users">
-                <?php if($detail->status==0){
-                  ?>
-                  Sedang Dalam Proses Penyelesaian
-                  <?php
-                }else{
-                  ?>
-                  <?php echo $detail->tindak_lanjut;?>
-                  <?php
-                }
-                ?>
-              </div> -->
+              
               <div class="clear"></div>
             </div>
           </div>
