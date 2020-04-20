@@ -343,12 +343,12 @@
                                   <br>
                                   <table border="1">
                                     <tr>
-                                      <td>
+                                      <td height="500px" style="text-align:left" valign="top">
                                         Tindak Lanjut :<br>
                                         Tanggal :
                                         <?php echo $detail->tanggal_selesai;?>
                                         <BR>
-                                        <?php echo $detail->uraian;?>
+                                        <?php echo $detail->tindak_lanjut;?>
                                       </td>
                                     </tr>
                                   </table>
