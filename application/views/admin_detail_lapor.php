@@ -150,7 +150,7 @@
 
                                       <div class="col-sm-12">
                                         <?php
-                                        if($detail->jenis_pengaduan==0){
+                                        if($detail->jenis_pengaduan==5){
 
                                         ?>
                                         <div class="dashboard-list fl-wrap btn-warning" style="padding: 10px 20px;">
