@@ -35,7 +35,7 @@ class Telegram extends CI_Controller {
       $pesan_balik="Terimakasih";
 
     }
-    else if(strpos($pesan,"/LAPORAN#")>0)
+    else if(strpos($pesan,"APORAN#")>0)
     {
       $datas = split("#",$pesan);
       $tahun = $datas[1];
@@ -121,8 +121,11 @@ class Telegram extends CI_Controller {
           $pesan_balik=$pesan;
         }
     }
+    else if($pesan=="/start"){
+      $pesan_balik = "Format Lapor Pengaduan LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] %0A Contoh LAPOR%231171245708900001%23Antini%23082276226790%23Setui%23PNS%23Assammualaikum......Terima Kasih ";
+    }
     else {
-        $pesan_balik = "Mohon maaf format yang Anda Masukkan Salah, silahkan kirim ulang dengan Format LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] %0A%0AContoh : LAPOR%231171044509850001%23SUNTADI%23082237663729%23DESA KUTA ALAM, KECAMATAN KUTA ALAM%23KARYAWAN%23ASSAMMUALAIKUM NAMA YANG TERTERA DI SERTIPIKAT DENGAN KTP BERBEDA, APAKAH NANTI TIDAK BERMASALAH? MOHON DI CEK KEMBALI NOMOR SERTIPIKAT XXXXXXX";
+        $pesan_balik = "Mohon maaf format yang Anda Masukkan Salah, silahkan kirim ulang dengan Format LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] ";
     }
     $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik";
     $ch = curl_init();
