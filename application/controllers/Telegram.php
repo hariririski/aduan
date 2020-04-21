@@ -35,7 +35,7 @@ class Telegram extends CI_Controller {
       $pesan_balik="Terimakasih";
 
     }
-    else if(strpos($pesan,"APORAN#")>0)
+    else if(strpos($pesan,"/LAPORAN#")>0)
     {
       $datas = split("#",$pesan);
       $tahun = $datas[1];
