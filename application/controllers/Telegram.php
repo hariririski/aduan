@@ -9,6 +9,7 @@ class Telegram extends CI_Controller {
     $this->load->database();
     $this->load->model('M_lapor_hp');
     $this->load->model('M_lapor');
+    $this->load->model('M_telegram');
 
   }
 
@@ -25,7 +26,7 @@ class Telegram extends CI_Controller {
     $chat_id = $updates[message][chat][id];
     $pesan = strtoupper($pesan);
 
-    //$pesan="LAPORAN#2020";
+    //$pesan="LAPOR#111111111111#nama#222222222#alamat#pekerjaan#akumau atau tentang dirimu";
     //$chat_id="-343349381";
     if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
