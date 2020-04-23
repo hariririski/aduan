@@ -26,7 +26,7 @@ class Telegram extends CI_Controller {
     $chat_id = $updates[message][chat][id];
     $pesan = strtoupper($pesan);
 
-    $pesan="LAPOR#111111111111#nama#222222222#alamat#pekerjaan#akumau atau tentang dirimu";
+    //$pesan="LAPOR#111111111111#nama#222222222#alamat#pekerjaan#akumau atau tentang dirimu";
     //$chat_id="-343349381";
     if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
@@ -39,9 +39,8 @@ class Telegram extends CI_Controller {
       $uraian = $datas[6];
       $tanggal = date("Y-m-d");
       $kirim= $this->M_telegram->add($nik,$nama,$no_hp,$alamat,$pekerjaan,$uraian);
-      echo $kirim;
       $media="Telegram";
-      $pesan_balik="Pengaduan! %0ANama%20%20%20%20%20:%20$nama%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_hp %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian%0A%0A Terima Kasih Atas Pengaduan Anda%0A%0A Pengaduan Anda Secara Otomatis Masuk Kedalam Aplikasi KIBAN BPN KOTA BANDA ACEH %0A%0A Untuk Pemantauan Pengaduan Dengan Mengirim Format: %0ACEK#$kirim";
+      $pesan_balik="Pengaduan! %0ANama%20%20%20%20%20:%20$nama%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_hp %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian%0A%0ATerima Kasih Atas Pengaduan Anda%0A%0APengaduan Anda Secara Otomatis Masuk Kedalam Aplikasi KIBAN BPN KOTA BANDA ACEH %0A%0AUntuk Pemantauan Pengaduan Dengan Mengirim Format: %0ACEK%23$kirim";
 
     }
     else if(strpos($pesan,"APORAN#")>0)
@@ -136,7 +135,7 @@ class Telegram extends CI_Controller {
     else {
       $pesan_balik = "Format Lapor Pengaduan LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] %0A Contoh LAPOR%231171245708900001%23Antini%23082276226790%23Setui%23PNS%23Assammualaikum......Terima Kasih ";
     }
-    echo$API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik";
+    $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');

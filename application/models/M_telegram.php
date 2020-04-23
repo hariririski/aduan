@@ -31,7 +31,7 @@
           $query1=$this->db->query($perintah1);
 
           $media="Telegram";
-          $this->telegram_add($new_nomor,$nama_lengkap,$no_telepon,$tanggal,$uraian_pengaduan,$media);
+          //$this->telegram_add($new_nomor,$nama_lengkap,$no_telepon,$tanggal,$uraian_pengaduan,$media);
 
            if($query==true&&$query1==true){
              return ($id_pelapor.$nomor);
