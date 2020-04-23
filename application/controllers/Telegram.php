@@ -41,7 +41,7 @@ class Telegram extends CI_Controller {
       $tanggal = date("Y-m-d");
       $kirim= $this->M_telegram->add($nik,$nama,$no_hp,$alamat,$pekerjaan,$uraian);
       $media="Telegram";
-      $pesan_balik="Pengaduan! %0ANama%20%20%20%20%20:%20$nama%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_hp %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian%0A%0ATerima Kasih Atas Pengaduan Anda%0A%0APengaduan Anda Secara Otomatis Masuk Kedalam Aplikasi KIBAN BPN KOTA BANDA ACEH %0A%0AUntuk Pemantauan Pengaduan Dengan Mengirim Format:";
+      $pesan_balik="Pengaduan! %0ANama%20%20%20%20%20:%20$nama%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_hp %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian%0A%0ATerima Kasih Atas Pengaduan Anda%0A%0APengaduan Anda Secara Otomatis Masuk Kedalam Aplikasi KIBAN BPN KOTA BANDA ACEH %0A%0AUntuk Pemantauan Pengaduan Dengan Mengirim Format:CEK%23[id Pengaduan] dan Dapat di Cek juga Melalui %0A https://bpnkotabandaaceh.com/lapor/hp/detail/$kirim %0A https://www.bpnkotabandaaceh.com/lapor/umum_cek_awal?no_telepon=$kirim";
       $pesan_balik2="CEK%23$kirim";
 
 
