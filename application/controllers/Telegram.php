@@ -28,6 +28,7 @@ class Telegram extends CI_Controller {
     $pesan_balik2;
 
     //$pesan="LAPOR#111111111111#nama#222222222#alamat#pekerjaan#akumau atau tentang dirimu";
+    //$pesan="CEK#158761916518";
     //$chat_id="-343349381";
     if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
@@ -56,13 +57,13 @@ class Telegram extends CI_Controller {
       $tindak_lanjut;
       $status;
       foreach ($kirim as $isi) {
-        $new_nomor=$isi->nomor,
-        $nama_lengkap$isi->nama_lengkap,
-        $tanggal=$isi->tanggal_pengaduan,
-        $nomor_telepon=$isi->tanggal_pengaduan,
-        $uraian_pengaduan=$isi->uraian_pengaduan,
-        $tindak_lanjut=$isi->tindak_lanjut,
-        $status=$isi->status
+        $new_nomor=$isi->nomor;
+        $nama_lengkap=$isi->nama_lengkap;
+        $tanggal=$isi->tanggal_pengaduan;
+        $nomor_telepon=$isi->tanggal_pengaduan;
+        $uraian_pengaduan=$isi->uraian_pengaduan;
+        $tindak_lanjut=$isi->tindak_lanjut;
+        $status=$isi->status;
       }
       if($status==0){
         $status="Sedang Diproses";
