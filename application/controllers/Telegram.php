@@ -29,9 +29,13 @@ class Telegram extends CI_Controller {
     //$chat_id="-343349381";
     if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
-      $nama = $datas[1];
-      $alamat = $datas[2];
-      $hp = $datas[3];
+      $nik = $datas[1];
+      $nama = $datas[2];
+      $no_hp = $datas[3];
+      $alamat = $datas[4];
+      $pekerjaan = $datas[5];
+      $uraian = $datas[6];
+      $kirim= $this->M_telegram->add($nik,$nama,$no_hp,$alamat,$pekerjaan,$uraian);
       $pesan_balik="Terimakasih";
 
     }
