@@ -53,15 +53,15 @@ class Telegram extends CI_Controller {
       $new_nomor;
       $nama_lengkap;
       $tanggal;
-      $nomor_telepon;
+      $no_telepon;
       $uraian_pengaduan;
       $tindak_lanjut;
       $status;
       foreach ($kirim as $isi) {
         $new_nomor=$isi->nomor;
-        $nama_lengkap=$isi->nama_lengkap;
+        $nama_lengkap=$isi->nama;
         $tanggal=$isi->tanggal_pengaduan;
-        $nomor_telepon=$isi->tanggal_pengaduan;
+        $no_telepon=$isi->no_telepon;
         $uraian_pengaduan=$isi->uraian_pengaduan;
         $tindak_lanjut=$isi->tindak_lanjut;
         $status=$isi->status;
