@@ -47,6 +47,7 @@ class Telegram extends CI_Controller {
 
 
     }else if(strpos($pesan,"EK#")>0){
+      $datas = split("#",$pesan);
       $id_pengaduan = $datas[1];
       $kirim= $this->M_telegram->cek($id_pengaduan);
       $new_nomor;
@@ -166,7 +167,7 @@ class Telegram extends CI_Controller {
     else {
       $pesan_balik = "Format Lapor Pengaduan LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] %0A Contoh LAPOR%231171245708900001%23Antini%23082276226790%23Setui%23PNS%23Assammualaikum......Terima Kasih ";
     }
-    echo $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik";
+    $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
@@ -175,7 +176,7 @@ class Telegram extends CI_Controller {
     curl_close($ch);
 
     if(!empty($pesan_balik2)){
-      echo $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik2";
+      $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik2";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
