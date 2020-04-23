@@ -26,8 +26,8 @@ class Telegram extends CI_Controller {
     $chat_id = $updates[message][chat][id];
     $pesan = strtoupper($pesan);
 
-    $pesan="LAPOR#111111111111#nama#222222222#alamat#pekerjaan#akumau atau tentang dirimu";
-    $chat_id="-343349381";
+    //$pesan="LAPOR#111111111111#nama#222222222#alamat#pekerjaan#akumau atau tentang dirimu";
+    //$chat_id="-343349381";
     if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
       print_r($datas);
