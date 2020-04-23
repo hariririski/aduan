@@ -62,7 +62,7 @@ class Telegram extends CI_Controller {
         $nama_lengkap=$isi->nama;
         $tanggal=$isi->tanggal_pengaduan;
         $no_telepon=$isi->no_telepon;
-        $uraian_pengaduan=$isi->uraian_pengaduan;
+        $uraian_pengaduan=$isi->uraian;
         $tindak_lanjut=$isi->tindak_lanjut;
         $status=$isi->status;
       }
