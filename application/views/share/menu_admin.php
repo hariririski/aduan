@@ -9,7 +9,7 @@
             <li><a href="<?php echo site_url(); ?>data"><i class="fal fa-book"></i>Data Pengaduan</a></li>
             <li><a href="<?php echo site_url(); ?>admin_lapor"><i class="fal fa-plus"></i> Tambah Pengaduan</a></li>
             <li><a href="<?php echo site_url(); ?>admin_info"><i class="fal fa-info"></i> Informasi </a></li>
-            <li><a href="<?php echo site_url(); ?>admin_info"><i class="fal fa-plus"></i>Tambah Informasi</a></li>
+            <li><a href="<?php echo site_url(); ?>tambah_info"><i class="fal fa-plus"></i>Tambah Informasi</a></li>
             <li><a href="<?php echo site_url(); ?>laporan"><i class="fal fa-book"></i>Laporan</a></li>
         </ul>
     </div>

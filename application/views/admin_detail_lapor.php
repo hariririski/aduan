@@ -11,7 +11,20 @@
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/style.css">
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/dashboard-style.css">
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/color.css">
+        <script src="<?php echo site_url(); ?>assets/ckeditor/ckeditor.js"></script>
+        <style>
+                /* Style the CKEditor element to look like a textfield */
+        .cke_textarea_inline
+        {
+          padding: 10px;
+          height: 200px;
+          overflow: auto;
 
+          border: 1px solid gray;
+          -webkit-appearance: textfield;
+        }
+
+        </style>
         <?php echo $this->load->view('share/table_header', '', TRUE);?>
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="<?php echo site_url(); ?>assets/umum/images/favicon.ico">
@@ -231,6 +244,10 @@
         <!--=============== scripts  ===============-->
         <?php echo $this->load->view('share/table_footer', '', TRUE);?>
         <!-- <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script> -->
+      
+        <script>
+      		CKEDITOR.inline( 'tindak_lanjut' );
+      	</script>
         <script src="<?php echo site_url(); ?>assets/umum/js/plugins.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/scripts.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/charts.js"></script>

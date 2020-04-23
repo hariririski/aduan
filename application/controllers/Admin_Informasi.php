@@ -8,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			 $this->load->library('session');
   			 $this->load->database();
          $this->load->model('M_info');
+         $this->load->model('M_jenis_informasi');
 
   		}
 
@@ -28,6 +29,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $id =$this->input->get('id');
           $data['informasi'] = $this->M_info->detail_hp($id);
        		$this->load->view('umum_detail_artikel',$data);
+       	}
+         public function tambah()
+       	{
+
+          $data['jenis'] = $this->M_jenis_informasi->lihat();
+       		$this->load->view('admin_tambah_info',$data);
        	}
 
    }

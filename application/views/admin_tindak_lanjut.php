@@ -11,7 +11,21 @@
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/style.css">
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/dashboard-style.css">
         <link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>assets/umum/css/color.css">
+        <script src="<?php echo site_url(); ?>assets/ckeditor/ckeditor.js"></script>
+        <style>
+                /* Style the CKEditor element to look like a textfield */
+        .cke_textarea_inline
+        {
+          padding: 10px;
+          height: 200px;
+          overflow: auto;
 
+          border: 1px solid gray;
+          -webkit-appearance: textfield;
+        }
+
+        </style>
+      	<link rel="stylesheet" href="<?php echo site_url(); ?>assets/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
         <?php echo $this->load->view('share/table_header', '', TRUE);?>
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="<?php echo site_url(); ?>assets/umum/images/favicon.ico">
@@ -124,6 +138,7 @@
                                       </div>
                                       <label style="padding: 10px;"> Uraian Pengaduan</label>
                                       <textarea cols="40" rows="3"  disabled name="uraian_pengaduan" placeholder="Uraikan Pengaduan Anda" style="margin-bottom:20px;"><?php echo $detail->uraian; ?></textarea>
+
                                       <div class="row">
                                       <div class="col-sm-12">
                                         <label style="padding: 10px;">Bidang<i class="far fa-user" style="top: 50px;"></i>  </label>
@@ -144,8 +159,13 @@
                                       </div>
                                     </div>
                                       <label style="padding: 10px;"> Tindak Lanjut</label>
-                                      <textarea cols="40" rows="3"  name="tindak_lanjut" placeholder="Tindak Lanjut" style="margin-bottom:20px;"><?php echo $detail->tindak_lanjut; ?></textarea>
+                                      <br>
+                                      <!-- <textarea cols="40" rows="3"  name="tindak_lanjut" placeholder="Tindak Lanjut" style="margin-bottom:20px;"><?php //echo $detail->tindak_lanjut; ?></textarea> -->
+                                      <!-- <input cols="40" required  rows="3"  name="tindak_lanjut" id="editor" style="margin-bottom:20px;" value="<?php echo $detail->tindak_lanjut; ?>"> -->
+                                      <textarea name="tindak_lanjut" placeholder="Tindak Lanjut" style="margin-bottom:20px;" style="height: 200px">
+                                        <?php echo $detail->tindak_lanjut; ?>
 
+                                      </textarea>
                                       <div class="col-sm-12">
                                         <?php
                                         if($detail->jenis_pengaduan==0){
@@ -202,6 +222,10 @@
         <!--=============== scripts  ===============-->
         <?php echo $this->load->view('share/table_footer', '', TRUE);?>
         <!-- <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script> -->
+        <script>
+      		CKEDITOR.inline( 'tindak_lanjut' );
+      	</script>
+
         <script src="<?php echo site_url(); ?>assets/umum/js/plugins.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/scripts.js"></script>
         <script src="<?php echo site_url(); ?>assets/umum/js/charts.js"></script>
