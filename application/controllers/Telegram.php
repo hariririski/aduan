@@ -40,14 +40,16 @@ class Telegram extends CI_Controller {
       $tanggal = date("Y-m-d");
       $kirim= $this->M_telegram->add($nik,$nama,$no_hp,$alamat,$pekerjaan,$uraian);
       $media="Telegram";
-      $pesan_balik="Pengaduan! %0ANama%20%20%20%20%20:%20$nama%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_hp %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian%0A%0ATerima Kasih Atas Pengaduan Anda%0A%0APengaduan Anda Secara Otomatis Masuk Kedalam Aplikasi KIBAN BPN KOTA BANDA ACEH %0A%0AUntuk Pemantauan Pengaduan Dengan Mengirim Format: %0ACEK%23$kirim";
+      $pesan_balik="Pengaduan! %0ANama%20%20%20%20%20:%20$nama%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_hp %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian%0A%0ATerima Kasih Atas Pengaduan Anda%0A%0APengaduan Anda Secara Otomatis Masuk Kedalam Aplikasi KIBAN BPN KOTA BANDA ACEH %0A%0AUntuk Pemantauan Pengaduan Dengan Mengirim Format:";
       $pesan_balik2="CEK%23$kirim";
 
 
 
     }else if(strpos($pesan,"EK#")>0){
       $id_pengaduan = $datas[1];
-        $pesan_balik2="cek dahulu";
+      $kirim= $this->M_telegram->cek($id_pengaduan);
+      $pesan_balik2="Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan %0AStatus:$status %0ATindak Lanjut :$tindak_lanjut  %0A%0A Terima Kasih";
+      $this->telegram_add($id_pengaduan,$pesan_balik2);
     }
     else if(strpos($pesan,"APORAN#")>0)
     {
@@ -162,6 +164,16 @@ class Telegram extends CI_Controller {
     return $result;
 
   }
+  public function telegram_add($chat_id,$pesan_balik2){
+    echo $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik2";
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+    curl_setopt($ch, CURLOPT_URL, $API);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return $result;
+    }
 
 }
   ?>
