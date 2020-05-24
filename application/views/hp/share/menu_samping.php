@@ -13,7 +13,7 @@
   </div>
   <div class="content top-20 bottom-50">
     <div class="link-list link-list-1">
-      <a id="nav-welcome" href="<?php echo site_url(); ?>hp">
+      <a id="nav-starters" href="<?php echo site_url(); ?>hp">
         <i class="fa fa-home color-blue2-dark"></i>
         <span>Home</span>
         <i class="fa fa-angle-right"></i>
@@ -33,9 +33,14 @@
         <span>Informasi Pertanahan</span>
         <i class="fa fa-angle-right"></i>
       </a>
-      <a id="nav-media" href="media.html">
+      <a id="nav-media" href="<?php echo site_url(); ?>tentang">
         <i class="fa fa-info color-green1-dark"></i>
         <span>Tentang</span>
+        <i class="fa fa-angle-right"></i>
+      </a>
+      <a id="nav-media" href="<?php echo site_url(); ?>privacy">
+        <i class="fa fa-lock color-green1-dark"></i>
+        <span>Privacy</span>
         <i class="fa fa-angle-right"></i>
       </a>
       <a id="nav-contact" href="<?php echo site_url(); ?>login_hp">
@@ -50,7 +55,7 @@
       </a>
     </div>
   </div>
-  
+
 
 
 

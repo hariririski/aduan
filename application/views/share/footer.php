@@ -23,9 +23,9 @@
 
             <div class="subfooter-nav">
                 <ul class="no-list-style">
-                    <li><a href="#">Terms of use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Blog</a></li>
+
+                    <li><a href="<?php echo site_url(); ?>privacy">Privacy</a></li>
+
                 </ul>
             </div>
         </div>
