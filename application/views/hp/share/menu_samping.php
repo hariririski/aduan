@@ -33,6 +33,11 @@
         <span>Informasi Pertanahan</span>
         <i class="fa fa-angle-right"></i>
       </a>
+      <a id="nav-pages" href="<?php echo site_url(); ?>newsletter">
+        <i class="fa fa-book color-brown1-dark"></i>
+        <span>Newsletter</span>
+        <i class="fa fa-angle-right"></i>
+      </a>
       <a id="nav-media" href="<?php echo site_url(); ?>tentang">
         <i class="fa fa-info color-green1-dark"></i>
         <span>Tentang</span>

@@ -143,35 +143,16 @@
       <div data-height="300" class="content-bg round-none top-10 opacity-90 bg-highlight"></div>
       <div class="content bottom-0">
         <br>
-        <h4 class="color-white top-30 bottom-0">Kemudahan Untuk Mengakses</h4>
-        <p class="color-white opacity-80 bottom-30">Adanda Dapat Mengakses Aplikasi Pengaduan Melalui Perangkat Dekstop/Laptop Maupun Smartphone/Handphone, Silahkan Pilih Tampilan Aplikasi Anda</p>
+        <h2 class="color-white opacity-80 bottom-30 center-text">Newsletter</h2>
+        <!-- <p class="color-white opacity-80 bottom-30">Adanda Dapat Mengakses Aplikasi Pengaduan Melalui Perangkat Dekstop/Laptop Maupun Smartphone/Handphone, Silahkan Pilih Tampilan Aplikasi Anda</p> -->
       </div>
       <div class="content-boxed shadow-small">
         <div class="content">
-          <div class="one-half">
-            <a href="<?php echo site_url(); ?>beranda" data-height="180" class="caption round-medium shadow-large bg-theme bottom-15" style="height: 180px;">
-              <div class="caption-center">
-                <h1 class="center-text">
-                  <img src="<?php echo site_url(); ?>assets/hp/images/dekstop.jfif" width="55" height="55" >
-                </h1>
-                <h4 class="center-text color-theme">Dekstop</h4>
 
-              </div>
 
-            </a>
-          </div>
-          <div class="one-half last-column">
-            <a href="<?php echo site_url(); ?>hp" data-height="180" class="caption round-medium shadow-large bg-theme bottom-15" style="height: 180px;">
-              <div class="caption-center">
-                <h1 class="center-text">
-                  <img src="<?php echo site_url(); ?>assets/hp/images/hp.jfif" width="65" height="55" >
-                </h1>
-                <h4 class="center-text color-theme">Smartphone</h4>
+          <!-- <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script> -->
 
-              </div>
-
-            </a>
-          </div>
+          <a href="<?php echo site_url(); ?>newsletter"><img src="https://online.fliphtml5.com/eggtp/sokm/files/shot.jpg" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/eggtp/sokm/" data-width="400" data-height="250" data-title="Newsletter Kantor Pertanahan Kota Banda Aceh Edisi I Mei 2020">
 
         </div>
 
