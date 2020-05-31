@@ -35,7 +35,7 @@
 
           </div>
           <div class="caption-overlay "></div>
-          <div class="caption-bg owl-lazy" data-src="<?php echo site_url(); ?>assets/hp/images/1.png"></div>
+          <div class="caption-bg owl-lazy" data-src="<?php echo site_url(); ?>assets/hp/images/play.png"></div>
         </div>
         <div class="caption bottom-0 round-medium shadow-large" data-height="350">
           <div class="caption-bottom bottom-10 center-text">
@@ -46,11 +46,10 @@
         </div>
         <div class="caption bottom-0 round-medium shadow-large" data-height="350">
           <div class="caption-bottom bottom-10 center-text">
-            <h1 class="bolder font-24">"Kepuasan Masyarakat Semangat Kami Untuk Lebih Baik"</h1>
 
           </div>
-          <div class="caption-overlay bg-gradient-fade"></div>
-          <div class="caption-bg owl-lazy" data-src="<?php echo site_url(); ?>assets/hp/images/pictures/1n.jpg"></div>
+          <div class="caption-overlay "></div>
+          <div class="caption-bg owl-lazy" data-src="<?php echo site_url(); ?>assets/hp/images/1.png"></div>
         </div>
       </div>
 
