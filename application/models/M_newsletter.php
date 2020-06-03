@@ -5,6 +5,10 @@
         $query=$this->db->query("SELECT * FROM `newsletter` order by tanggal desc limit 3");
         return $query->result();
       }
+      function lihat2(){
+        $query=$this->db->query("SELECT * FROM `newsletter` order by tanggal ");
+        return $query->result();
+      }
 
       function artikel($id){
         $query=$this->db->query("SELECT * FROM `newsletter` where id_newsletter=$id ");

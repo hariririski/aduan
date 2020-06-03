@@ -88,7 +88,9 @@ $route['chart'] = 'Admin_Pengaduan/chart';
 $route['telegram'] = 'Telegram/index';
 $route['tambah_info'] = 'Admin_Informasi/tambah';
 $route['privacy'] = 'Umum_Tentang/privacy';
-$route['newsletter'] = 'Newsletter';
+$route['data_newsletter'] = 'Newsletter/data_newsletter';
+$route['tambah_newsletter'] = 'Newsletter/tambah_newsletter';
+
 
 
 
