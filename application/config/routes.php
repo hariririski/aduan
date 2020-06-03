@@ -90,6 +90,7 @@ $route['tambah_info'] = 'Admin_Informasi/tambah';
 $route['privacy'] = 'Umum_Tentang/privacy';
 $route['data_newsletter'] = 'Newsletter/data_newsletter';
 $route['tambah_newsletter'] = 'Newsletter/tambah_newsletter';
+$route['newsletter_pc'] = 'Newsletter/pc';
 
 
 
