@@ -7,14 +7,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          $this->load->helper('url');
   			 $this->load->library('session');
   			 $this->load->database();
+         $this->load->model('M_newsletter');
 
 
   		}
 
          public function index()
        	{
+          $data['newsletter'] = $this->M_newsletter->lihat();
+       		$this->load->view('hp/newsletter',$data);
+       	}
+         public function pc()
+       	{
 
-       		$this->load->view('hp/newsletter');
+       		$this->load->view('umum_newsletter');
        	}
 
 

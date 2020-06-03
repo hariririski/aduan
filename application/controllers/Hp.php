@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			 $this->load->database();
          $this->load->model('M_lapor_hp');
          $this->load->model('M_info');
+         $this->load->model('M_newsletter');
 
   		}
 
@@ -18,6 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $data['pengaduan_selesai'] = $this->M_lapor_hp->pengaduan_selesai();
           $data['pengaduan_proses'] = $this->M_lapor_hp->pengaduan_proses();
           $data['jenis_pengaduan'] = $this->M_lapor_hp->lihat();
+          $data['newsletter'] = $this->M_newsletter->lihat();
        		$this->load->view('hp/home',$data);
        	}
          public function info()

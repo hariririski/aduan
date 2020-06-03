@@ -32,23 +32,34 @@
         <a href="#" data-menu="menu-main" class="shadow-huge scale-box bg-fade-gray2-dark"></a>
       </div>
 
+      <?php
+         foreach($newsletter as $newsletter){
+       ?>
+
+       <div class="content-boxed shadow-small">
+         <div class="content">
+
+              <?php echo $newsletter->content; ?>
+                 <?php echo $newsletter->gambar; ?>
+
+
+         </div>
+         <a class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10" data-rel="fh5-light-box-demo" data-href="   <?php echo $newsletter->url; ?>" data-width="400" data-height="250" >Baca</a>
+         <!-- <a href="https://drive.google.com/open?id=10cKhuoWkKX91ZoXg3Ss3vKqDRZcm7rzK" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">Download</a> -->
+       </div>
 
 
 
 
 
-      <div class="content-boxed shadow-small">
-        <div class="content">
+
+       <?php } ?>
 
 
-          <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script>
 
-          <img src="https://online.fliphtml5.com/eggtp/sokm/files/shot.jpg" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/eggtp/sokm/" data-width="400" data-height="250" data-title="Newsletter Kantor Pertanahan Kota Banda Aceh Edisi I Mei 2020">
 
-        </div>
-        <a class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/eggtp/sokm/" data-width="400" data-height="250" data-title="Newsletter Kantor Pertanahan Kota Banda Aceh Edisi I Mei 2020">Baca</a>
-        <!-- <a href="https://drive.google.com/open?id=10cKhuoWkKX91ZoXg3Ss3vKqDRZcm7rzK" class="button bg-highlight button-xs button-full button-round-medium shadow-small bottom-10">Download</a> -->
-      </div>
+
+
 
 
 

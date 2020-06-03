@@ -142,17 +142,23 @@
         <h2 class="color-white opacity-80 bottom-30 center-text">Newsletter</h2>
         <!-- <p class="color-white opacity-80 bottom-30">Adanda Dapat Mengakses Aplikasi Pengaduan Melalui Perangkat Dekstop/Laptop Maupun Smartphone/Handphone, Silahkan Pilih Tampilan Aplikasi Anda</p> -->
       </div>
-      <div class="content-boxed shadow-small">
-        <div class="content">
+      <?php
+         foreach($newsletter as $newsletter){
+       ?>
+       <div class="content-boxed shadow-small">
+         <div class="content">
 
 
-          <!-- <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script> -->
+           <a href="<?php echo site_url(); ?>newsletter">
+             <?php echo $newsletter->gambar; ?>
 
-          <a href="<?php echo site_url(); ?>newsletter"><img src="https://online.fliphtml5.com/eggtp/sokm/files/shot.jpg" data-rel="fh5-light-box-demo" data-href="https://online.fliphtml5.com/eggtp/sokm/" data-width="400" data-height="250" data-title="Newsletter Kantor Pertanahan Kota Banda Aceh Edisi I Mei 2020">
+           </a>
+         </div>
 
-        </div>
+       </div>
 
-      </div>
+       <?php } ?>
+
     </div>
 
     <?php echo $this->load->view('hp/share/sosial_media', '', TRUE);?>
