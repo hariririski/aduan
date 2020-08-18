@@ -39,7 +39,7 @@
 		?>
 
           <div class="one-half">
-            <div class="content-boxed content-boxed-full shadow-small" style="height: 400px;">
+            <div class="content-boxed content-boxed-full shadow-small" style="height: 300px;">
               <a href="#" class="caption bottom-15" data-height="200">
                 <div class="caption-bottom left-10 bottom-10">
                   <h4 class="color-white"><?php echo $u->judul ?></h4>
