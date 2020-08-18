@@ -45,7 +45,7 @@
                   <h4 class="color-white"><?php echo $u->judul ?></h4>
                 </div>
                 <div class="caption-overlay bg-gradient"></div>
-                <div class="caption-bg " style="background-image: url(<?php echo site_url(); ?>upload/artikel/<?php echo $u->foto ?>)"></div>
+                <div class="caption-bg " style="background-image: url(<?php echo $u->foto ?>)"></div>
               </a>
               <div class="content bottom-0">
                 <p style="height: 100px;">
@@ -66,12 +66,12 @@
                     );
                     $pecahkan = explode('-', date('d F Y', strtotime($u->tanggal)));
                     $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
-                    ?><?php $tanggal;?>,
+                    ?><?php //$tanggal;?>,
                   <?php
                     $str = $u->artikel;
                     $arr = explode(" ", str_replace(",", ", ", $str));
                     for ($index = 0; $index < 10; $index++) {
-                       $arr[$index]. " ";
+                       //$arr[$index]. " ";
                     }
 
                   ?>
