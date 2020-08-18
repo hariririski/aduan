@@ -66,12 +66,12 @@
                     );
                     $pecahkan = explode('-', date('d F Y', strtotime($u->tanggal)));
                     $tanggal= $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
-                    ?><?php echo $tanggal;?>,
+                    ?><?php $tanggal;?>,
                   <?php
                     $str = $u->artikel;
                     $arr = explode(" ", str_replace(",", ", ", $str));
                     for ($index = 0; $index < 10; $index++) {
-                       echo $arr[$index]. " ";
+                       $arr[$index]. " ";
                     }
 
                   ?>
