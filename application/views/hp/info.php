@@ -48,7 +48,7 @@
                 <div class="caption-bg " style="background-image: url(<?php echo site_url(); ?>upload/artikel/<?php echo $u->foto ?>)"></div>
               </a>
               <div class="content bottom-0">
-                <p style="height: 100px;">
+                <p style="height: 0px;">
                   <?php
                   $bulan = array (
                       1 => 'Januari',
