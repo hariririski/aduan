@@ -45,7 +45,7 @@
                   <h4 class="color-white"><?php echo $u->judul ?></h4>
                 </div>
                 <div class="caption-overlay bg-gradient"></div>
-                <div class="caption-bg " style="background-image: url(<?php echo $u->foto ?>)"></div>
+                <div class="caption-bg " style="background-image: url(<?php echo site_url(); ?>upload/artikel/<?php echo $u->foto ?>)"></div>
               </a>
               <div class="content bottom-0">
                 <p style="height: 100px;">
