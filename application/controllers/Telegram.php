@@ -56,7 +56,7 @@ class Telegram extends CI_Controller {
       $no_telepon;
       $uraian_pengaduan;
       $tindak_lanjut;
-      $status;
+      $status_pengaduan;
       foreach ($kirim as $isi) {
         $new_nomor=$isi->nomor;
         $nama_lengkap=$isi->nama;
@@ -64,12 +64,12 @@ class Telegram extends CI_Controller {
         $no_telepon=$isi->no_telepon;
         $uraian_pengaduan=$isi->uraian;
         $tindak_lanjut=$isi->tindak_lanjut;
-        $status=$isi->status;
+        $status_pengaduan=$isi->status;
       }
-      if($status==0){
+      if($status_pengaduan==0){
         $status="Sedang Diproses";
         $pesan_balik2="Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan %0AStatus%20%20%20%20%20:$status %0ATindak Lanjut:$tindak_lanjut  %0A%0A Terima Kasih";
-      }else if($status==1){
+      }else if($status_pengaduan==1){
         $status="Selesai";
         $pesan_balik2="Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan %0AStatus%20%20%20%20%20:$status %0ATindak Lanjut:$tindak_lanjut  %0A%0A Terima Kasih";
       }else {
