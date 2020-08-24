@@ -170,21 +170,21 @@
                           <div class="reviews-comments-header fl-wrap">
                             <h4><a href="#">Kantor Pertanahan Kota Banda Aceh</a></h4>
                           </div>
-                          <p>"
-                            <?php if($detail->status==0){
+                          <p>
+                            <?php if($data_pengaduan->status==0){
                               ?>
                               Sedang Dalam Proses Penyelesaian
                               <?php
                             }else{
                               ?>
-                              <?php echo $detail->tindak_lanjut;?>
+                              <?php echo $data_pengaduan->tindak_lanjut;?>
                               <?php
                             }
                             ?>
-                          "</p>
+                          </p>
                           <div class="reviews-comments-item-footer fl-wrap">
                             <div class="reviews-comments-item-date">
-                              
+
                             </div>
 
                           </div>
