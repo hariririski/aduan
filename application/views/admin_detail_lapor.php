@@ -111,7 +111,7 @@
                                           <label style="padding: 10px;">Jenis Pengaduan<i class="far fa-user" style="top: 50px;"></i>  </label>
                                           <div class="listsearch-input-item">
                                             <select data-placeholder="City" name="jenis_pengaduan" class="chosen-select no-search-select" required >
-                                                <option value="<?php if(($detail->id_jenis_pengaduan)==5){echo "";}else{echo $detail->id_jenis_pengaduan;} ?>"><?php echo $detail->nama_jenis_pengaduan; ?></option>
+                                                <option value="<?php if(($detail->id_jenis_pengaduan)==0){echo "";}else{echo $detail->id_jenis_pengaduan;} ?>"><?php echo $detail->nama_jenis_pengaduan; ?></option>
                                                 <?php
                                                    foreach($jenis_pengaduan as $pengaduan){
                                                      if($detail->id_jenis_pengaduan!=$pengaduan->id_jenis_pengaduan){
@@ -163,7 +163,7 @@
 
                                       <div class="col-sm-12">
                                         <?php
-                                        if($detail->jenis_pengaduan==5){
+                                        if($detail->jenis_pengaduan==0){
 
                                         ?>
                                         <div class="dashboard-list fl-wrap btn-warning" style="padding: 10px 20px;">
@@ -189,11 +189,10 @@
                                         if($detail->jenis_pengaduan==0){
 
                                         ?>
-                                        <a href="#" disabled  class="btn btn-success" style="margin-top: 20px;">Cetak</a>
-                                        <a href="#" disabled  class="btn btn-warning" style="margin-top: 20px;">Tindak Lanjut</a>
+
 
                                         <?php
-                                        }else{
+                                      }else if($detail->jenis_pengaduan!=0){
                                           ?>
                                           <script>
                                             function openWin() {
@@ -244,7 +243,7 @@
         <!--=============== scripts  ===============-->
         <?php echo $this->load->view('share/table_footer', '', TRUE);?>
         <!-- <script src="<?php echo site_url(); ?>assets/umum/js/jquery.min.js"></script> -->
-      
+
         <script>
       		CKEDITOR.inline( 'tindak_lanjut' );
       	</script>
