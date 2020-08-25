@@ -15,7 +15,6 @@ class Telegram extends CI_Controller {
 
 
 
-
   public function index(){
 
     $website = "https://api.telegram.org/bot".$botToken;
@@ -28,7 +27,7 @@ class Telegram extends CI_Controller {
     $pesan_balik2;
 
     //$pesan="LAPOR#111111111111#nama#222222222#alamat#pekerjaan#akumau atau tentang dirimu";
-    //$pesan="CEK#158761916518";
+    //$pesan="CEK#15536591420";
     //$chat_id="-343349381";
     if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
@@ -50,6 +49,7 @@ class Telegram extends CI_Controller {
       $datas = split("#",$pesan);
       $id_pengaduan = $datas[1];
       $kirim= $this->M_telegram->cek($id_pengaduan);
+      print($kirim);
       $new_nomor;
       $nama_lengkap;
       $tanggal;
@@ -65,7 +65,7 @@ class Telegram extends CI_Controller {
         $uraian_pengaduan=$isi->uraian;
         $tindak_lanjut=$isi->tindak_lanjut;
         $status_pengaduan=$isi->status;
-      }
+
       if($status_pengaduan==0){
         $status="Sedang Diproses";
         $pesan_balik2="Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan %0AStatus%20%20%20%20%20:$status %0ATindak Lanjut:$tindak_lanjut  %0A%0A Terima Kasih";
@@ -73,9 +73,11 @@ class Telegram extends CI_Controller {
         $status="Selesai";
         $pesan_balik2="Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan %0AStatus%20%20%20%20%20:$status %0ATindak Lanjut:$tindak_lanjut  %0A%0A Terima Kasih";
       }else {
-        $pesan_balik2="Maaf Pengaduan Tidak Di temukan";
+        $pesan_balik2="";
 
       }
+    }
+    $pesan_balik2="Maaf Pengaduan Tidak Di temukan";
 
       $this->telegram_add($id_pengaduan,$pesan_balik2);
     }
