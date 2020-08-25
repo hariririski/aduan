@@ -9,9 +9,9 @@ class Telegram extends CI_Controller {
     $this->load->database();
     $this->load->model('M_lapor_hp');
     $this->load->model('M_lapor');
-    $this->load->model('M_telegram');
 
   }
+
 
 
 
@@ -24,62 +24,16 @@ class Telegram extends CI_Controller {
     $pesan = $updates[message][text];
     $chat_id = $updates[message][chat][id];
     $pesan = strtoupper($pesan);
-    $pesan_balik2;
 
-    //$pesan="LAPOR#111111111111#nama#222222222#alamat#pekerjaan#akumau atau tentang dirimu";
-    //$pesan="CEK%23159833118319";
+    //$pesan="LAPORAN#2020";
     //$chat_id="-343349381";
     if(strpos($pesan,"APOR#")>0){
       $datas = split("#",$pesan);
-      $nik = $datas[1];
-      $nama = $datas[2];
-      $no_hp = $datas[3];
-      $alamat = $datas[4];
-      $pekerjaan = $datas[5];
-      $uraian = $datas[6];
-      $tanggal = date("Y-m-d");
-      $kirim= $this->M_telegram->add($nik,$nama,$no_hp,$alamat,$pekerjaan,$uraian);
-      $media="Telegram";
-      $pesan_balik="Pengaduan! %0ANama%20%20%20%20%20:%20$nama%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_hp %0AMedia%20%20%20%20%20:%20$media %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian%0A%0ATerima Kasih Atas Pengaduan Anda%0A%0APengaduan Anda Secara Otomatis Masuk Kedalam Aplikasi KIBAN BPN KOTA BANDA ACEH %0A%0AUntuk Pemantauan Pengaduan Dengan Mengirim Format:CEK%23[id Pengaduan] dan Dapat di Cek juga Melalui %0A https://bpnkotabandaaceh.com/lapor/hp/detail/$kirim %0A https://www.bpnkotabandaaceh.com/lapor/umum_cek?id=$kirim";
-      $pesan_balik2="CEK%23$kirim";
+      $nama = $datas[1];
+      $alamat = $datas[2];
+      $hp = $datas[3];
+      $pesan_balik="Terimakasih";
 
-
-
-    }else if(strpos($pesan,"EK#")>0){
-      $datas = split("#",$pesan);
-      $id_pengaduan = $datas[1];
-      $kirim= $this->M_telegram->cek($id_pengaduan);
-      print($kirim);
-      $new_nomor;
-      $nama_lengkap;
-      $tanggal;
-      $no_telepon;
-      $uraian_pengaduan;
-      $tindak_lanjut;
-      $status_pengaduan;
-      foreach ($kirim as $isi) {
-        $new_nomor=$isi->nomor;
-        $nama_lengkap=$isi->nama;
-        $tanggal=$isi->tanggal_pengaduan;
-        $no_telepon=$isi->no_telepon;
-        $uraian_pengaduan=$isi->uraian;
-        $tindak_lanjut=$isi->tindak_lanjut;
-        $status_pengaduan=$isi->status;
-
-      if($status_pengaduan==0){
-        $status="Sedang Diproses";
-        $pesan_balik2="Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan %0AStatus%20%20%20%20%20:$status %0ATindak Lanjut:$tindak_lanjut  %0A%0A Terima Kasih";
-      }else if($status_pengaduan==1){
-        $status="Selesai";
-        $pesan_balik2="Pengaduan!%0ANo%20%20%20%20%20%20%20%20%20%20%20:%20$new_nomor %0ANama%20%20%20%20%20:%20$nama_lengkap%0ATanggal%20%20:%20$tanggal  %0AHP%20%20%20%20%20%20%20%20%20%20%20:%20$no_telepon %0AUraian%20%20%20%20%20:%0A%20%20%20%20%20$uraian_pengaduan %0AStatus%20%20%20%20%20:$status %0ATindak Lanjut:$tindak_lanjut  %0A%0A Terima Kasih";
-      }else {
-        $pesan_balik2="";
-
-      }
-    }
-    $pesan_balik2="Maaf Pengaduan Tidak Di temukan";
-
-      $this->telegram_add($id_pengaduan,$pesan_balik2);
     }
     else if(strpos($pesan,"APORAN#")>0)
     {
@@ -167,43 +121,19 @@ class Telegram extends CI_Controller {
           $pesan_balik=$pesan;
         }
     }
-    else if($pesan=="/start"){
-      $pesan_balik = "Format Lapor Pengaduan LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] %0A Contoh LAPOR%231171245708900001%23Antini%23082276226790%23Setui%23PNS%23Assammualaikum......Terima Kasih ";
-    }
     else {
-      $pesan_balik = "Format Lapor Pengaduan LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] %0A Contoh LAPOR%231171245708900001%23Antini%23082276226790%23Setui%23PNS%23Assammualaikum......Terima Kasih ";
+        $pesan_balik = "Mohon maaf format yang Anda Masukkan Salah, silahkan kirim ulang dengan Format LAPOR%23[NIK]%23[NAMA]%23[HP]%23[ALAMAT]%23[PEKERJAAN]%23[URAIAN PENGADUAN] %0A%0AContoh : LAPOR%231171044509850001%23SUNTADI%23082237663729%23DESA KUTA ALAM, KECAMATAN KUTA ALAM%23KARYAWAN%23ASSAMMUALAIKUM NAMA YANG TERTERA DI SERTIPIKAT DENGAN KTP BERBEDA, APAKAH NANTI TIDAK BERMASALAH? MOHON DI CEK KEMBALI NOMOR SERTIPIKAT XXXXXXX";
     }
-    echo $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik";
+    $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
     curl_setopt($ch, CURLOPT_URL, $API);
     $result = curl_exec($ch);
     curl_close($ch);
-
-    if(!empty($pesan_balik2)){
-      echo $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik2";
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-      curl_setopt($ch, CURLOPT_URL, $API);
-      $result = curl_exec($ch);
-      curl_close($ch);
-      return $result;
-    }
     return $result;
 
   }
-  public function telegram_add($chat_id,$pesan_balik2){
-    echo $API = "https://api.telegram.org/$token/sendMessage?parse_mode=html&chat_id=$chat_id&text=$pesan_balik2";
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-    curl_setopt($ch, CURLOPT_URL, $API);
-    $result = curl_exec($ch);
-    curl_close($ch);
-    return $result;
-    }
 
 }
   ?>
